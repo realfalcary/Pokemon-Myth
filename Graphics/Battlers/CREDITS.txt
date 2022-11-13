@@ -1,0 +1,49 @@
+#==============================================================================#
+#                                                                              #
+#                         Gen 8 DS-Style Back Sprites                          #
+#                                                                              #
+#                            Compiled by TheLuiz                               #
+#                            Created by leparagon                              #
+#                                                                              #
+#                          With contributions from:                            #
+#                          French-Cyndaquil, Z-nogyroP                         #
+#                                                                              #
+#                       Sprites originally found here:                         #
+ https://www.deviantart.com/leparagon/art/GenVIII-DS-style-GBA-sprites-852873278                            
+#                                                                              #
+#==============================================================================#
+
+  ** Credits **
+--------------------------------------------------------------------------------
+
+	leparagon - Original artwork and resource
+	
+	Z-nogyroP, French-Cyndaquil - Unspecified contribuition and resizing on the original sprite sheet.
+	
+	Prodigal96 - GMAX Eevee and Lapras Backsprites
+	
+	Smogon Gen 8 Sprite Project - Reference
+
+        VanillaSunshine - For the original idea. Check her Gen 6 and 7 packs with the same format.
+
+	TheLuiz - Formatting back sprites for use with Pokémon Essentials
+
+--------------------------------------------------------------------------------
+
+Thank you to leparagon for his original resource linked above!
+
+All I did was format the back sprites for use in Essentials, so massive kudos
+to him and all the other contributors of his original resource!
+
+
+Please credit ALL of the contributors to this resource with the following:
+
+Gen 8 Back Sprites by:
+leparagon
+Z-nogyroP
+French-Cyndaquil
+Prodigal96 
+TheLuiz
+
+Please do not redistribute this resource anywhere. 
+If you'd like to share it, please link to its page from Relic Castle.

@@ -1,0 +1,850 @@
+﻿# See the documentation on the wiki to learn how to edit this file.
+#-------------------------------
+043 # Route 1
+25,10,10
+Land
+    SUNKERN,3,4
+    POLIWAG,3,4
+    AZURILL,3,4
+    COMBEE,3,4
+    SENTRET,3,4
+    PIDGEY,3,4
+    SHINX,4,5
+    SHINX,4,5
+    SHINX,3,4
+    MUNCHLAX,3,5
+    MUNCHLAX,3,5
+    MUNCHLAX,3,5
+#-------------------------------
+080 # Route 11
+25,10,10
+Land
+    FLORGES,53
+    FLORGES,53
+    DELUGAR,54
+    DELUGAR,54
+    ALTARIA,54
+    ALTARIA,54
+    LUXRAY,55
+    LUXRAY,55
+    ZEBSTRIKA,54
+    ZEBSTRIKA,54
+    KLINKLANG,56
+    KLINKLANG,56
+Water
+    GYARADOS,55
+    STARMIE,55
+    TENTACRUEL,55
+    MILOTIC,55
+    SWAMPERT,55
+#-------------------------------
+083 # Courmine Cave F1
+25,10,10
+Cave
+    ZUBAT,4
+    ZUBAT,4
+    CUBONE,4
+    CUBONE,4
+    DAMPURR,4
+    CHINGLING,4
+    RIOLU,4
+    RIOLU,4
+    TYROGUE,4
+    TYROGUE,4
+    TYROGUE,4
+    VANILLITE,4
+#-------------------------------
+085 # Courmine Cave F3
+25,10,10
+Cave
+    ZUBAT,4
+    ZUBAT,4
+    CUBONE,4
+    CUBONE,4
+    DAMPURR,4
+    CHINGLING,4
+    RIOLU,4
+    RIOLU,4
+    TYROGUE,4
+    TYROGUE,4
+    TYROGUE,4
+    VANILLITE,4
+#-------------------------------
+089 # Route 2
+25,10,10
+Land
+    ZIGZAGOON_1,9,11
+    ZIGZAGOON_1,9,11
+    DAMPURR,9,11
+    TREECKO,9,11
+    POOCHYENA,9,11
+    KRICKETUNE,10,12
+    SHINX,10,12
+    SHINX,10,12
+    MAREEP,9,11
+    MAREEP,9,11
+    MAREEP,9,11
+    ZANGOOSE,6,9
+Water
+    GOLDEEN,11,14
+    GOLDEEN,11,14
+    STARYU,12,15
+    STARYU,12,15
+    STARYU,12,15
+OldRod
+    GOLDEEN,11,14
+    GOLDEEN,11,14
+GoodRod
+    GOLDEEN,12,14
+    FINNEON,12,15
+    GOLDEEN,11,14
+SuperRod
+    GOLDEEN,12,14
+    FINNEON,12,15
+    STARYU,12,15
+    STARYU,14,17
+    STARYU,14,17
+#-------------------------------
+094 # Aether Heart
+25,10,10
+Land
+    DUGTRIO,26
+    DUGTRIO,26
+    DUGTRIO,26
+    DUGTRIO,26
+    DUGTRIO,26
+    DUGTRIO,26
+    DUGTRIO,26
+    DUGTRIO,26
+    DUGTRIO,26
+    DUGTRIO,26
+    DUGTRIO,26
+    LARVITAR,26
+#-------------------------------
+098 # Maycrop Cave
+25,10,10
+Cave
+    CROBAT,36
+    CROBAT,36
+    MAROWAK,36
+    MAROWAK,36
+    DELUGAR,36
+    DELUGAR,36
+    LUCARIO,36
+    ONIX,36
+    HITMONCHAN,36
+    HITMONTOP,36
+    HITMONLEE,36
+    ZOROARK,36
+#-------------------------------
+099 # Hilloway Outskirts
+25,10,10
+Land
+    AIPOM,32
+    SCYTHER_1,32
+    FLOETTE,32
+    FLOETTE,32
+    SOAKCUFF,32
+    SOAKCUFF,32
+    LIEPARD,32
+    LIEPARD,32
+    GROTLE,32
+    GROTLE,32
+    ROSERADE,32
+    ROSERADE,32
+#-------------------------------
+100 # Hilloway Tunnel
+25,10,10
+Cave
+    CLEFAIRY,31,34
+    JIGGLYPUFF,31,34
+    CLEFAIRY,31,34
+    JIGGLYPUFF,31,34
+    CLEFAIRY,31,34
+    JIGGLYPUFF,31,34
+    CLEFAIRY,31,34
+    JIGGLYPUFF,31,34
+    CLEFAIRY,31,34
+    JIGGLYPUFF,31,34
+    TROPIUS,31,34
+    ALCREMIE,31,34
+#-------------------------------
+102 # Route 3
+25,10,10
+Land
+    COCOLING,14,17
+    AIPOM,14,16
+    HOOTHOOT,14,16
+    DUSTOX,14,16
+    BEAUTIFLY,14,17
+    LITLEO,14,17
+    CHIMCHAR,14,16
+    SCRAGGY,14,16
+    MINCCINO,14,16
+    EMOLGA,14,17
+    SNICK,13,16
+    KECLEON,13,16
+#-------------------------------
+104 # Fairloom Ruins
+25,10,10
+Land
+    COCOLING,14,16
+    BUNEARY,15,16
+    COMBEE,14,17
+    SCRAGGY,13,16
+    EMOLGA,14,16
+    TURTWIG,15,17
+    SNICK,15,16
+    KECLEON,14,17
+    PIKACHU,15,18
+    EEVEE,15,17
+    LITLEO,16,17
+    WOOPER,16,18
+#-------------------------------
+109 # Mt. Maycrop
+25,10,10
+Land
+    MACHOKE,32
+    MACHOKE,32
+    DONPHAN,33
+    DONPHAN,33
+    SHELGON,34
+    SHELGON,34
+    GARDEVOIR,34
+    GARDEVOIR,34
+    GALLADE,34
+    GALLADE,34
+    FRAXURE,34
+    FRAXURE,34
+Water
+    PELIPPER,35
+    COCONAB,35
+    STARMIE,35
+    GYARADOS,35
+    KINGDRA,35
+#-------------------------------
+118 # Route 4
+25,10,10
+Land
+    BELLSPROUT,19,21
+    WOOBAT,19,20
+    SWADLOON,17,19
+    DUSTOX,18,19
+    PUMPKABOO,19,21
+    SERVINE,19,20
+    GROWLITHE,19,21
+    STARAVIA,19,20
+    MISDREAVUS,21,23
+    EMOLGA,20,21
+    SNICK,19,21
+    KECLEON,20,22
+#-------------------------------
+124 # Aether Cave F1
+25,10,10
+Cave
+    GEODUDE,18
+    WHISMUR,18
+    SWINUB,18
+    SWINUB,18
+    MACHOP,18
+    MACHOP,18
+    ZUBAT,18
+    ZUBAT,18
+    ROGGENROLA,18
+    ROGGENROLA,18
+    CHANSEY,18
+    CHANSEY,18
+#-------------------------------
+128 # Connection Cave
+25,10,10
+Cave
+    GOLBAT,23
+    GOLBAT,24
+    CUBONE,23
+    CUBONE,23
+    SOAKCUFF,22
+    LAIRON,25
+    LUCARIO,25
+    ONIX,24
+    HITMONCHAN,22
+    HITMONTOP,22
+    HITMONLEE,22
+    ZORUA,25
+#-------------------------------
+132 # Mythic Forest
+25,10,10
+Land
+    WOBBUFFET,42
+    WOBBUFFET,42
+    WOBBUFFET,42
+    WOBBUFFET,42
+    WOBBUFFET,42
+    WOBBUFFET,42
+    WOBBUFFET,42
+    WOBBUFFET,42
+    WOBBUFFET,42
+    WOBBUFFET,42
+    WOBBUFFET,42
+    RAICHU_1,45
+Water
+    SKRELP,35
+    SKRELP,35
+    SKRELP,37
+    SKRELP,37
+    SKRELP,37
+#-------------------------------
+134 # Guardian Grotto
+25,10,10
+Land
+    WYNAUT,3
+    WYNAUT,3
+    WYNAUT,3
+    WYNAUT,3
+    WYNAUT,3
+    WYNAUT,3
+    WYNAUT,3
+    WYNAUT,3
+    WYNAUT,3
+    WYNAUT,3
+    WYNAUT,3
+    BELDUM,5
+#-------------------------------
+136 # Route 5
+25,10,10
+Land
+    STARAVIA,22,24
+    COCONAB,22,24
+    ESPURR,22,24
+    GROVYLE,22,24
+    BUNEARY,22,24
+    PETILIL,22,24
+    SKIDDO,22,24
+    MONFERNO,22,24
+    COTTONEE,22,24
+    FOONGUS,22,24
+    DEERLING,22,24
+    DITTO,25
+#-------------------------------
+144 # Route 6
+25,10,10
+Land
+    STARAPTOR,34,37
+    SLURPUFF,34,36
+    DUBWOOL,30,36
+    SIMIPOUR,34,36
+    DIGGERSBY,37,38
+    LILLIGANT,34,36
+    GOGOAT,32,34
+    TANGROWTH,31,35
+    WHIMSICOTT,33,36
+    VENUSAUR,34,37
+    SAWSBUCK,35,38
+    SIMISAGE,35,36
+#-------------------------------
+145 # Route 7
+25,10,10
+Land
+    HERACROSS,28,29
+    SANDSLASH,28,29
+    TRAPINCH,27,30
+    PINSIR,25,28
+    ZORUA,27,29
+    DRILBUR,28,29
+    CROBAT,28,30
+    DUSKULL,27,29
+    SHUPPET,27,29
+    DUNSPARCE,28,30
+    FALINKS,28,29
+    CHARMELEON,26,29
+#-------------------------------
+156 # Diamond Gym
+25,10,10
+Land
+    CUBCHOO,37
+    SNEASEL,38
+    GLACEON,35
+    SNORUNT,38
+    VANILLITE,35
+    JYNX,40
+    FROSLASS,38
+    GLALIE,38
+    BEARTIC,40
+    ABOMASNOW,38
+    AMAURA,39
+    CRABOMINABLE,40
+#-------------------------------
+157 # Route 13
+25,10,10
+Land
+    ROSELIA,53
+    YANMEGA,53
+    COCOFESTED,54
+    PRIMEAPE,54
+    BEEDRILL,54
+    LUDICOLO,54
+    ORICORIO,55
+    SERPENSYNC,55
+    ABSOL,54
+    WAVSTISNAIL,54
+    RILLABOOM,56
+    FLYGON,56
+Water
+    GYARADOS,55
+    STARMIE,55
+    TENTACRUEL,55
+    MILOTIC,55
+    SWAMPERT,55
+#-------------------------------
+161 # Route 121
+25,10,10
+Land
+    PYROAR,39
+    PYROAR,39
+    PYROAR,39
+    PRIMEAPE,39
+    PRIMEAPE,39
+    PRIMEAPE,39
+    PRIMEAPE,39
+    NINJASK,39
+    NINJASK,39
+    NINJASK,39
+    ABSOL,40
+    ABSOL,40
+#-------------------------------
+175 # Route 8
+25,10,10
+Land
+    MUK_1,38,40
+    MUK_1,38,40
+    MUK_1,38,40
+    XATU,38,40
+    XATU,38,40
+    ESPEON,38,40
+    ESPEON,38,40
+    ESPEON,38,40
+    GALLADE,38,40
+    GARDEVOIR,38,40
+    GARDEVOIR,38,40
+    WEEZING_1,38,40
+Water
+    SKRELP,35
+    SKRELP,35
+    SKRELP,37
+    SKRELP,37
+    SKRELP,37
+#-------------------------------
+192 # Mt. Seeter
+25,10,10
+Land
+    FROSLASS,45
+    FROSLASS,45
+    GLALIE,45
+    GLALIE,45
+    PARFORMANC,45
+    PARFORMANC,46
+    JYNX,45
+    JYNX,45
+    GLACEON,45
+    GLACEON,43
+    WEAVILE,47
+    TOGEKISS,46
+#-------------------------------
+195 # Seeter Outskirts
+25,10,10
+Land
+    TOGEKISS,48
+    FROSLASS,48
+    MIMIKYU,47
+    WALREIN,48
+    HUNTAIL,47
+    BANETTE,48
+    BEARTIC,48
+    SNOM,48
+    INFERNAPE,48
+    GLACEON,48
+    AEREON,48
+    MEDICHAM,49
+#-------------------------------
+197 # Seeter Outskirts
+25,10,10
+Land
+    TOGEKISS,48
+    FROSLASS,48
+    MIMIKYU,47
+    WALREIN,48
+    METANG,47
+    BANETTE,48
+    BEARTIC,48
+    SNOM,48
+    METANG,48
+    GLACEON,48
+    METANG,48
+    METANG,49
+#-------------------------------
+198 # Slumprop Forest
+25,10,10
+Land
+    GOURGEIST,50
+    GOURGEIST,50
+    MIMIKYU,51
+    MIMIKYU,50
+    SHELGON,49
+    BANETTE,49
+    BANETTE,50
+    DUSKNOIR,51
+    DUSKNOIR,51
+    SPECTREON,52
+    SNORLAX,54
+    ROTOM,54
+#-------------------------------
+218 # Route 9
+25,10,10
+Land
+    SNORLAX,53
+    SNORLAX,53
+    COCOFESTED,52
+    ARCANINE,52
+    NINETALES,52
+    BANETTE,52
+    BANETTE,52
+    LEAFEON,52
+    DELPHOX,54
+    BLAZIKEN,54
+    LEAVANNY,54
+    GARDEVOIR,55
+#-------------------------------
+219 # Sunside Creek
+25,10,10
+Land
+    SERPERIOR,54
+    ARCANINE,54
+    GOLEM,53
+    LEAFEON,52
+    MACHAMP,52
+    GLISCOR,54
+    MEOWSTIC,55
+    DECIDUEYE,55
+    SIRFETCHD,55
+    DRAPION,55
+    BINDSHII,55
+    WAVSTISNAIL,55
+Water
+    GYARADOS,55
+    STARMIE,55
+    COCOFESTED,50
+    VAPOREON,50
+    SWAMPERT,53
+#-------------------------------
+224 # Route 10
+25,10,10
+Land
+    SWELLOW,51
+    COCOFESTED,51
+    LEAFEON,52
+    ARCANINE,52
+    VAPOREON,53
+    ALTARIA,53
+    PELIPPER,53
+    LUCARIO,53
+    SCEPTILE,54
+    GALLADE,54
+    LEAVANNY,54
+    GARDEVOIR,55
+Water
+    GYARADOS,52
+    STARMIE,52
+    WAILORD,55
+    VAPOREON,50
+    SWAMPERT,53
+#-------------------------------
+231 # Passage of Night
+25,10,10
+Land
+    ZOROARK,36
+    ZOROARK,36
+    LAMPENT,35
+    LAMPENT,35
+    MIGHTYENA,36
+    MIGHTYENA,36
+    ALTARIA,35
+    ALTARIA,35
+    SWAMPERT,36
+    SWAMPERT,36
+    SCEPTILE,36
+    SCEPTILE,36
+#-------------------------------
+233 # Pokemon League
+25,10,10
+Land
+    SWELLOW,67
+    SWELLOW,67
+    SCEPTILE,67
+    SCEPTILE,67
+    FALINKS,67
+    FALINKS,67
+    PIDGEOT,67
+    PIDGEOT,67
+    SWALOT,67
+    SWALOT,67
+    LUXRAY,69
+    LUXRAY,69
+Water
+    GYARADOS,68
+    STARMIE,68
+    TENTACRUEL,68
+    MILOTIC,68
+    SWAMPERT,68
+#-------------------------------
+234 # Pokemon League
+25,10,10
+Land
+    SWELLOW,67
+    SWELLOW,67
+    SCEPTILE,67
+    SCEPTILE,67
+    FALINKS,67
+    FALINKS,67
+    PIDGEOT,67
+    PIDGEOT,67
+    SERPERIOR,67
+    SERPERIOR,67
+    LUXRAY,69
+    LUXRAY,69
+Water
+    COCOFESTED,68
+    STARMIE,68
+    TENTACRUEL,68
+    MILOTIC,68
+    SWAMPERT,68
+#-------------------------------
+237 # Molstrus Museum and Dock
+25,10,10
+Land
+    SWELLOW,67
+    SWELLOW,67
+    SCEPTILE,67
+    SCEPTILE,67
+    FALINKS,67
+    FALINKS,67
+    PIDGEOT,67
+    PIDGEOT,67
+    SERPERIOR,67
+    SERPERIOR,67
+    LUXRAY,69
+    LUXRAY,69
+Water
+    COCOFESTED,68
+    STARMIE,68
+    TENTACRUEL,68
+    MILOTIC,68
+    SWAMPERT,68
+#-------------------------------
+240 # Victory Road
+25,10,10
+Land
+    LEAVANNY,71
+    LEAVANNY,71
+    NOIVERN,71
+    NOIVERN,71
+    FALINKS,71
+    FALINKS,71
+    RAICHU,71
+    RAICHU,71
+    GOLEM,71
+    GOLEM,71
+    DUNEON,71
+    DUNEON,71
+#-------------------------------
+241 # Victory Road
+25,10,10
+Land
+    LEAVANNY,71
+    LEAVANNY,71
+    NOIVERN,71
+    NOIVERN,71
+    FALINKS,71
+    FALINKS,71
+    RAICHU,71
+    RAICHU,71
+    GOLEM,71
+    GOLEM,71
+    DUNEON,71
+    DUNEON,71
+#-------------------------------
+242 # Victory Road
+25,10,10
+Land
+    LEAVANNY,51
+    LEAVANNY,51
+    NOIVERN,51
+    NOIVERN,51
+    FALINKS,51
+    FALINKS,51
+    RAICHU,51
+    RAICHU,51
+    GOLEM,51
+    GOLEM,51
+    DUNEON,51
+    DUNEON,51
+#-------------------------------
+243 # Victory Road
+25,10,10
+Land
+    LEAVANNY,71
+    LEAVANNY,71
+    NOIVERN,71
+    NOIVERN,71
+    FALINKS,71
+    FALINKS,71
+    RAICHU,71
+    RAICHU,71
+    GOLEM,71
+    GOLEM,71
+    DUNEON,71
+    DUNEON,71
+#-------------------------------
+244 # Victory Road
+25,10,10
+Land
+    LEAVANNY,71
+    LEAVANNY,71
+    NOIVERN,71
+    NOIVERN,71
+    FALINKS,71
+    FALINKS,71
+    RAICHU,71
+    RAICHU,71
+    GOLEM,71
+    GOLEM,71
+    DUNEON,71
+    DUNEON,71
+#-------------------------------
+254 # Serene Onboard
+25,10,10
+Land
+    RAICHU,76
+    RAICHU,79
+    DRAMPA,78
+    DRAMPA,78
+    VICTREEBEL,79
+    VICTREEBEL,75
+    MANECTRIC,78
+    MANECTRIC,78
+    SCEPTILE,80
+    SCEPTILE,80
+    FLYGON,80
+    FLYGON,80
+#-------------------------------
+263 # Shrine Of Night
+25,10,10
+Land
+    FROSLASS,81
+    FROSLASS,81
+    ABOMASNOW,81
+    ABOMASNOW,81
+    AVALUGG,81
+    AVALUGG,81
+    GLACEON,81
+    GLACEON,81
+    BEARTIC,81
+    BEARTIC,81
+    NOIVERN,81
+    NOIVERN,81
+#-------------------------------
+271 # Route 121
+25,10,10
+Land
+    SUNKERN,3,4
+    POLIWAG,3,4
+    BULBASAUR,3,4
+    COMBEE,3,4
+    SENTRET,3,4
+    PIDGEY,3,4
+    SHINX,4,5
+    SHINX,4,5
+    HISSIORITE,3,4
+    MUNCHLAX,3,5
+    MUNCHLAX,3,5
+    AIPOM,3,5
+#-------------------------------
+272 # Courmine Sewers
+25,10,10
+Cave
+    EKANS,6
+    EKANS,6
+    GULPIN,6
+    ZUBAT,6
+    GRIMER,6
+    GULPIN,6
+    GRIMER,6
+    CROAGUNK,6
+    VENONAT,6
+    MAREANIE,6
+    SKORUPI,6
+    TOXEL,6
+#-------------------------------
+276 # Time Path
+25,10,10
+Land
+    SWELLOW,46
+    SWELLOW,47
+    SCEPTILE,47
+    SCEPTILE,45
+    FALINKS,45
+    FALINKS,49
+    GLISCOR,49
+    GLISCOR,46
+    SERPERIOR,47
+    SERPERIOR,47
+    KLINKLANG,50
+    KLINKLANG,50
+Water
+    GYARADOS,52
+    STARMIE,49
+    TENTACRUEL,50
+    VAPOREON,50
+    SWAMPERT,53
+#-------------------------------
+278 # Cavern Room
+25,10,10
+Cave
+    WOBBUFFET,50
+    WOBBUFFET,50
+    WOBBUFFET,50
+    WOBBUFFET,50
+    WOBBUFFET,50
+    WOBBUFFET,50
+    WOBBUFFET,50
+    WOBBUFFET,50
+    WOBBUFFET,50
+    WOBBUFFET,50
+    WOBBUFFET,50
+    WOBBUFFET,50
+Water
+    JELLICENT,47
+    JELLICENT,47
+    JELLICENT,47
+    JELLICENT,47
+    FEEBAS,5
+#-------------------------------
+285 # Thundercloud Island
+25,10,10
+Land
+    PIDGEOT,53
+    PIDGEOT,53
+    GOLEM,54
+    GOLEM,54
+    FALINKS,54
+    FALINKS,54
+    LUXRAY,55
+    LUXRAY,55
+    JOLTEON,54
+    JOLTEON,54
+    KLINKLANG,56
+    KLINKLANG,56
+Water
+    GYARADOS,55
+    STARMIE,55
+    TENTACRUEL,55
+    MILOTIC,55
+    SWAMPERT,55

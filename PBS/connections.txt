@@ -1,0 +1,46 @@
+﻿# See the documentation on the wiki to learn how to edit this file.
+#-------------------------------
+# Serene Ranch (252) - Serene City (261)
+252,32,0,261,0,71
+# Diamond Town (126) - Molstrus City (159)
+126,0,123,159,38,0
+# Right Filler (151) - Diamond Town (126)
+151,West,157,126,East,0
+# Thundercloud Island (285) - Sunside Village (220)
+285,North,0,220,South,32
+# Molstrus City (159) - Templon Town (176)
+159,0,0,176,11,287
+# Molstrus City (159) - Time Path (276)
+159,0,0,276,50,270
+# Molstrus City (159) - Route 121 (161)
+159,15,0,161,0,242
+# Molstrus City (159) - Route 121 (271)
+159,59,0,271,0,242
+# Molstrus City (159) - Route 7 (145)
+159,109,0,145,0,256
+# Molstrus City (159) - rock filler (96)
+159,175,0,96,0,186
+# Molstrus City (159) - Route 13 (157)
+159,43,0,157,0,85
+# tree filler (48) - Route 11 (80)
+48,South,0,80,North,65
+# Molstrus City (159) - rock filler (42)
+159,165,0,42,0,227
+# Molstrus City (159) - Route 9 (218)
+159,0,0,218,90,258
+# Molstrus City (159) - Route 5 (136)
+159,198,0,136,0,255
+# Molstrus City (159) - Route 13 (158)
+159,0,0,158,26,51
+# Molstrus City (159) - Route 10 (224)
+159,0,0,224,94,176
+# Molstrus City (159) - Sunside Creek (219)
+159,0,0,219,136,218
+# Molstrus City (159) - Tree Filler (153)
+159,0,0,153,38,126
+# Molstrus City (159) - Route 1 (43)
+159,123,0,43,0,186
+# Molstrus City (159) - Courmine Village (76)
+159,168,0,76,0,206
+# Molstrus City (159) - Courmine Village (32)
+159,95,0,32,0,222
