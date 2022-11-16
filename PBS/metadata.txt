@@ -609,7 +609,7 @@ Outdoor = true
 ShowArea = true
 #-------------------------------
 [134]
-# Guardian Grotto
+# Evening Cave
 SnapEdges = true
 BattleBack = cave1
 Outdoor = false
@@ -626,6 +626,10 @@ ShowArea = true
 [142]
 # Crystal Cavern
 BattleBack = elite8
+#-------------------------------
+[143]
+# Evening Cave
+SnapEdges = true
 #-------------------------------
 [144]
 # Route 6
@@ -644,6 +648,12 @@ ShowArea = true
 # Maycrop Town
 SnapEdges = true
 MapPosition = 0,17,6
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[147]
+# Passage of Evening
+SnapEdges = true
 Outdoor = true
 ShowArea = true
 #-------------------------------
@@ -741,9 +751,12 @@ Outdoor = true
 ShowArea = true
 #-------------------------------
 [178]
-# Mythic Forest
-BattleBack = forest
+# Shrine Of Evening
+SnapEdges = true
+BattleBack = 
 MapPosition = 0,15,7
+Outdoor = true
+ShowArea = true
 #-------------------------------
 [179]
 # Pokemon League
@@ -752,38 +765,32 @@ Outdoor = false
 ShowArea = false
 #-------------------------------
 [181]
-# Rusty Town
 SnapEdges = true
 MapPosition = 0,11,6
 Outdoor = true
 ShowArea = true
 #-------------------------------
 [184]
-# Rusty Gym
 MapPosition = 0,11,6
 DarkMap = true
 #-------------------------------
 [185]
-# Rusty Beach
 SnapEdges = true
 MapPosition = 0,11,6
 #-------------------------------
 [186]
-# Rusty Beach
 SnapEdges = true
 MapPosition = 0,11,6
 Outdoor = true
 ShowArea = true
 #-------------------------------
 [187]
-# Rusty Beach
 SnapEdges = true
 MapPosition = 0,11,6
 Outdoor = true
 ShowArea = true
 #-------------------------------
 [188]
-# Rusty Gym
 SnapEdges = true
 BattleBack = cave1
 MapPosition = 0,11,6
@@ -791,33 +798,28 @@ DarkMap = true
 Outdoor = false
 #-------------------------------
 [189]
-# Rusty Gym
 SnapEdges = true
 BattleBack = cave1
 MapPosition = 0,11,6
 #-------------------------------
 [190]
-# Rusty Gym Exit
 SnapEdges = true
 MapPosition = 0,11,6
 DarkMap = true
 #-------------------------------
 [211]
-# Pokemon League
 SnapEdges = true
 BattleBack = lily2
 Outdoor = true
 ShowArea = true
 #-------------------------------
 [212]
-# Pokemon League
 SnapEdges = true
 BattleBack = izu
 Outdoor = true
 ShowArea = true
 #-------------------------------
 [213]
-# Diamond Desert
 SnapEdges = true
 BattleBack = indoor3
 MapPosition = 0,19,17
@@ -825,7 +827,6 @@ Outdoor = true
 ShowArea = true
 #-------------------------------
 [215]
-# Diamond Town
 SnapEdges = true
 MapPosition = 0,22,17
 Outdoor = true
@@ -837,14 +838,13 @@ BattleBack = indoor7
 MapPosition = 0,12,9
 #-------------------------------
 [217]
-# Diamond Gym
 BattleBack = darkgym
 MapPosition = 0,22,17
 DarkMap = true
 #-------------------------------
 [218]
 # Route 9
-SnapEdges = false
+SnapEdges = true
 MapPosition = 0,11,18
 Outdoor = true
 ShowArea = true
@@ -876,7 +876,6 @@ Outdoor = true
 ShowArea = true
 #-------------------------------
 [225]
-# Pokemon League
 BattleBack = vanilla
 #-------------------------------
 [226]
@@ -935,74 +934,62 @@ Outdoor = false
 ShowArea = false
 #-------------------------------
 [238]
-# Victory Road
 SnapEdges = true
 MapPosition = 0,15,17
 Outdoor = true
 ShowArea = true
 #-------------------------------
 [239]
-# Victory Road
 SnapEdges = true
 MapPosition = 0,15,17
 ShowArea = true
 #-------------------------------
 [240]
-# Victory Road
 SnapEdges = true
 MapPosition = 0,15,17
 Outdoor = true
 ShowArea = true
 #-------------------------------
 [241]
-# Victory Road
 SnapEdges = true
 MapPosition = 0,15,17
 ShowArea = true
 #-------------------------------
 [242]
-# Victory Road
 SnapEdges = true
 ShowArea = true
 #-------------------------------
 [243]
-# Victory Road
 SnapEdges = true
 MapPosition = 0,15,17
 Outdoor = true
 ShowArea = true
 #-------------------------------
 [244]
-# Victory Road
 SnapEdges = true
 MapPosition = 0,15,17
 Outdoor = true
 ShowArea = true
 #-------------------------------
 [245]
-# Pokemon League
 SnapEdges = true
 MapPosition = 0,17,17
 Outdoor = true
 ShowArea = true
 #-------------------------------
 [247]
-# Pokemon League
 BattleBack = fen
 MapPosition = 0,17,17
 #-------------------------------
 [248]
-# Pokemon League
 BattleBack = olivia
 MapPosition = 0,17,17
 #-------------------------------
 [249]
-# Pokemon League
 BattleBack = champion1
 MapPosition = 0,17,17
 #-------------------------------
 [250]
-# Pokemon League
 BattleBack = izu
 MapPosition = 0,17,17
 #-------------------------------
@@ -1088,22 +1075,24 @@ Outdoor = false
 ShowArea = true
 #-------------------------------
 [276]
-# Time Path
+# Templon Path
+SnapEdges = true
 Outdoor = true
 ShowArea = true
 #-------------------------------
 [277]
-# Time Cavern
 SnapEdges = true
 BattleBack = cave1
 #-------------------------------
 [278]
-# Cavern Room
 BattleBack = cave1
 #-------------------------------
 [279]
-# Time Cavern
 SnapEdges = true
+#-------------------------------
+[281]
+# Templon Gym
+BattleBack = gym
 #-------------------------------
 [282]
 # Distortion World
@@ -1115,7 +1104,6 @@ SnapEdges = true
 Outdoor = false
 #-------------------------------
 [284]
-# Frontlay Island
 SnapEdges = true
 BattleBack = true
 Outdoor = false
