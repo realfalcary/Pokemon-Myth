@@ -1077,7 +1077,7 @@ ShowArea = true
 [276]
 # Templon Path
 SnapEdges = true
-Outdoor = true
+Outdoor = false
 ShowArea = true
 #-------------------------------
 [277]
