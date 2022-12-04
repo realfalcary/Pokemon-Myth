@@ -261,7 +261,7 @@ Cave
     GOLBAT,23
     GOLBAT,24
     CUBONE,23
-    CUBONE,23
+    RACCANE,23
     SOAKCUFF,22
     LAIRON,25
     LUCARIO,25
@@ -783,7 +783,7 @@ Cave
     SKORUPI,6
     TOXEL,6
 #-------------------------------
-276 # Time Path
+276 # Templon Path
 25,10,10
 Land
     SWELLOW,46

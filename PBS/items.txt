@@ -862,3 +862,8 @@
 838,SERENETICKET,Serene Ticket,Serene Tickets,8,0,"A ticket required to board a boat to Serene.",0,0,6,
 839,FLYGONITE,Flygonite,Flygonites,1,0,"One of a variety of mysterious Mega Stones. Have Flygon hold it, and it will be able to Mega Evolve.",0,0,12,
 840,MYTHICCRYSTAL,Mythic Crystal,Mythic Crystals,8,0,"A glamerous, pink gemstone from the depths of Mythan, It's loved by a certain Pokemon.",0,0,6,
+841,EXPCANDYXXL,Exp. Candy XXL,Exp. Candies XXL,1,10000,"A candy that is packed with energy. When consumed, it will grant a single Pokémon a immense large amount of Exp. Points.",1,0,0,
+842,LOSTPHONE,Lost Phone,Lost Phones,8,0,"A lost phone that often has missed calls, but never rings.",0,0,6,
+843,EVENINGSHARD,Evening Shard,Evening Shards,8,0,"A valiant crystal, shaped out of a vibrant rock. It was extracted from the Shrine Of Evening. ",0,0,6,
+844,DAYSHARD,Day Shard,Day Shards,8,0,"A valiant crystal, shaped out of a vibrant rock. It was extracted from the Shrine Of Day. ",0,0,6,
+845,NIGHTSHARD,Night Shard,Night Shards,8,0,"A valiant crystal, shaped out of a vibrant rock. It was extracted from the Shrine Of Night. ",0,0,6,

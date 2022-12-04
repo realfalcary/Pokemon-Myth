@@ -765,14 +765,18 @@ Outdoor = false
 ShowArea = false
 #-------------------------------
 [181]
+# Mythic Caverns
 SnapEdges = true
+BattleBack = CrystalCavernPink
 MapPosition = 0,11,6
 Outdoor = true
 ShowArea = true
 #-------------------------------
 [184]
+# Serene City
+SnapEdges = true
 MapPosition = 0,11,6
-DarkMap = true
+DarkMap = false
 #-------------------------------
 [185]
 SnapEdges = true
@@ -1026,7 +1030,6 @@ Outdoor = true
 ShowArea = true
 #-------------------------------
 [260]
-# TEST
 SnapEdges = true
 BattleBack = darkgym
 #-------------------------------

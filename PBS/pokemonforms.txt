@@ -14,7 +14,6 @@ BattlerEnemyY = 11
 #-------------------------------
 [CHARIZARD,4]
 FormName = Stoned Mesprit
-BattlerEnemyY = 27
 #-------------------------------
 [CHIMECHO,1]
 FormName = Mega Chimecho
@@ -25,6 +24,7 @@ BaseStats = 85,70,90,85,105,95
 FormName = Mega Melmetal
 MegaStone = MELMETALITE
 BaseStats = 100,120,110,120,110,110
+BattlerEnemyY = 5
 #-------------------------------
 [SYLVEON,1]
 FormName = Mega Sylveon
@@ -34,11 +34,12 @@ BaseStats = 115,75,105,60,120,140
 [HOOH,1]
 FormName = Corrupted Ho-Oh
 Abilities = CORRUPTAURA
+BattlerEnemyY = 7
 #-------------------------------
 [BINDSHII,1]
 FormName = Corrupted Bindshii
 Abilities = CORRUPTAURA
-BattlerEnemyY = 18
+BattlerEnemyY = 7
 #-------------------------------
 [VENUSAUR,1]
 FormName = Mega Venusaur
@@ -87,8 +88,7 @@ HiddenAbility = SPEEDBOOST
 Height = 2.4
 Weight = 155.5
 Pokedex = The large wing pattern on the back of Flygon resembles a Dragon Bulb Flower.
-BattlerPlayerY = 2
-BattlerEnemyY = 7
+BattlerEnemyY = 4
 #-------------------------------
 [JIRACHI,1]
 FormName = Mega Jirachi
@@ -99,8 +99,7 @@ HiddenAbility = SERENEGRACE
 Height = 2.4
 Weight = 155.5
 Pokedex = After Arcanine learned how to control its fire, it began to create heat tornados causing large amounts of smoke to emit from its body.
-BattlerPlayerY = 2
-BattlerEnemyY = 7
+BattlerEnemyY = 9
 #-------------------------------
 [MEW,1]
 FormName = Mega Mew
@@ -112,8 +111,7 @@ HiddenAbility = SERENEGRACE
 Height = 2.4
 Weight = 155.5
 Pokedex = After Arcanine learned how to control its fire, it began to create heat tornados causing large amounts of smoke to emit from its body.
-BattlerPlayerY = 2
-BattlerEnemyY = 7
+BattlerEnemyY = 13
 #-------------------------------
 [CHARIZARD,1]
 FormName = Mega Charizard X
@@ -138,6 +136,7 @@ HiddenAbility = DROUGHT
 Weight = 100.5
 Pokedex = Its bond with its Trainer is the source of its power. It boasts speed and maneuverability greater than that of a jet fighter.
 BattlerPlayerY = 7
+BattlerEnemyY = 12
 #-------------------------------
 [BEEDRILL,1]
 FormName = Mega Beedrill
@@ -175,7 +174,7 @@ Weight = 3.8
 Color = Black
 Pokedex = With its incisors, it gnaws through doors and infiltrates people’s homes. Then, with a twitch of its whiskers, it steals whatever food it finds.
 WildItemUncommon = PECHABERRY
-BattlerEnemyY = 26
+BattlerEnemyY = 21
 #-------------------------------
 [ZOROARK,2]
 FormName = Hisuian
@@ -187,6 +186,7 @@ Weight = 3.8
 Color = Black
 Pokedex = With its incisors, it gnaws through doors and infiltrates people’s homes. Then, with a twitch of its whiskers, it steals whatever food it finds.
 WildItemUncommon = PECHABERRY
+BattlerEnemyY = 6
 #-------------------------------
 [RATICATE,1]
 FormName = Alolan
@@ -370,7 +370,7 @@ Type1 = FIRE
 Type2 = GHOST
 BaseStats = 73,67,75,109,81,100
 EffortPoints = 0,0,0,2,0,0
-BattlerEnemyY = 20
+BattlerEnemyY = 15
 #-------------------------------
 [DIGLETT,1]
 FormName = Alolan
@@ -621,7 +621,6 @@ BattlerEnemyY = 21
 #-------------------------------
 [GENGAR,3]
 FormName = Possessed Gengar
-BaseStats = 60,65,60,110,130,75
 #-------------------------------
 [EXEGGUTOR,1]
 FormName = Alolan
@@ -715,7 +714,7 @@ HiddenAbility = MOLDBREAKER
 Weight = 305.0
 Pokedex = It zooms out of the water at Mach speeds. Even large ships caught in its path are split cleanly in two!
 BattlerPlayerY = 4
-BattlerEnemyY = 8
+BattlerEnemyY = 12
 #-------------------------------
 [AERODACTYL,1]
 FormName = Mega Aerodactyl
@@ -1038,6 +1037,16 @@ Height = 1.9
 Weight = 55.2
 BattlerPlayerY = 3
 BattlerEnemyY = 12
+#-------------------------------
+[SCEPTILE,3]
+FormName = Armiran Sceptile
+Type1 = POISON
+Type2 = DARK
+BaseStats = 70,145,75,145,110,85
+Abilities = ELECTRICSURGE
+HiddenAbility = ELECTRICSURGE
+Height = 1.9
+Weight = 55.2
 #-------------------------------
 [BLAZIKEN,1]
 FormName = Mega Blaziken
@@ -1495,6 +1504,7 @@ Type1 = FIGHTING
 [ARCEUS,20]
 FormName = True Form
 BaseStats = 125,125,125,125,125,125
+BattlerEnemyY = 14
 #-------------------------------
 [ARCEUS,2]
 FormName = Flying Type
@@ -2651,6 +2661,7 @@ BaseStats = 70,125,60,115,130,80
 Abilities = PRANKSTER
 HiddenAbility = SPEEDBOOST
 Weight = 155.5
+BattlerEnemyY = 18
 #-------------------------------
 [SPECTREON,1]
 FormName = Mega Spectreon
