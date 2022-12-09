@@ -481,7 +481,7 @@ ShowArea = false
 [098]
 # Maycrop Cave
 SnapEdges = true
-BattleBack = elite6
+BattleBack = cave1
 MapPosition = 0,22,13
 Outdoor = false
 #-------------------------------
@@ -620,7 +620,7 @@ Environment = Cave
 SnapEdges = true
 BattleBack = 
 MapPosition = 0,19,9
-Outdoor = false
+Outdoor = true
 ShowArea = true
 #-------------------------------
 [142]
@@ -779,6 +779,7 @@ MapPosition = 0,11,6
 DarkMap = false
 #-------------------------------
 [185]
+# Courmine Village
 SnapEdges = true
 MapPosition = 0,11,6
 #-------------------------------
@@ -1080,7 +1081,7 @@ ShowArea = true
 [276]
 # Templon Path
 SnapEdges = true
-Outdoor = false
+Outdoor = true
 ShowArea = true
 #-------------------------------
 [277]
