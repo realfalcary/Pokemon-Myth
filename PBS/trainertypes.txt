@@ -71,7 +71,7 @@
 68,ELITEFOUR_Bruno,Elite Four,200,Battle Elite,Battle victory leader,,Male,,
 69,ELITEFOUR_Agatha,Elite Four,200,Battle Elite,Battle victory leader,,Female,,
 70,ELITEFOUR_Lance,Elite Four,200,Battle Elite,Battle victory leader,,Male,,
-71,CHAMPIONMIZZY,Former Champion,200,Battle Elite,Battle victory leader,,Male,,
+71,MIZZY,Former Champion,200,Battle Elite,Battle victory leader,,Male,,
 72,RIVAL1,Rival,200,Battle Elite,Battle victory leader,,Male,,
 73,LEADER1,Gym Leader,200,Battle Gym Leader,Battle victory leader,,Male,,
 74,GRUNT,Team Corrupt,200,Vs. Corrupt Grunt,,,Female,,
@@ -124,3 +124,4 @@
 121,KELSEA,Rose Researcher,200,Battle Gym Leader,Battle victory leader,,Female,,
 122,LILYHALLOWEEN,Pokemon Trainer,200,Battle Gym Leader,Battle victory leader,,Female,,
 123,N,Unova Traveler,200,Battle Gym Leader,Battle victory leader,,Male,,
+124,CMARCUS,Corrupt Leader,200,Battle Gym Leader,Battle victory leader,,Male,,

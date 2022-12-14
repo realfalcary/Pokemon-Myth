@@ -409,7 +409,8 @@ Outdoor = true
 #-------------------------------
 [080]
 # Route 11
-Weather = Rain,100
+SnapEdges = true
+BattleBack = desert
 MapPosition = 0,12,10
 Outdoor = true
 ShowArea = true
@@ -570,6 +571,8 @@ MapPosition = 0,22,6
 #-------------------------------
 [126]
 # Diamond Town
+SnapEdges = true
+BattleBack = desert
 MapPosition = 0,12,12
 Outdoor = true
 ShowArea = true
@@ -665,13 +668,13 @@ MapPosition = 0,17,6
 Environment = None
 #-------------------------------
 [155]
-# Poke Mart
+# Diamond Inn
 Outdoor = false
 ShowArea = false
 #-------------------------------
 [156]
 # Diamond Gym
-BattleBack = 
+BattleBack = gym
 Outdoor = false
 Environment = None
 ShowArea = false
@@ -784,33 +787,39 @@ SnapEdges = true
 MapPosition = 0,11,6
 #-------------------------------
 [186]
+# Desert Resort
 SnapEdges = true
+BattleBack = desert
 MapPosition = 0,11,6
 Outdoor = true
 ShowArea = true
 #-------------------------------
 [187]
+# Desert Reserve
 SnapEdges = true
 MapPosition = 0,11,6
 Outdoor = true
 ShowArea = true
 #-------------------------------
 [188]
-SnapEdges = true
-BattleBack = cave1
+# Corrupt Lab
+SnapEdges = false
+BattleBack = 
 MapPosition = 0,11,6
-DarkMap = true
+DarkMap = false
 Outdoor = false
 #-------------------------------
 [189]
+# Elevator
 SnapEdges = true
 BattleBack = cave1
 MapPosition = 0,11,6
 #-------------------------------
 [190]
+# Corrupt Lab 
 SnapEdges = true
 MapPosition = 0,11,6
-DarkMap = true
+DarkMap = false
 #-------------------------------
 [211]
 SnapEdges = true
@@ -863,19 +872,19 @@ ShowArea = true
 #-------------------------------
 [220]
 # Sunside Village
-SnapEdges = false
+SnapEdges = true
 MapPosition = 0,12,9
 Outdoor = true
 ShowArea = true
 #-------------------------------
 [223]
 # Sunside Gym
-BattleBack = indoor7
+BattleBack = gym
 MapPosition = 0,12,9
 #-------------------------------
 [224]
 # Route 10
-SnapEdges = false
+SnapEdges = true
 MapPosition = 0,12,11
 Outdoor = true
 ShowArea = true
@@ -1081,7 +1090,7 @@ ShowArea = true
 [276]
 # Templon Path
 SnapEdges = true
-Outdoor = true
+Outdoor = false
 ShowArea = true
 #-------------------------------
 [277]
@@ -1114,8 +1123,10 @@ Outdoor = false
 ShowArea = true
 #-------------------------------
 [285]
-# Thundercloud Island
-Weather = Storm,100
+# Roycloud Passway
+SnapEdges = true
+BattleBack = desert
+Weather = Sun,100
 MapPosition = 0,13,10
 Outdoor = true
 ShowArea = true

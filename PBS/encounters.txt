@@ -19,24 +19,34 @@ Land
 080 # Route 11
 25,10,10
 Land
-    FLORGES,53
-    FLORGES,53
-    DELUGAR,54
-    DELUGAR,54
-    ALTARIA,54
-    ALTARIA,54
-    LUXRAY,55
-    LUXRAY,55
-    ZEBSTRIKA,54
-    ZEBSTRIKA,54
-    KLINKLANG,56
-    KLINKLANG,56
-Water
-    GYARADOS,55
-    STARMIE,55
-    TENTACRUEL,55
-    MILOTIC,55
-    SWAMPERT,55
+    CAMERUPT,48
+    CAMERUPT,48
+    DELUGAR,48
+    DELUGAR,48
+    ALTARIA,48
+    ALTARIA,48
+    LUXRAY,48
+    LUXRAY,48
+    ZEBSTRIKA,48
+    ZEBSTRIKA,48
+    KLINKLANG,48
+    KLINKLANG,48
+#-------------------------------
+186 # Desert Resort
+25,10,10
+Land
+    SKARMORY,49
+    SKARMORY,49
+    SANDSLASH,49
+    SANDSLASH,49
+    PYTHONOVA,49
+    PYTHONOVA,49
+    PANGORO,49
+    PANGORO,49
+    MARACTUS,49
+    MARACTUS,49
+    DUNEON,49
+    DUNEON,49
 #-------------------------------
 083 # Courmine Cave F1
 25,10,10
@@ -293,7 +303,7 @@ Water
     SKRELP,37
     SKRELP,37
 #-------------------------------
-134 # Guardian Grotto
+134 # Evening Cave
 25,10,10
 Land
     WYNAUT,3
@@ -433,7 +443,7 @@ Water
     SKRELP,37
     SKRELP,37
 #-------------------------------
-192 # Mt. Seeter
+192
 25,10,10
 Land
     FROSLASS,45
@@ -449,7 +459,7 @@ Land
     WEAVILE,47
     TOGEKISS,46
 #-------------------------------
-195 # Seeter Outskirts
+195
 25,10,10
 Land
     TOGEKISS,48
@@ -465,7 +475,7 @@ Land
     AEREON,48
     MEDICHAM,49
 #-------------------------------
-197 # Seeter Outskirts
+197
 25,10,10
 Land
     TOGEKISS,48
@@ -481,7 +491,7 @@ Land
     METANG,48
     METANG,49
 #-------------------------------
-198 # Slumprop Forest
+198
 25,10,10
 Land
     GOURGEIST,50
@@ -500,18 +510,18 @@ Land
 218 # Route 9
 25,10,10
 Land
-    SNORLAX,47
-    MAGNIFIDOVE,47
+    SNORLAX,46
+    MAGNIFIDOVE,46
     COCOFESTED,46
     ARCANINE,46
-    NINETALES,47
-    BANETTE,47
-    BANETTE,47
+    NINETALES,46
+    BANETTE,46
+    BANETTE,46
     LEAFEON,46
-    DELPHOX,48
+    DELPHOX,46
     BLAZIKEN,46
-    LEAVANNY,47
-    GARDEVOIR,45
+    LEAVANNY,46
+    GARDEVOIR,46
 #-------------------------------
 219 # Sunside Creek
 25,10,10
@@ -538,24 +548,24 @@ Water
 224 # Route 10
 25,10,10
 Land
-    SWELLOW,51
-    COCOFESTED,51
-    LEAFEON,52
-    ARCANINE,52
-    VAPOREON,53
-    ALTARIA,53
-    PELIPPER,53
-    LUCARIO,53
-    SCEPTILE,54
-    GALLADE,54
-    LEAVANNY,54
-    GARDEVOIR,55
+    SWELLOW,46
+    COCOFESTED,46
+    LEAFEON,46
+    ARCANINE,46
+    VAPOREON,46
+    ALTARIA,46
+    PELIPPER,46
+    LUCARIO,46
+    SCEPTILE,46
+    GALLADE,46
+    LEAVANNY,46
+    GARDEVOIR,46
 Water
-    GYARADOS,52
-    STARMIE,52
-    WAILORD,55
-    VAPOREON,50
-    SWAMPERT,53
+    GYARADOS,46
+    STARMIE,46
+    WAILORD,46
+    VAPOREON,46
+    SWAMPERT,46
 #-------------------------------
 231 # Passage of Night
 25,10,10
@@ -639,7 +649,7 @@ Water
     MILOTIC,68
     SWAMPERT,68
 #-------------------------------
-240 # Victory Road
+240
 25,10,10
 Land
     LEAVANNY,71
@@ -655,7 +665,7 @@ Land
     DUNEON,71
     DUNEON,71
 #-------------------------------
-241 # Victory Road
+241
 25,10,10
 Land
     LEAVANNY,71
@@ -671,7 +681,7 @@ Land
     DUNEON,71
     DUNEON,71
 #-------------------------------
-242 # Victory Road
+242
 25,10,10
 Land
     LEAVANNY,51
@@ -687,7 +697,7 @@ Land
     DUNEON,51
     DUNEON,51
 #-------------------------------
-243 # Victory Road
+243
 25,10,10
 Land
     LEAVANNY,71
@@ -703,7 +713,7 @@ Land
     DUNEON,71
     DUNEON,71
 #-------------------------------
-244 # Victory Road
+244
 25,10,10
 Land
     LEAVANNY,71
@@ -805,7 +815,7 @@ Water
     VAPOREON,50
     SWAMPERT,53
 #-------------------------------
-278 # Cavern Room
+278
 25,10,10
 Cave
     WOBBUFFET,50
@@ -827,24 +837,24 @@ Water
     JELLICENT,47
     FEEBAS,5
 #-------------------------------
-285 # Thundercloud Island
+285 # Roycloud Passway
 25,10,10
 Land
-    PIDGEOT,53
-    PIDGEOT,53
-    GOLEM,54
-    GOLEM,54
-    FALINKS,54
-    FALINKS,54
-    LUXRAY,55
-    LUXRAY,55
-    JOLTEON,54
-    JOLTEON,54
-    KLINKLANG,56
-    KLINKLANG,56
+    DUGTRIO,47
+    DUGTRIO,47
+    GOLEM,47
+    GOLEM,47
+    FALINKS,47
+    FALINKS,47
+    LUXRAY,47
+    LUXRAY,47
+    JOLTEON,47
+    JOLTEON,47
+    KLINKLANG,47
+    KLINKLANG,47
 Water
-    GYARADOS,55
-    STARMIE,55
-    TENTACRUEL,55
-    MILOTIC,55
-    SWAMPERT,55
+    GYARADOS,50
+    STARMIE,50
+    TENTACRUEL,50
+    MILOTIC,50
+    SWAMPERT,50

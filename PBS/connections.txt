@@ -6,11 +6,9 @@
 126,0,123,159,38,0
 # Right Filler (151) - Diamond Town (126)
 151,West,157,126,East,0
-# Thundercloud Island (285) - Sunside Village (220)
-285,North,0,220,South,32
 # Molstrus City (159) - Templon Town (176)
 159,0,0,176,11,287
-# Molstrus City (159) - Time Path (276)
+# Molstrus City (159) - Templon Path (276)
 159,0,0,276,50,270
 # Molstrus City (159) - Route 121 (161)
 159,15,0,161,0,242
@@ -44,3 +42,5 @@
 159,168,0,76,0,206
 # Molstrus City (159) - Courmine Village (32)
 159,95,0,32,0,222
+# Thundercloud Island (285) - Sunside Village (220)
+285,0,0,220,75,63
