@@ -1874,7 +1874,7 @@ Pokemon = INFERNAPE,54
 Pokemon = LUCARIO,57
     Moves = CLOSECOMBAT,METEORMASH,BULLETPUNCH,SWORDSDANCE
     Item = LUCARIONITE
-    Role = WINCONDITION
+    Role = SETUPSWEEPER
 #-------------------------------
 [SCIENTIST,Quandale,1]
 LoseText = "My calculations were wrong!"
