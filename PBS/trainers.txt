@@ -700,6 +700,10 @@ Pokemon = NOCTOWL,46
 Pokemon = CHIMEAURA,49
     Moves = PSYCHIC,UPROAR,FLASHCANNON,ENERGYBALL
     IV = 31
+Pokemon = SONAREON,48
+    Item = LIFEORB
+    Ability = 2
+    Moves = HYPERVOICE,STARBOLT,RECOVER,HYPERBEAM
 #-------------------------------
 [ACETRAINER,Mary,1]
 LoseText = "Not even my well trained Pokemon stood a chance against you."
