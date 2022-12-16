@@ -55,7 +55,7 @@ Cave
     ZUBAT,4
     CUBONE,4
     CUBONE,4
-    DAMPURR,4
+    CHINGLING,4
     CHINGLING,4
     RIOLU,4
     RIOLU,4
@@ -71,7 +71,7 @@ Cave
     ZUBAT,4
     CUBONE,4
     CUBONE,4
-    DAMPURR,4
+    CHINGLING,4
     CHINGLING,4
     RIOLU,4
     RIOLU,4
@@ -85,7 +85,7 @@ Cave
 Land
     ZIGZAGOON_1,9,11
     ZIGZAGOON_1,9,11
-    DAMPURR,9,11
+    TREECKO,9,11
     TREECKO,9,11
     POOCHYENA,9,11
     KRICKETUNE,10,12
@@ -114,22 +114,6 @@ SuperRod
     STARYU,12,15
     STARYU,14,17
     STARYU,14,17
-#-------------------------------
-094 # Aether Heart
-25,10,10
-Land
-    DUGTRIO,26
-    DUGTRIO,26
-    DUGTRIO,26
-    DUGTRIO,26
-    DUGTRIO,26
-    DUGTRIO,26
-    DUGTRIO,26
-    DUGTRIO,26
-    DUGTRIO,26
-    DUGTRIO,26
-    DUGTRIO,26
-    LARVITAR,26
 #-------------------------------
 098 # Maycrop Cave
 25,10,10

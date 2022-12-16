@@ -8,10 +8,10 @@ Pokemon = RUFFLET,5
 [RIVAL1,Marcus,2]
 LoseText = "I guess I need to keep training, dont you think?"
 Pokemon = COCOLING,7
-    Moves = ABSORB,LEECHSEED
+    Moves = ABSORB,LEECHSEED,PROTECT,QUICKATTACK
     Item = ORANBERRY
 Pokemon = RUFFLET,8
-    Moves = PECK,GROWL,FLASH
+    Moves = PECK,GROWL,FLASH,QUICKATTACK
     Item = ORANBERRY
 #-------------------------------
 [RANGER_M,Micheal,1]
@@ -101,13 +101,15 @@ Pokemon = GLIGAR,13
 #-------------------------------
 [IZU,Izu,1]
 LoseText = "Wait... so you aren't with those goons?"
-Pokemon = HOUNDOUR,13
-    Moves = EMBER,QUICKATTACK,BITE,ROAR
-    Item = CHARCOAL
-Pokemon = DAMPURR,13
+Pokemon = HOUNDOUR,15
+    Moves = INCINERATE,SNARL,SOLARBEAM,SWIFT
+    Item = POWERHERB
+Pokemon = DAMPURR,15
     Moves = ROCKBLAST,WATERGUN,GROWL,TACKLE
-Pokemon = MELTAN,14
-    Moves = METALCLAW,DIG,SANDATTACK,THUNDERPUNCH
+Pokemon = PUMPKABOO,14
+    Moves = RAZORLEAF,LEECHSEED,WILLOWISP,SYNTHESIS
+Pokemon = MELTAN,16
+    Moves = METALCLAW,TOXIC,SUBSTITUTE,PROTECT
     Item = LEFTOVERS
 #-------------------------------
 [BOARDER,Nick,1]
@@ -123,12 +125,6 @@ Pokemon = GLACEON,19
 LoseText = "You're like hot cocoa on a snowy day!"
 Pokemon = SNOM,18
 Pokemon = SMOOCHUM,19
-#-------------------------------
-[LEADER_Misty,Misty,1]
-LoseText = "Congrats, go fight our leader now!"
-Pokemon = PSYDUCK,17
-Pokemon = SNOM,17
-Pokemon = GLACEON,17
 #-------------------------------
 [LEADER2,Alexander,1]
 LoseText = "Very well, you deserve my badge."
@@ -1256,12 +1252,12 @@ Pokemon = CHARIZARD,36
 [LASS,Carrie,1]
 Items = HYPERPOTION,FULLRESTORE,FULLHEAL
 LoseText = "Incredible, you are quite skilled!"
-Pokemon = AMPHAROS,34
+Pokemon = FLAAFFY,25
     Item = EXPERTBELT
-Pokemon = CRYSTALEON,33
+Pokemon = CRYSTALEON,26
     Moves = ROCKTOMB,TOXIC,EARTHQUAKE,EXTREMESPEED
     Item = HARDSTONE
-Pokemon = ABSOL,35
+Pokemon = ABSOL,28
     Moves = NIGHTSLASH,PSYCHOBOOST,NASTYPLOT,AERIALACE
     Item = ABSOLITE
 #-------------------------------
