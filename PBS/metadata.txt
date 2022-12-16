@@ -411,6 +411,7 @@ Outdoor = true
 # Route 11
 SnapEdges = true
 BattleBack = desert
+Weather = Sandstorm,100
 MapPosition = 0,12,10
 Outdoor = true
 ShowArea = true
@@ -617,6 +618,13 @@ SnapEdges = true
 BattleBack = cave1
 Outdoor = false
 Environment = Cave
+#-------------------------------
+[135]
+# Resivor Dock
+SnapEdges = true
+BattleBack = desert
+Outdoor = true
+ShowArea = true
 #-------------------------------
 [136]
 # Route 5
