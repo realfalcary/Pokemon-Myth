@@ -1,0 +1,7 @@
+v3.0.8 Patch Notes
+
+- Fixed Route 5 softlock involving guard blocking your way
+- Fixed teleport softlock in Sunside house
+- Added Plaineon (Evolves from Eevee at level 23)
+- Many bug fixes
+- Nerfed Ivy's Vaporeon in front of Templon Gym 
