@@ -5,3 +5,4 @@ v3.0.8 Patch Notes
 - Added Plaineon (Evolves from Eevee at level 23)
 - Many bug fixes
 - Nerfed Ivy's Vaporeon in front of Templon Gym 
+- Added minor content update involving Mari and Resivor Islands

@@ -163,6 +163,7 @@ ShowArea = true
 [032]
 # Courmine Village
 SnapEdges = true
+MapPosition = 0,17,9
 Outdoor = true
 ShowArea = true
 #-------------------------------
@@ -439,7 +440,7 @@ ShowArea = true
 # Eclipse Village
 SnapEdges = true
 BattleBack = 
-MapPosition = 0,22,14
+MapPosition = 0,17,13
 Outdoor = false
 Environment = None
 ShowArea = true
@@ -452,14 +453,14 @@ BattleBack = gym
 # Route 2
 SnapEdges = true
 BattleBack = 
-MapPosition = 0,18,13
+MapPosition = 0,19,13
 Outdoor = true
 ShowArea = true
 #-------------------------------
 [090]
 # Avialodge Town
 SnapEdges = true
-MapPosition = 0,22,13
+MapPosition = 0,21,13
 Outdoor = true
 ShowArea = true
 #-------------------------------
@@ -484,7 +485,6 @@ ShowArea = false
 # Maycrop Cave
 SnapEdges = true
 BattleBack = cave1
-MapPosition = 0,22,13
 Outdoor = false
 #-------------------------------
 [099]
@@ -531,6 +531,7 @@ DarkMap = true
 [109]
 # Mt. Maycrop
 SnapEdges = true
+MapPosition = 0,17,5
 Outdoor = true
 ShowArea = true
 #-------------------------------
@@ -623,6 +624,7 @@ Environment = Cave
 # Resivor Dock
 SnapEdges = true
 BattleBack = desert
+MapPosition = 0,11,12
 Outdoor = true
 ShowArea = true
 #-------------------------------
@@ -757,7 +759,7 @@ ShowArea = true
 # Templon Town
 SnapEdges = true
 BattleBack = 
-MapPosition = 0,13,6
+MapPosition = 0,15,9
 Outdoor = true
 ShowArea = true
 #-------------------------------
@@ -828,6 +830,28 @@ MapPosition = 0,11,6
 SnapEdges = true
 MapPosition = 0,11,6
 DarkMap = false
+#-------------------------------
+[193]
+# Resivor Village
+MapPosition = 0,7,8
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[194]
+# Watro Sea
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[198]
+# Justice Grotto
+SnapEdges = true
+Outdoor = false
+ShowArea = true
+#-------------------------------
+[201]
+# Watro Sea
+Outdoor = true
+ShowArea = true
 #-------------------------------
 [211]
 SnapEdges = true

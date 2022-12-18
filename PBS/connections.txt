@@ -42,5 +42,11 @@
 159,168,0,76,0,206
 # Molstrus City (159) - Courmine Village (32)
 159,95,0,32,0,222
-# Thundercloud Island (285) - Sunside Village (220)
+# Roycloud Passway (285) - Sunside Village (220)
 285,0,0,220,75,63
+# Watro Sea (194) - Resivor Village (193)
+194,East,0,193,West,9
+# Dream Land (196) - Resivor Village (193)
+196,West,0,193,East,1
+# Watro Sea (201) - Watro Sea (194)
+201,East,0,194,West,0

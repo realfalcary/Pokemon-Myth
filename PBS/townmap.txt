@@ -103,13 +103,16 @@ Point=7,12,Watro Sea,,,,,
 Point=7,11,Watro Sea,,,,,
 Point=7,10,Watro Sea,,,,,
 Point=7,9,Watro Sea,,,,,
-Point=6,10,Watro Sea,,,,,
+Point=6,10,,,,,,
 Point=7,7,Resivor Path,,,,,
 Point=7,6,Resivor Path,,,,,
 Point=4,10,Smithest Path,,,,,
 Point=3,9,Graypoint Sea,,,,,
 Point=3,8,Graypoint Sea,,,,,
 Point=2,8,Graypoint Sea,,,,,
+Point=6,8,Watro Sea,,,,,
+Point=5,8,Watro Sea,,,,,
+Point=5,9,Watro Sea,,,,,
 #-------------------------------
 [1]
 Name=

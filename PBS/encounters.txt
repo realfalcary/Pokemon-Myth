@@ -32,22 +32,6 @@ Land
     KLINKLANG,48
     KLINKLANG,48
 #-------------------------------
-186 # Desert Resort
-25,10,10
-Land
-    SKARMORY,49
-    SKARMORY,49
-    SANDSLASH,49
-    SANDSLASH,49
-    PYTHONOVA,49
-    PYTHONOVA,49
-    PANGORO,49
-    PANGORO,49
-    MARACTUS,49
-    MARACTUS,49
-    DUNEON,49
-    DUNEON,49
-#-------------------------------
 083 # Courmine Cave F1
 25,10,10
 Cave
@@ -427,7 +411,23 @@ Water
     SKRELP,37
     SKRELP,37
 #-------------------------------
-192
+186 # Desert Resort
+25,10,10
+Land
+    SKARMORY,49
+    SKARMORY,49
+    SANDSLASH,49
+    SANDSLASH,49
+    PYTHONOVA,49
+    PYTHONOVA,49
+    PANGORO,49
+    PANGORO,49
+    MARACTUS,49
+    MARACTUS,49
+    DUNEON,49
+    DUNEON,49
+#-------------------------------
+192 # Resivor Islands
 25,10,10
 Land
     FROSLASS,45
@@ -443,7 +443,25 @@ Land
     WEAVILE,47
     TOGEKISS,46
 #-------------------------------
-195
+193 # Resivor Village
+25,10,10
+Water
+    GYARADOS,58
+    TENTACRUEL,58
+    MILOTIC,58
+    SHARPEDO,58
+    WAILORD,58
+#-------------------------------
+194 # Watro Sea
+25,10,10
+Water
+    GYARADOS,58
+    TENTACRUEL,58
+    MILOTIC,58
+    SHARPEDO,58
+    WAILORD,58
+#-------------------------------
+195 # Resivor Harbour
 25,10,10
 Land
     TOGEKISS,48
@@ -459,7 +477,7 @@ Land
     AEREON,48
     MEDICHAM,49
 #-------------------------------
-197
+197 # Resivor Village
 25,10,10
 Land
     TOGEKISS,48
@@ -475,7 +493,7 @@ Land
     METANG,48
     METANG,49
 #-------------------------------
-198
+198 # Justice Grotto
 25,10,10
 Land
     GOURGEIST,50
