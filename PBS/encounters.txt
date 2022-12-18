@@ -509,6 +509,24 @@ Land
     SNORLAX,54
     ROTOM,54
 #-------------------------------
+201 # Watro Sea
+25,10,10
+Water
+    GYARADOS,58
+    TENTACRUEL,58
+    MILOTIC,58
+    SHARPEDO,58
+    WAILORD,58
+#-------------------------------
+203 # Watro Sea
+25,10,10
+Water
+    GYARADOS,58
+    TENTACRUEL,58
+    MILOTIC,58
+    SHARPEDO,58
+    WAILORD,58
+#-------------------------------
 218 # Route 9
 25,10,10
 Land

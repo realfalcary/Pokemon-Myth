@@ -853,6 +853,11 @@ ShowArea = true
 Outdoor = true
 ShowArea = true
 #-------------------------------
+[203]
+# Watro Sea
+Outdoor = true
+ShowArea = true
+#-------------------------------
 [211]
 SnapEdges = true
 BattleBack = lily2

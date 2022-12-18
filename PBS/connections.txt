@@ -44,6 +44,12 @@
 159,95,0,32,0,222
 # Roycloud Passway (285) - Sunside Village (220)
 285,0,0,220,75,63
+# Smithest Town (204) - Watro Sea (203)
+204,North,1,203,South,0
+# Watro Sea (194) - Watro Sea (203)
+194,South,0,203,North,32
+# Watro Sea (201) - Watro Sea (203)
+201,South,0,203,North,2
 # Watro Sea (194) - Resivor Village (193)
 194,East,0,193,West,9
 # Dream Land (196) - Resivor Village (193)

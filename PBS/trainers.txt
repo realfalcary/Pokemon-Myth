@@ -2462,3 +2462,13 @@ Moves = ICEBEAM,EARTHQUAKE,RECOVER,SURF
 Pokemon = CARRACOSTA,62
 Item = WHITEHERB
 Moves = SHELLSMASH,ICEBEAM,STONEEDGE,AQUAJET
+#-------------------------------
+[SWIMMER_M,Ronaldo,1]
+LoseText = "Take it easy on me, I've been swimming all day!"
+Pokemon = SWAMPERT,63
+Moves = EARTHQUAKE,ICEBEAM,SURF,PROTECT
+Item = LEFTOVERS
+Pokemon = GYARADOS,63
+Item = SITRUSBERRY
+Role = SETUPSWEEPER
+Moves = DRAGONDANCE,ICEBEAM,SCALD,DRAGONRUSH
