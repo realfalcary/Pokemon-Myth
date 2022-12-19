@@ -839,6 +839,7 @@ ShowArea = true
 #-------------------------------
 [194]
 # Watro Sea
+MapPosition = 0,6,8
 Outdoor = true
 ShowArea = true
 #-------------------------------
@@ -850,11 +851,18 @@ ShowArea = true
 #-------------------------------
 [201]
 # Watro Sea
+MapPosition = 0,5,8
 Outdoor = true
 ShowArea = true
 #-------------------------------
 [203]
 # Watro Sea
+MapPosition = 0,5,9
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[204]
+# Smithest Town
 Outdoor = true
 ShowArea = true
 #-------------------------------
