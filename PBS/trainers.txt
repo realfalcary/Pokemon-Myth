@@ -1963,46 +1963,46 @@ Pokemon = VENUSAUR,60
     Item = VENUSAURITE
 #-------------------------------
 [ASTRAPIXIE,Pixie,5]
-Pokemon = BLAZESIDHE,58
+Pokemon = BLAZESIDHE,65
     Moves = FIREBLAST,MOONBLAST,TOXIC,CALMMIND
     Item = QUICKCLAW
-Pokemon = BINDSHII,58
+Pokemon = BINDSHII,65
     Moves = STARBOLT,THUNDERBOLT,MOONBLAST,SHADOWBALL
     Ability = 2
-Pokemon = SYLVEON,58
+Pokemon = SYLVEON,65
     Moves = STARBOLT,RECOVER,MYSTICALFIRE,SHADOWBALL
     Item = SYLVEITE
 #-------------------------------
 [ASTRASPECTRAL,Spectral,5]
-Pokemon = SPIRITOMB,58
+Pokemon = SPIRITOMB,65
     Moves = PAINSPLIT,DISABLE,DOUBLETEAM,FOULPLAY
     Item = LIFEORB
-Pokemon = AEGISLASH,58
+Pokemon = AEGISLASH,65
     Moves = KINGSSHIELD,IRONHEAD,SHADOWSNEAK,AERIALACE
     Item = QUICKCLAW
-Pokemon = MISMAGIUS,58
+Pokemon = MISMAGIUS,65
     Moves = SHADOWBALL,MYSTICALFIRE,POWERGEM,DARKPULSE
     Item = MISMAGITE
 #-------------------------------
 [XERU,Xeru,1]
 LoseText = "Not what I expected at all."
-Pokemon = MIMIKYU,60
+Pokemon = MIMIKYU,65
     Moves = PLAYROUGH,SHADOWCLAW,WOODHAMMER,DRAINPUNCH
     Item = EXPERTBELT
-Pokemon = ASCENTEON,60
+Pokemon = ASCENTEON,65
     Moves = RECOVER,OUTRAGE,EARTHQUAKE,PLAYROUGH
     Item = LEFTOVERS
-Pokemon = GENGAR,61
+Pokemon = GENGAR,65
     Moves = SHADOWBALL,ENERGYBALL,PSYCHIC,THUNDERBOLT
     Item = LIFEORB
-Pokemon = SERPENSYNC,60
+Pokemon = SERPENSYNC,65
     Moves = AQUAJET,EXTREMESPEED,JETSTRIKE,OUTRAGE
     Ability = 2
     Item = KINGSROCK
-Pokemon = DRAGAPULT,60
+Pokemon = DRAGAPULT,65
     Moves = DRAGONDARTS,PHANTOMFORCE,SUCKERPUNCH,PSYCHICFANGS
     Item = ASSAULTVEST
-Pokemon = RAYQUAZA,65
+Pokemon = RAYQUAZA,67
     Moves = DRAGONASCENT,EARTHQUAKE,OUTRAGE,CRUNCH
     Item = CHOICEBAND
 #-------------------------------
@@ -2472,3 +2472,15 @@ Pokemon = GYARADOS,63
 Item = SITRUSBERRY
 Role = SETUPSWEEPER
 Moves = DRAGONDANCE,ICEBEAM,SCALD,DRAGONRUSH
+#-------------------------------
+[ASTRAGRUNT_F,Karmen,1]
+LoseText = "I can longer take flight because of you! Your heart is made of ice!"
+Pokemon = DELIBIRD,68
+Item = FOCUSSASH
+Moves = ICEBEAM,BLIZZARD,EXPLOSION,EXTREMESPEED
+#-------------------------------
+[ASTRAGRUNT_M,Jackson,1]
+LoseText = "The hottest and toughest around is no more!"
+Pokemon = CAMERUPT,68
+Item = FOCUSBAND
+Moves = FIREBLAST,EARTHQUAKE,HEADSMASH,ROCKSLIDE

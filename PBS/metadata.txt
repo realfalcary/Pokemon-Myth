@@ -866,6 +866,17 @@ ShowArea = true
 Outdoor = true
 ShowArea = true
 #-------------------------------
+[207]
+# Smithest Cavern
+SnapEdges = true
+BattleBack = cave1
+Outdoor = false
+ShowArea = false
+#-------------------------------
+[208]
+# Smithest Cavern
+BattleBack = cave1
+#-------------------------------
 [211]
 SnapEdges = true
 BattleBack = lily2
