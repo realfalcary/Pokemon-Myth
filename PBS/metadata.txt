@@ -877,6 +877,12 @@ ShowArea = false
 # Smithest Cavern
 BattleBack = cave1
 #-------------------------------
+[210]
+# Clayground Valley
+BattleBack = onmountain
+Outdoor = true
+ShowArea = true
+#-------------------------------
 [211]
 SnapEdges = true
 BattleBack = lily2
@@ -985,6 +991,7 @@ ShowArea = true
 [235]
 # Pokemon League
 SnapEdges = false
+BattleBack = vanilla
 MapPosition = 0,14,14
 Outdoor = false
 ShowArea = false
