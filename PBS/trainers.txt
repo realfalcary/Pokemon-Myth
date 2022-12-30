@@ -716,6 +716,7 @@ Pokemon = CLEFABLE,65
 Pokemon = GOODRA,63
 #-------------------------------
 [VANILLA,Vanilla,2]
+Items = FULLRESTORE,FULLRESTORE,REVIVE,FULLHEAL,FULLHEAL
 LoseText = "Love it... I really do, I'm glad I get to call you the new Champion."
 Pokemon = BLAZESIDHE,70
     Moves = FIREBLAST,MOONBLAST,STARBOLT,TOXIC
@@ -727,9 +728,9 @@ Pokemon = DEOXYS,70
     Form = 1
     Moves = PSYCHIC,CALMMIND,DRACOMETEOR,EXTREMESPEED
     Item = LIFEORB
-Pokemon = TYPHLOSION,70
+Pokemon = LUGIA,70
     Shiny = yes
-    Moves = ERUPTION,FIREBLAST,EARTHQUAKE,ROCKSLIDE
+    Moves = ICEBEAM,SCALD,BRAVEBIRD,ROOST
     Item = QUICKCLAW
 Pokemon = PHENELPHA,70
     Moves = FLAMETHROWER,BRAVEBIRD,ROOST,TRIPLEAXEL
