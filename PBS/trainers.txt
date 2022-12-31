@@ -1987,23 +1987,23 @@ Pokemon = MISMAGIUS,65
 #-------------------------------
 [XERU,Xeru,1]
 LoseText = "Not what I expected at all."
-Pokemon = MIMIKYU,65
+Pokemon = MIMIKYU,63
     Moves = PLAYROUGH,SHADOWCLAW,WOODHAMMER,DRAINPUNCH
     Item = EXPERTBELT
-Pokemon = ASCENTEON,65
+Pokemon = ASCENTEON,63
     Moves = RECOVER,OUTRAGE,EARTHQUAKE,PLAYROUGH
     Item = LEFTOVERS
-Pokemon = GENGAR,65
+Pokemon = GENGAR,63
     Moves = SHADOWBALL,ENERGYBALL,PSYCHIC,THUNDERBOLT
     Item = LIFEORB
-Pokemon = SERPENSYNC,65
+Pokemon = SERPENSYNC,63
     Moves = AQUAJET,EXTREMESPEED,JETSTRIKE,OUTRAGE
     Ability = 2
     Item = KINGSROCK
-Pokemon = DRAGAPULT,65
+Pokemon = DRAGAPULT,63
     Moves = DRAGONDARTS,PHANTOMFORCE,SUCKERPUNCH,PSYCHICFANGS
     Item = ASSAULTVEST
-Pokemon = RAYQUAZA,67
+Pokemon = RAYQUAZA,65
     Moves = DRAGONASCENT,EARTHQUAKE,OUTRAGE,CRUNCH
     Item = CHOICEBAND
 #-------------------------------

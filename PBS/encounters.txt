@@ -205,7 +205,7 @@ Water
 25,10,10
 Land
     BELLSPROUT,19,21
-    WOOBAT,19,20
+    ABSOL,19,20
     SWADLOON,17,19
     DUSTOX,18,19
     PUMPKABOO,19,21
@@ -427,22 +427,6 @@ Land
     DUNEON,49
     DUNEON,49
 #-------------------------------
-192 # Resivor Islands
-25,10,10
-Land
-    FROSLASS,45
-    FROSLASS,45
-    GLALIE,45
-    GLALIE,45
-    GLALIE,45
-    GLALIE,45
-    JYNX,45
-    JYNX,45
-    GLACEON,45
-    GLACEON,43
-    WEAVILE,47
-    TOGEKISS,46
-#-------------------------------
 193 # Resivor Village
 25,10,10
 Water
@@ -460,54 +444,6 @@ Water
     MILOTIC,58
     SHARPEDO,58
     WAILORD,58
-#-------------------------------
-195 # Resivor Harbour
-25,10,10
-Land
-    TOGEKISS,48
-    FROSLASS,48
-    MIMIKYU,47
-    WALREIN,48
-    HUNTAIL,47
-    BANETTE,48
-    BEARTIC,48
-    SNOM,48
-    INFERNAPE,48
-    GLACEON,48
-    AEREON,48
-    MEDICHAM,49
-#-------------------------------
-197 # Resivor Village
-25,10,10
-Land
-    TOGEKISS,48
-    FROSLASS,48
-    MIMIKYU,47
-    WALREIN,48
-    METANG,47
-    BANETTE,48
-    BEARTIC,48
-    SNOM,48
-    METANG,48
-    GLACEON,48
-    METANG,48
-    METANG,49
-#-------------------------------
-198 # Justice Grotto
-25,10,10
-Land
-    GOURGEIST,50
-    GOURGEIST,50
-    MIMIKYU,51
-    MIMIKYU,50
-    SHELGON,49
-    BANETTE,49
-    BANETTE,50
-    DUSKNOIR,51
-    DUSKNOIR,51
-    SPECTREON,52
-    SNORLAX,54
-    ROTOM,54
 #-------------------------------
 201 # Watro Sea
 25,10,10
