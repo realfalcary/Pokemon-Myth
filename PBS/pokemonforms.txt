@@ -20,6 +20,13 @@ FormName = Mega Chimecho
 MegaStone = CHIMECHOITE
 BaseStats = 85,70,90,85,105,95
 #-------------------------------
+[EMPOLEON,1]
+FormName = Mega Empoleon
+MegaStone = EMPOLEITE
+Type1 = WATER
+Type2 = STEEL
+BaseStats = 94,96,98,80,121,111
+#-------------------------------
 [MELMETAL,1]
 FormName = Mega Melmetal
 MegaStone = MELMETALITE
