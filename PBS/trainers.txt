@@ -875,26 +875,28 @@ LoseText = "Proceed, and don't give up."
 Pokemon = MEDICHAM,78
     Item = MEDICHAMITE
 #-------------------------------
-[E41,Marila,1]
-LoseText = "Proved me wrong it seems..."
-Pokemon = DRAGAPULT,68
-    Moves = OUTRAGE,JETBOOM,CRUNCH,SHADOWSNEAK
-    Item = CHOICEBAND
-Pokemon = REGICE,68
-    Moves = ICEPUNCH,BLIZZARD,STRENGTH,IRONHEAD
-    Item = NEVERMELTICE
-Pokemon = SERPENSYNC,68
-    Moves = SURF,OUTRAGE,ICEBEAM,JETBOOM
+[E41,Maxim,1]
+LoseText = "Outclassed by a small child, well done..."
+Pokemon = GOLURK,68
+    Moves = EARTHQUAKE,PHANTOMFORCE,HAMMERARM,HEAVYSLAM
     Item = LIFEORB
-Pokemon = AGGRON,68
-    Moves = IRONHEAD,BODYSLAM,IRONTAIL,CRUNCH
-    Item = ASSAULTVEST
-Pokemon = MAMOSWINE,68
-    Moves = ICEBEAM,EARTHQUAKE,ROCKSLIDE,BODYSLAM
+Pokemon = CORVIKNIGHT,68
+    Moves = ROOST,BRAVEBIRD,STEELWING,SCREECH
+    Item = LEFTOVERS
+Pokemon = VOLCARONA,68
+    Shiny = yes
+    Moves = MOONBLAST,PSYCHIC,CALMMIND,DRACOMETEOR
     Item = LIFEORB
-Pokemon = SCEPTILE,70
-    Moves = DUALCHOP,LEAFBLADE,OUTRAGE,WOODHAMMER
-    Item = SCEPTILITE
+Pokemon = EMPOLEON,68
+    Shiny = yes
+    Moves = AQUAJET,HYDROPUMP,SCALD,ICEBEAM
+    Item = LIFEORB
+Pokemon = ZACIAN,68
+    Moves = BEHEMOTHBLADE,CRUNCH,SWORDSDANCE,SACREDSWORD
+    Item = LIFEORB
+Pokemon = ZAMAZENTA,68
+    Moves = BEHEMOTHBASH,WIDEGUARD,CRUNCH,PSYCHICFANGS
+    Item = LIFEORB
 #-------------------------------
 [E42,Lily,1]
 LoseText = "I love every battle we have, the way you fight amazes me..."
