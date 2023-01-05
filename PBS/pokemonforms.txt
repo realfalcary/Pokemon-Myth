@@ -23,6 +23,7 @@ BaseStats = 85,70,90,85,105,95
 [CROBAT,1]
 FormName = Mega Crobat
 MegaStone = CROBATITE
+HiddenAbility = SPEEDBOOST
 BaseStats = 85,95,80,200,80,90
 BattlerEnemyY = -12
 #-------------------------------
