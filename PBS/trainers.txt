@@ -751,22 +751,22 @@ Pokemon = HYDREIGON,63
 #-------------------------------
 [LEADER8,Bola,1]
 LoseText = "Darkness overpowered by the light... Well done trainer."
-Pokemon = TYRANITAR,59
+Pokemon = TYRANITAR,65
     Moves = DRAGONDANCE,EARTHQUAKE,DRAGONCLAW,ROCKSLIDE
     Item = ASSAULTVEST
-Pokemon = KROOKODILE,59
+Pokemon = KROOKODILE,65
     Moves = SWORDSDANCE,FOULPLAY,EARTHQUAKE,DRAGONCLAW
     Item = BLACKGLASSES
-Pokemon = ZOROARK,62
+Pokemon = ZOROARK,65
     Moves = FOULPLAY,DARKPULSE,FLAMETHROWER,DRACOMETEOR
     Item = ZOROARKITE
-Pokemon = BISHARP,60
+Pokemon = BISHARP,65
     Moves = IRONHEAD,FOULPLAY,EARTHQUAKE,SWORDSDANCE
     Item = LIFEORB
-Pokemon = INCINEROAR,59
+Pokemon = INCINEROAR,65
     Moves = FIREBLAST,DARKESTLARIAT,STARBOLT,EARTHQUAKE
     Item = LIFEORB
-Pokemon = SPIRITOMB,61
+Pokemon = SPIRITOMB,65
     Moves = SHADOWBALL,PSYCHIC,DARKPULSE,DRACOMETEOR
     Item = LIFEORB
 #-------------------------------
@@ -1929,40 +1929,40 @@ Pokemon = SAMUROTT,58
 #-------------------------------
 [EXPERTSPECIALIST_F,Riley,1]
 LoseText = "You know, for a kid you really have a very unique battle style, well done!"
-Pokemon = BINDSHII,55
+Pokemon = BINDSHII,65
     Moves = SHADOWBALL,STARBOLT,SHADOWSNEAK,TOXIC
     Item = LIFEORB
-Pokemon = COCOFESTED,57
+Pokemon = COCOFESTED,65
     Moves = ENERGYBALL,SCALD,SURF,EARTHQUAKE
     Item = LIFEORB
-Pokemon = BLAZESIDHE,57
+Pokemon = BLAZESIDHE,65
     Moves = FLAMETHROWER,STARBOLT
     Item = LIFEORB
-Pokemon = SPECTREON,59
+Pokemon = SPECTREON,65
     Moves = SHADOWSNEAK,FLAMETHROWER,SHADOWBALL,STARBOLT
     Item = SPECTREITE
 #-------------------------------
 [EXPERTSPECIALIST_F,Filoh,1]
 LoseText = "What a strong battle style!"
-Pokemon = JYNX,59
+Pokemon = JYNX,65
     Moves = ICEBEAM,PSYCHIC,CALMMIND,TOXIC
     Item = LIFEORB
-Pokemon = AERODACTYL,58
+Pokemon = AERODACTYL,65
     Moves = FLY,ROCKSLIDE,EARTHQUAKE,PROTECT
     Item = AERODACTYLITE
 #-------------------------------
 [EXPERTSPECIALIST_F,Juliet,1]
 LoseText = "That's embarrassing..."
-Pokemon = HYDREIGON,58
+Pokemon = HYDREIGON,65
     Moves = DRAGONDANCE,DRAGONTAIL,EARTHQUAKE,FOULPLAY
     Item = LIFEORB
-Pokemon = CHARIZARD,58
+Pokemon = CHARIZARD,65
     Moves = FLAMETHROWER,DRAGONDANCE,DRAGONPULSE,ROOST
     Item = CHARIZARDITEX
 #-------------------------------
 [EXPERTSPECIALIST_F,Carrie,1]
 LoseText = "Yes, that's perfect!"
-Pokemon = VENUSAUR,60
+Pokemon = VENUSAUR,67
     Moves = LEECHSEED,TOXIC,MEGADRAIN,FRENZYPLANT
     Item = VENUSAURITE
 #-------------------------------
@@ -2488,3 +2488,67 @@ LoseText = "The hottest and toughest around is no more!"
 Pokemon = CAMERUPT,68
 Item = FOCUSBAND
 Moves = FIREBLAST,EARTHQUAKE,HEADSMASH,ROCKSLIDE
+#-------------------------------
+[IVY,Ivy,4]
+LoseText = "I see, it seems like you've outclassed me even now, so I wish you the best of luck in the Pokemon League."
+Pokemon = VAPOREON,65
+    Role = TOXICSTALLER
+    Moves = SCALD,TOXIC,WISH,AQUAJET
+    Item = LEFTOVERS
+Pokemon = LUXRAY,65
+    Moves = VOLTSWITCH,THUNDERWAVE,CRUNCH,THUNDERBOLT
+    Item = LEFTOVERS
+Pokemon = ARCHEOPS,65
+    Moves = ROCKSLIDE,BRAVEBIRD,CRUNCH,ROOST
+    Item = SITRUSBERRY
+Pokemon = MIENSHAO,65
+    Item = ASSAULTVEST
+    Role = PIVOT
+    Moves = HIGHJUMPKICK,KNOCKOFF,UTURN,FAKEOUT
+Pokemon = DELUGAR,65
+    Item = LEFTOVERS
+    Moves = SURF,SCALD,ICEBEAM,EARTHQUAKE
+Pokemon = MELOETTA,65
+    Form = 2
+    Item = LIFEORB
+    Moves = SONARPULSE,PSYCHIC,MOONBLAST,FIREBLAST
+#-------------------------------
+[IZU,Izu,5]
+LoseText = "Wait... so you aren't with those goons?"
+Pokemon = DECIDUEYE,65
+    Moves = DIAMONDSTORM,SPIRITSHACKLE,BULLETSEED,EARTHQUAKE
+    Item = CHOICEBAND
+Pokemon = MELMETAL,67
+    Moves = DOUBLEIRONBASH,ICEPUNCH,DARKESTLARIAT,EARTQUAKE
+    Item = ASSAULTVEST
+Pokemon = HOUNDOOM,65
+    Moves = FLAMETHROWER,EXTREMESPEED,CRUNCH,ROAR
+    Item = HOUNDOOMINITE
+Pokemon = MAGNEZONE,66
+    Moves = IRONHEAD,THUNDERBOLT,IRONDEFENSE,GEARGRIND
+    Item = WEAKNESSPOLICY
+Pokemon = BINDSHII,65
+    Moves = MOONBLAST,FAIRYWIND,HYPERVOICE,WISH
+    Item = PIXIEPLATE
+Pokemon = SCIZOR,65
+    Form = 1
+    Moves = FIREPUNCH,IRONHEAD,BULLETPUNCH,ROLLOUT
+    Item = CHOICESCARF
+#-------------------------------
+[EXPERTSPECIALIST_F,Linda,1]
+LoseText = "That's the type of power we need in Mythan!"
+Pokemon = GOODRA,66
+Item = LEFTOVERS
+Moves = OUTRAGE,SLUDEBOMB,STICKYWEB,SURF
+Pokemon = LOPUNNY,66
+Item = LOPUNNITE
+Moves = HIGHJUMPKICK,TRIPLEAXEL,FOCUSBLAST,SUPERPOWER
+#-------------------------------
+[EXPERTSPECIALIST_F,Luna,1]
+LoseText = "Eek! Maybe ghost pokemon aren't the only scary things!"
+Pokemon = METAGROSS,67
+Item = CHOICEBAND
+Moves = DRACOMETEOR,SMARTSTRIKE,EARTHQUAKE,HEAVYSLAM
+Pokemon = GENGAR,68
+Item = GENGARITE
+Moves = GLARE,SHADOWSNEAK,PSYCHIC,EARTHQUAKE

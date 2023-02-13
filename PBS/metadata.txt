@@ -691,18 +691,20 @@ ShowArea = false
 #-------------------------------
 [157]
 # Route 13
+SnapEdges = true
 MapPosition = 0,12,14
 Outdoor = true
 ShowArea = true
 #-------------------------------
 [158]
-# Route 13
+# MAP158
 MapPosition = 0,14,14
-Outdoor = true
+Outdoor = false
 ShowArea = true
 #-------------------------------
 [159]
 # Molstrus City
+SnapEdges = true
 MapPosition = 0,15,15
 Outdoor = true
 ShowArea = true
@@ -884,12 +886,14 @@ Outdoor = true
 ShowArea = true
 #-------------------------------
 [211]
+# Courmine Village
 SnapEdges = true
 BattleBack = lily2
 Outdoor = true
 ShowArea = true
 #-------------------------------
 [212]
+# Eclipse Village
 SnapEdges = true
 BattleBack = izu
 Outdoor = true
