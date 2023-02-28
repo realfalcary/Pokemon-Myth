@@ -580,7 +580,7 @@ Outdoor = true
 ShowArea = true
 #-------------------------------
 [127]
-# Talisband Forest
+# Maycrop Town
 SnapEdges = true
 BattleBack = field
 MapPosition = 0,22,6
@@ -697,7 +697,7 @@ Outdoor = true
 ShowArea = true
 #-------------------------------
 [158]
-# MAP158
+# Sunside Village
 MapPosition = 0,14,14
 Outdoor = false
 ShowArea = true
@@ -738,7 +738,7 @@ Outdoor = true
 ShowArea = true
 #-------------------------------
 [170]
-# Victory Road
+# Sunside Village
 SnapEdges = true
 #-------------------------------
 [172]
@@ -775,7 +775,7 @@ ShowArea = true
 #-------------------------------
 [179]
 # Pokemon League
-BattleBack = slumprop
+BattleBack = CrystalCavernPink
 Outdoor = false
 ShowArea = false
 #-------------------------------
@@ -900,6 +900,7 @@ Outdoor = true
 ShowArea = true
 #-------------------------------
 [213]
+# Molstrus City
 SnapEdges = true
 BattleBack = indoor3
 MapPosition = 0,19,17
@@ -982,12 +983,14 @@ ShowArea = true
 [233]
 # Pokemon League
 SnapEdges = false
+BattleBack = battlebgSnow2
 Outdoor = false
 ShowArea = false
 #-------------------------------
 [234]
 # Pokemon League
 SnapEdges = true
+BattleBack = battlebglucas
 MapPosition = 0,14,14
 Outdoor = true
 ShowArea = true
@@ -1001,14 +1004,12 @@ Outdoor = false
 ShowArea = false
 #-------------------------------
 [236]
-# Molstrus City
 SnapEdges = true
 MapPosition = 0,14,14
 Outdoor = true
 ShowArea = true
 #-------------------------------
 [237]
-# Molstrus Museum and Dock
 SnapEdges = false
 MapPosition = 0,14,14
 Outdoor = false
@@ -1081,13 +1082,11 @@ Outdoor = true
 ShowArea = true
 #-------------------------------
 [253]
-# Serene Onboard
 SnapEdges = true
 BattleBack = Giratina
 ShowArea = true
 #-------------------------------
 [254]
-# Serene Onboard
 SnapEdges = true
 Outdoor = true
 ShowArea = true
