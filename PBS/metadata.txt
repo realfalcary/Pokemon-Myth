@@ -509,8 +509,8 @@ ShowArea = true
 [103]
 # Fairloom City
 SnapEdges = true
-MapPosition = 0,26,13
-Outdoor = true
+MapPosition = 0,13,26
+Outdoor = false
 ShowArea = true
 #-------------------------------
 [104]
@@ -904,6 +904,12 @@ ShowArea = true
 SnapEdges = true
 BattleBack = indoor3
 MapPosition = 0,19,17
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[214]
+# Myth Forest
+SnapEdges = true
 Outdoor = true
 ShowArea = true
 #-------------------------------
