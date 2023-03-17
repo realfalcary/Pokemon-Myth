@@ -897,3 +897,19 @@ SuperRod
     STARMIE,65
     SERPENSYNC,64
     SERPENSYNC,64
+#-------------------------------
+215 # Betty's Ranch
+25,10,10
+Land
+    MILTANK,12
+    MILTANK,12
+    MILTANK,13
+    MILTANK,14
+    MILTANK,13
+    MILTANK,14
+    MILTANK,15
+    MILTANK,12
+    MILTANK,13
+    MILTANK,14
+    MILTANK,14
+    MILTANK,15
