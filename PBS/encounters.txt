@@ -16,6 +16,22 @@ Land
     MUNCHLAX,3,5
     MUNCHLAX,3,5
 #-------------------------------
+042 # Eclipse Passage
+25,10,10
+Land
+    SUNKERN,3,4
+    POLIWAG,3,4
+    AZURILL,3,4
+    COMBEE,3,4
+    SWOVE,3,4
+    PIDGEY,3,4
+    SHINX,4,5
+    SHINX,4,5
+    SHINX,3,4
+    MUNCHLAX,3,5
+    MUNCHLAX,3,5
+    MUNCHLAX,3,5
+#-------------------------------
 080 # Route 11
 25,10,10
 Land
@@ -37,28 +53,12 @@ Land
 Cave
     ZUBAT,4
     ZUBAT,4
-    CUBONE,4
-    CUBONE,4
-    CHINGLING,4
-    CHINGLING,4
-    RIOLU,4
-    RIOLU,4
-    TYROGUE,4
-    TYROGUE,4
-    TYROGUE,4
-    VANILLITE,4
-#-------------------------------
-085 # Courmine Cave F3
-25,10,10
-Cave
-    ZUBAT,4
-    ZUBAT,4
-    CUBONE,4
+    SWINUB,4
     CUBONE,4
     CHINGLING,4
     CHINGLING,4
-    RIOLU,4
-    RIOLU,4
+    RIOLU_2,4
+    RIOLU_2,4
     TYROGUE,4
     TYROGUE,4
     TYROGUE,4
@@ -108,7 +108,7 @@ Cave
     MAROWAK,36
     DELUGAR,36
     DELUGAR,36
-    LUCARIO,36
+    LUCARIO_2,36
     ONIX,36
     HITMONCHAN,36
     HITMONTOP,36
@@ -242,7 +242,7 @@ Cave
     RACCANE,23
     SOAKCUFF,22
     LAIRON,25
-    LUCARIO,25
+    LUCARIO_2,25
     ONIX,24
     HITMONCHAN,22
     HITMONTOP,22
@@ -297,7 +297,7 @@ Land
     BUNEARY,22,24
     PETILIL,22,24
     SKIDDO,22,24
-    MONFERNO,22,24
+    SLURPUFF,22,24
     COTTONEE,22,24
     FOONGUS,22,24
     DEERLING,22,24
@@ -489,7 +489,7 @@ Land
     VAPOREON,46
     ALTARIA,46
     PELIPPER,46
-    LUCARIO,46
+    LUCARIO_2,46
     SCEPTILE,46
     GALLADE,46
     LEAVANNY,46

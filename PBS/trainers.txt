@@ -7,13 +7,14 @@ Pokemon = RUFFLET,5
 #-------------------------------
 [RIVAL1,Marcus,2]
 LoseText = "I guess I need to keep training, dont you think?"
-Pokemon = ZUBAT,7
+Pokemon = ZUBAT,9
+Shiny = yes
 Item = WIDELENS
 Moves = POISONFANG,PLUCK,BITE,HYPNOSIS
-Pokemon = COCOLING,7
+Pokemon = COCOLING,9
     Moves = ABSORB,LEECHSEED,PROTECT,QUICKATTACK
     Item = ORANBERRY
-Pokemon = RUFFLET,8
+Pokemon = RUFFLET,10
     Moves = PECK,GROWL,FLASH,QUICKATTACK
     Item = ORANBERRY
 #-------------------------------
@@ -26,6 +27,13 @@ Pokemon = SENTRET,4
 LoseText = "That was so heated!"
 Pokemon = PIDGEY,4
 Pokemon = FLETCHLING,5
+#-------------------------------
+[RANGER_M,Maccow,1]
+LoseText = "Aw man..."
+Pokemon = CAITLIT,3
+Moves = SCRATCH,GROWL,EMBER
+Pokemon = SPINARAK,4
+Moves = STRINGSHOT,POISONSTING,LEER,BUGBITE
 #-------------------------------
 [HIKER,Al,1]
 LoseText = "I guess you don't like rocks?"
@@ -42,6 +50,21 @@ Pokemon = ZIGZAGOON,7
 Pokemon = PIKACHU,6
     Moves = THUNDERSHOCK,IRONTAIL,TACKLE,QUICKATTACK
     Item = QUICKCLAW
+#-------------------------------
+[INFUSIONINCLEORE,Leore,1]
+LoseText = "The fresh breeze of battling a strong opponent, now that was something! I can tell you and your Pokemon bond really well!"
+Pokemon = ARON,17
+Item = QUICKCLAW
+Moves = DIG,IRONHEAD,ROCKTHROW,GLARE
+Pokemon = NOSEPASS,16
+Item = FOCUSSASH
+Moves = NASTYPLOT,ROCKPOLISH,ROCKSLIDE,HEADBUTT
+Pokemon = MAWILE,16
+Item = BERRYJUICE
+Moves = FAIRYWIND,BITE,IRONHEAD,GLARE
+Pokemon = BELDUM,18
+Item = QUICKCLAW
+Moves = PSYBEAM,IRONHEAD,ZENHEADBUTT,CALMMIND
 #-------------------------------
 [BIKER,Smithy,1]
 LoseText = "Go fowards, you are strong."
@@ -63,7 +86,8 @@ Pokemon = GROWLITHE,12
     Moves = FLAMECHARGE,WILDCHARGE,MORNINGSUN,WILLOWISP
     Role = PHYSICALWALL
     Item = ORANBERRY
-Pokemon = CAITLIT,12
+Pokemon = CAITLIT,14
+    InfusionType1 = FIRE
     Moves = FLAMECHARGE,PLAYROUGH,UTURN
     Role = REVENGEKILLER
     Item = BERRYJUICE
@@ -1145,8 +1169,27 @@ Pokemon = HATENNA,9
 Pokemon = HATENNA,10
     Moves = CONFUSION,PLAYNICE,LIFEDEW
 #-------------------------------
+[ASTRAGRUNT_M,Dexi,1]
+LoseText = ""
+Pokemon = SUNFLORA,14
+Item = MIRACLESEED
+Moves = MEGADRAIN,LEECHSEED,SUNNYDAY,GROWTH
+Pokemon = SLUGMA,15
+Item = SOFTSAND
+Moves = LAVAPLUME,EARTHPOWER,WILLOWISP,EXTREMESPEED
+#-------------------------------
+[ASTRAGRUNT_F,Lexi,1]
+LoseText = ""
+Pokemon = SABLEYE,15
+Item = BLACKGLASSES
+Moves = DARKPULSE,SUCKERPUNCH,TAUNT,HYPNOSIS
+Pokemon = AZUMARILL,15
+Item = LEFTOVERS
+Moves = AQUAJET,BUBBLEBEAM,FAIRYWIND,TAILWHIP
+#-------------------------------
 [HIKER,Hilverta,1]
-Pokemon = BULBASAUR,10
+Pokemon = GEODUDE,4
+Pokemon = LARVITAR,5
 #-------------------------------
 [ASTRANINJA,Raz,1]
 Pokemon = MRMIME,12
@@ -1206,6 +1249,7 @@ LoseText = "Out matched, once again!"
 Pokemon = GROVYLE,18
     Moves = LEAFBLADE,QUICKATTACK,LEECHSEED,GLARE
 Pokemon = ZUBAT,18
+Shiny = yes
 Item = WIDELENS
 Moves = POISONFANG,PLUCK,BITE,HYPNOSIS
 Pokemon = COCOLING,17
@@ -1295,6 +1339,7 @@ Pokemon = GARDEVOIR,33
     Moves = PSYCHIC,THUNDERBOLT,DRAININGKISS,HYPNOSIS
     Item = TWISTEDSPOON
 Pokemon = CROBAT,33
+Shiny = yes
 Item = WIDELENS
 Moves = CROSSPOISON,WINGATTACK,CRUNCH,HYPNOSIS
 Pokemon = GABITE,33
@@ -2329,6 +2374,7 @@ Pokemon = BRAVIARY,55
 Item = QUICKCLAW
 Moves = BRAVEBIRD,ROOST,FIREBLAST,HELPINGHAND
 Pokemon = CROBAT,55
+Shiny = yes
 Item = CROBATITE
 Moves = CROSSPOISON,WINGATTACK,CRUNCH,HYPNOSIS
 Pokemon = ARTICUNO,55
@@ -2553,3 +2599,25 @@ Moves = DRACOMETEOR,SMARTSTRIKE,EARTHQUAKE,HEAVYSLAM
 Pokemon = GENGAR,68
 Item = GENGARITE
 Moves = GLARE,SHADOWSNEAK,PSYCHIC,EARTHQUAKE
+#-------------------------------
+[BUGCATCHER,Slim,1]
+LoseText = "Man, I miss moms spaghetti..."
+Pokemon = WURMPLE,5
+Item = ORANBERRY
+Moves = STRINGSHOT,POISONSTING,GLARE
+Pokemon = BURMY,6
+Item = QUICKCLAW
+Moves = LEECHLIFE,ABSORB,PROTECT
+Pokemon = LEDYBA,6
+Item = HEAVYDUTYBOOTS
+Moves = WINGATTACK,BUGBITE
+#-------------------------------
+[FISHERMAN,Hura,1]
+LoseText = "I-"
+Pokemon = MAGIKARP,8
+Item = EXPERTBELT
+Moves = ICYWIND,WATERGUN
+Pokemon = DROWZEE,8
+Form = 1
+Item = MYSTICWATER
+Moves = WATERGUN,HYPNOSIS,AQUAJET
