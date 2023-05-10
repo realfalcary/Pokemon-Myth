@@ -2,7 +2,9 @@
 #-------------------------------
 [RIVAL1,Marcus,1]
 LoseText = "Wow! Pokemon battling is actually fun!"
-Pokemon = RUFFLET,5
+Pokemon = VULPIX,2
+Moves = EMBER,TACKLE
+Pokemon = RUFFLET,3
     Moves = PECK,GROWL
 #-------------------------------
 [RIVAL1,Marcus,2]
