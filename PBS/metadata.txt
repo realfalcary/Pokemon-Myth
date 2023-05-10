@@ -438,7 +438,7 @@ SnapEdges = true
 [085]
 # Infusion Labs A1
 SnapEdges = false
-BattleBack = 
+BattleBack = InfusionLabs
 Outdoor = false
 Environment = None
 ShowArea = false
