@@ -960,6 +960,14 @@ MapPosition = 0,12,9
 Outdoor = true
 ShowArea = true
 #-------------------------------
+[222]
+# Cold Storage
+BattleBack = coldStorage
+#-------------------------------
+[236]
+# Cold Storage
+BattleBack = coldStorage
+#-------------------------------
 [223]
 # Sunside Gym
 BattleBack = gym
@@ -1019,12 +1027,6 @@ BattleBack = vanilla
 MapPosition = 0,14,14
 Outdoor = false
 ShowArea = false
-#-------------------------------
-[236]
-SnapEdges = true
-MapPosition = 0,14,14
-Outdoor = true
-ShowArea = true
 #-------------------------------
 [237]
 SnapEdges = false

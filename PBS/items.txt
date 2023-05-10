@@ -875,3 +875,4 @@
 851,INFUSIONVIAL,Infusion Vial,Infusion Vials,8,0,"A vial of murky blue liquid with a red and white cap. This contains the base ingredients for Infusion.",0,0,6,
 852,BLOOMINFUSEDGEM,Bloom Infused Gem,Bloom Infused Gems,1,2200,"A very old geode-like cracked crystal, the colors inside sparkle and pulse.",1,0,7,
 853,HYDROINFUSEDGEM,Hydro Infused Gem,Hydro Infused Gems,1,2200,"A very old geode-like cracked crystal, the colors inside sparkle and pulse.",1,0,7,
+854,TOXICINFUSEDGEM,Toxic Infused Gem,Toxic Infused Gems,1,2200,"A very old geode-like cracked crystal, the colors inside sparkle and pulse.",1,0,7,

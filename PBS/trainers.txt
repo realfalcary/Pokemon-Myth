@@ -123,8 +123,8 @@ Pokemon = BUTTERFREE,15
 #-------------------------------
 [HIKER,Jake,1]
 LoseText = "You should read more about this route."
-Pokemon = CHARMANDER,14
-Pokemon = GLIGAR,13
+Pokemon = CHARMANDER,18
+Pokemon = GLIGAR,18
 #-------------------------------
 [IZU,Izu,1]
 LoseText = "Wait... so you aren't with those goons?"
@@ -237,6 +237,28 @@ Pokemon = GIBLE,19
 LoseText = "Darn it, boss won't be happy!"
 Pokemon = QUILAVA,18
 Pokemon = GIBLE,17
+#-------------------------------
+[GRUNT,Kristen,1]
+LoseText = "Keep it together, Monika can handle them!"
+Pokemon = DELIBIRD,18
+Item = QUICKCLAW
+Moves = ICESHARD,TAUNT,HEADBUTT,PROTECT
+Pokemon = RIOLU,18
+Form = 2
+Item = EXPERTBELT
+Moves = SHADOWCLAW,QUICKCLAW,JUMPKICK,ICEPUNCH
+Pokemon = PIDGEOTTO,18
+Item = QUICKCLAW
+Moves = THUNDERBOLT,WINGATTACK,ROOST,QUICKATTACK
+#-------------------------------
+[GRUNT,Thomas,1]
+LoseText = "What do we do?!"
+Pokemon = LAVEE,18
+Item = CHARCOAL
+Moves = FLAMETHROWER,DRAGONPULSE,CALMMIND,GLARE
+Pokemon = AZUMARILL,18
+Item = LEFTOVERS
+Moves = AQUAJET,ICEBEAM,AQUARING,BOUNCE
 #-------------------------------
 [BRI,Bri,1]
 LoseText = "Heh, as expected your actually quite strong.."
@@ -1248,13 +1270,11 @@ Pokemon = MEDICHAM,28
 LoseText = "Out matched, once again!"
 Pokemon = GROVYLE,18
     Moves = LEAFBLADE,QUICKATTACK,LEECHSEED,GLARE
-Pokemon = ZUBAT,18
-Shiny = yes
-Item = WIDELENS
-Moves = POISONFANG,PLUCK,BITE,HYPNOSIS
-Pokemon = COCOLING,17
+Pokemon = CRYOGONAL,18
+Moves = ICEBEAM,SWIFT,WATERPULSE,WILLOWISP
+Pokemon = COCONAB,18
     Moves = LEECHSEED,MEGADRAIN,WATERPULSE,SHELLSMASH
-Pokemon = RUFFLET,19
+Pokemon = RUFFLET,18
     Moves = WINGATTACK,ROOST,QUICKATTACK,LEER
 #-------------------------------
 [MONIKA,Monika,1]
@@ -2157,38 +2177,49 @@ Pokemon = EEVEE,14
 #-------------------------------
 [MONIKA,Monika,10]
 LoseText = "Fascinating... I didn't expect all that..."
-Pokemon = JOLTIK,16
+Pokemon = JOLTIK,18
     Moves = STICKYWEB,TOXIC,BUGBITE,QUICKATTACK
     Item = FOCUSSASH
+Pokemon = COMBUSKEN,18
+Item = QUICKCLAW
+Moves = BLAZEKICK,WINGATTACK,DOUBLEKICK,EXTREMESPEED
+Ability = 2
+Pokemon = SCYTHER,18
+Item = LIFEORB
+Moves = BLAZEKICK,SHADOWSNEAK,SHADOWCLAW,EXTREMESPEED
+Pokemon = ZORUA,18
+Form = 2
+Item = EXPERTBELT
+Moves = FLAMETHROWER,WILLOWISP,SHADOWSNEAK,CRUNCH
 Pokemon = MAWILE,18
     Moves = SANDATTACK,FAKEOUT,BITE,FAIRYWIND
     Item = LEFTOVERS
 #-------------------------------
 [BUGCATCHER,Kendrick,1]
 LoseText = "Like a moth to a flame..."
-Pokemon = BUTTERFREE,15
+Pokemon = BUTTERFREE,18
     Moves = PSYBEAM,CONFUSION,HYPNOSIS,GLARE
     Item = SILVERPOWDER
-Pokemon = BULBASAUR,15
+Pokemon = IVYSAUR,18
     Moves = LEECHSEED,VINEWHIP,ABSORB
     Item = LEFTOVERS
-Pokemon = EKANS,15
+Pokemon = EKANS,18
     Moves = BITE,VENOSHOCK,GLARE,WRAP
     Item = BLACKSLUDGE
 #-------------------------------
 [HIKER,Filipe,1]
 LoseText = "Keep climbing, you'll make it to the top!"
-Pokemon = GEODUDE,14
+Pokemon = GEODUDE,18
     Moves = ROCKSLIDE,BULLDOZE,DEFENSECURL,QUICKATTACK
     Ability = 0
     Item = ASSAULTVEST
-Pokemon = DAMPURR,14
+Pokemon = DAMPURR,18
     Moves = WATERPULSE,SCALD,AQUAJET,AQUARING
     Item = MYSTICWATER
 #-------------------------------
 [BLACKBELT,Rolo,1]
 LoseText = "Hiya! Incredible battle!"
-Pokemon = RIOLU,16
+Pokemon = RIOLU,18
     Moves = AURASPHERE,BITE,FLAMEWHEEL,ROCKTHROW
     Item = EXPERTBELT
 #-------------------------------
@@ -2332,27 +2363,16 @@ Moves = METEORBEAM,MOONBLAST,EARTHQUAKE,ROCKSLIDE
 #-------------------------------
 [IVY,Ivy,2]
 LoseText = "Oh wow! You've improved so much, amazing!"
-Pokemon = VAPOREON,42
-    Role = TOXICSTALLER
-    Moves = SCALD,TOXIC,WISH,AQUAJET
+Pokemon = SHINX,17
+    Moves = VOLTSWITCH,BITE,QUICKATTACK,THUNDERWAVE
     Item = LEFTOVERS
-Pokemon = LUXRAY,43
-    Moves = VOLTSWITCH,THUNDERWAVE,CRUNCH,THUNDERBOLT
-    Item = LEFTOVERS
-Pokemon = ARCHEOPS,43
-    Moves = ROCKSLIDE,BRAVEBIRD,CRUNCH,ROOST
-    Item = SITRUSBERRY
-Pokemon = MIENSHAO,43
-    Item = ASSAULTVEST
-    Role = PIVOT
-    Moves = HIGHJUMPKICK,KNOCKOFF,UTURN,FAKEOUT
-Pokemon = DELUGAR,42
-    Item = LEFTOVERS
-    Moves = SURF,SCALD,ICEBEAM,EARTHQUAKE
-Pokemon = MELOETTA,44
-    Form = 2
-    Item = LIFEORB
-    Moves = SONARPULSE,PSYCHIC,MOONBLAST,FIREBLAST
+Pokemon = ARCHEN,17
+    Moves = ROCKSLIDE,PECK,BITE,ROOST
+    Item = ORANBERRY
+Pokemon = EEVEE,18
+    Moves = FAKEOUT,QUICKATTACK,BITE,SWIFT
+    InfusionType1 = NORMAL
+    Item = FOCUSBAND
 #-------------------------------
 [ACETRAINER,Icko,1]
 LoseText = "What?!"
