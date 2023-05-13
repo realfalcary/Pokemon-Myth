@@ -8,6 +8,12 @@ class PBAI
 		$d_switch = 0
     $doubles_switch = nil
     $switch_flags = {}
+    $learned_flags = {
+      :setup_fodder => [],
+      :has_setup => [],
+      :should_taunt => [],
+      :move => nil
+    }
   	PBAI.log("AI initialized")
   end
 
