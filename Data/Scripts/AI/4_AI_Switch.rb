@@ -443,7 +443,7 @@ PBAI::SwitchHandler.add do |score,ai,battler,proj,target|
   		PBAI.log("+ 200")
   	end
   	if ![PBRoles::PHYSICALWALL,PBRoles::SPECIALWALL].include?(battler.role)
-  		if [PBRoles::DEFENSIVEPIVOT,PBRoles::CLERIC,PBRoles::TOXICSTALLER,PBRoles::HAZARDLEAD].include?(battler.role)
+  		if [PBRoles::PIVOT,PBRoles::CLERIC,PBRoles::TOXICSTALLER,PBRoles::HAZARDLEAD].include?(battler.role)
   			score += 150
   			PBAI.log("+ 150")
   		else
