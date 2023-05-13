@@ -155,9 +155,14 @@ LoseText = "You're like hot cocoa on a snowy day!"
 Pokemon = SNOM,18
 Pokemon = SMOOCHUM,19
 #-------------------------------
+[BOARDER,Sam,1]
+LoseText = "That was awesome!"
+Pokemon = SNORUNT,18
+Pokemon = SWINUB,19
+#-------------------------------
 [LEADER2,Alexander,1]
 LoseText = "Very well, you deserve my badge."
-Pokemon = AMAURA,17
+Pokemon = AMAURA,19
 Role = HAZARDLEAD
 Moves = AURORAVEIL,STEALTHROCK,ROCKTOMB,ENCORE
 Item = ICYROCK
@@ -169,7 +174,7 @@ Moves = ICEPUNCH,METALCLAW,BULLDOZE,HONECLAWS
 Pokemon = CLOYSTER,17
 Role = SPECIALBREAKER
 Moves = BUBBLEBEAM,AURORABEAM,HAIL,EXPLOSION
-Pokemon = GLACEON,19
+Pokemon = GLACEON,20
 Role = SPEEDCONTROL
 Item = HEAVYDUTYBOOTS
 Moves = FREEZEDRY,WATERPULSE,SHADOWBALL,CALMMIND
@@ -2643,3 +2648,8 @@ Pokemon = DROWZEE,8
 Form = 1
 Item = MYSTICWATER
 Moves = WATERGUN,HYPNOSIS,AQUAJET
+#-------------------------------
+[RIVAL1,Marcus,250]
+LoseText = "What a good time, good battle!"
+Pokemon = CROBAT,53
+Item = CROBATITE
