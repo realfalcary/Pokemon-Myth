@@ -893,7 +893,7 @@ class PBAI
             self.opposing_side.battlers.each do |target|
               next if target.nil?
               score = PBAI::SwitchHandler.trigger_general(score,@ai,self,proj,target)
-              target_moves = $game_switches[LvlCap::Expert] ? target.moves : target.used_moves
+              target_moves = target.used_moves
               if target_moves != nil
                 for i in target_moves
                   score = PBAI::SwitchHandler.trigger_type(i.type,score,@ai,self,proj,target)
