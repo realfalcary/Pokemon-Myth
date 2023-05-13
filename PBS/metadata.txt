@@ -964,10 +964,6 @@ ShowArea = true
 # Cold Storage
 BattleBack = coldStorage
 #-------------------------------
-[236]
-# Cold Storage
-BattleBack = coldStorage
-#-------------------------------
 [223]
 # Sunside Gym
 BattleBack = gym
@@ -1028,17 +1024,23 @@ MapPosition = 0,14,14
 Outdoor = false
 ShowArea = false
 #-------------------------------
+[236]
+# Cold Storage
+BattleBack = coldStorage
+#-------------------------------
 [237]
+# Poke Center
 SnapEdges = false
 MapPosition = 0,14,14
 Outdoor = false
 ShowArea = false
 #-------------------------------
 [238]
+# Poke Mart
 SnapEdges = true
 MapPosition = 0,15,17
-Outdoor = true
-ShowArea = true
+Outdoor = false
+ShowArea = false
 #-------------------------------
 [239]
 SnapEdges = true
@@ -1111,7 +1113,6 @@ Outdoor = true
 ShowArea = true
 #-------------------------------
 [257]
-# Legacy Island
 SnapEdges = true
 BattleBack = howliage
 Outdoor = true
