@@ -3,21 +3,21 @@
 [RIVAL1,Marcus,1]
 LoseText = "Wow! Pokemon battling is actually fun!"
 Pokemon = VULPIX,2
-Moves = EMBER,TACKLE
+    Moves = EMBER,TACKLE
 Pokemon = RUFFLET,3
     Moves = PECK,GROWL
 #-------------------------------
 [RIVAL1,Marcus,2]
 LoseText = "I guess I need to keep training, dont you think?"
 Pokemon = ZUBAT,9
-Shiny = yes
-Item = WIDELENS
-Moves = POISONFANG,PLUCK,BITE,HYPNOSIS
+    Shiny = yes
+    Item = WIDELENS
+    Moves = POISONFANG,PLUCK,BITE,HYPNOSIS
 Pokemon = COCOLING,9
     Moves = ABSORB,LEECHSEED,PROTECT,QUICKATTACK
     Item = ORANBERRY
 Pokemon = VULPIX,8
-Moves = EMBER,QUICKATTACK,TACKLE,GROWL
+    Moves = EMBER,QUICKATTACK,TACKLE,GROWL
 Pokemon = RUFFLET,10
     Moves = PECK,GROWL,FLASH,QUICKATTACK
     Item = ORANBERRY
@@ -58,17 +58,21 @@ Pokemon = PIKACHU,6
 [INFUSIONINCLEORE,Leore,1]
 LoseText = "The fresh breeze of battling a strong opponent, now that was something! I can tell you and your Pokemon bond really well!"
 Pokemon = ARON,17
-Item = QUICKCLAW
-Moves = DIG,IRONHEAD,ROCKTHROW,GLARE
+    Item = QUICKCLAW
+    Moves = DIG,IRONHEAD,ROCKTHROW,STEALTHROCK
+    Role = HAZARDLEAD
 Pokemon = NOSEPASS,16
-Item = FOCUSSASH
-Moves = NASTYPLOT,ROCKPOLISH,ROCKSLIDE,HEADBUTT
+    Item = FOCUSSASH
+    Moves = SPARK,ROCKPOLISH,ROCKSLIDE,HEADBUTT
+    Role = SETUPSWEEPER
 Pokemon = MAWILE,16
-Item = BERRYJUICE
-Moves = FAIRYWIND,BITE,IRONHEAD,GLARE
+    Item = BERRYJUICE
+    Moves = FAIRYWIND,BITE,IRONHEAD,GLARE
+    Role = SPEEDCONTROL
 Pokemon = BELDUM,18
-Item = QUICKCLAW
-Moves = PSYBEAM,IRONHEAD,ZENHEADBUTT,CALMMIND
+    Item = QUICKCLAW
+    Moves = PSYBEAM,MIRRORSHOT,ECHOEDVOICE,CALMMIND
+    Role = WINCON
 #-------------------------------
 [BIKER,Smithy,1]
 LoseText = "Go fowards, you are strong."
@@ -93,7 +97,7 @@ Pokemon = GROWLITHE,12
 Pokemon = CAITLIT,14
     InfusionType1 = FIRE
     Moves = FLAMECHARGE,PLAYROUGH,UTURN
-    Role = REVENGEKILLER
+    Role = WINCON
     Item = BERRYJUICE
 #-------------------------------
 [FISHERMAN,Kyle,1]
@@ -135,13 +139,16 @@ LoseText = "Wait... so you aren't with those goons?"
 Pokemon = HOUNDOUR,15
     Moves = INCINERATE,SNARL,SOLARBEAM,SWIFT
     Item = POWERHERB
+    Role = SPECIALBREAKER
 Pokemon = DAMPURR,15
     Moves = ROCKBLAST,WATERGUN,GROWL,TACKLE
 Pokemon = PUMPKABOO,14
     Moves = RAZORLEAF,LEECHSEED,WILLOWISP,SYNTHESIS
+    Role = PHYSICALWALL
 Pokemon = MELTAN,16
     Moves = METALCLAW,TOXIC,SUBSTITUTE,PROTECT
     Item = LEFTOVERS
+    Role = TOXICSTALLER
 #-------------------------------
 [BOARDER,Nick,1]
 LoseText = "That was heated, my Pokemon almost melted away!"
@@ -165,21 +172,21 @@ Pokemon = SWINUB,19
 [LEADER2,Alexander,1]
 LoseText = "Very well, you deserve my badge."
 Pokemon = AMAURA,20
-Role = HAZARDLEAD
-Moves = AURORAVEIL,STEALTHROCK,ROCKTOMB,ENCORE
-Item = ICYROCK
+    Role = HAZARDLEAD
+    Moves = AURORAVEIL,STEALTHROCK,ROCKTOMB,ENCORE
+    Item = ICYROCK
 Pokemon = SANDSHREW,20
-Role = PHYSICALBREAKER
-Form = 1
-Item = METALCOAT
-Moves = ICEPUNCH,METALCLAW,BULLDOZE,HONECLAWS
+    Role = SETUPSWEEPER
+    Form = 1
+    Item = METALCOAT
+    Moves = ICEPUNCH,METALCLAW,BULLDOZE,HONECLAWS
 Pokemon = CLOYSTER,20
-Role = SPECIALBREAKER
-Moves = BUBBLEBEAM,AURORABEAM,HAIL,EXPLOSION
+    Role = SPECIALBREAKER
+    Moves = BUBBLEBEAM,AURORABEAM,HAIL,EXPLOSION
 Pokemon = GLACEON,21
-Role = SPEEDCONTROL
-Item = HEAVYDUTYBOOTS
-Moves = FREEZEDRY,WATERPULSE,SHADOWBALL,CALMMIND
+    Item = HEAVYDUTYBOOTS
+    Moves = FREEZEDRY,WATERPULSE,SHADOWBALL,CALMMIND
+    Role = WINCON
 #-------------------------------
 [BUGCATCHER,Rilen,1]
 LoseText = "Wierd.."
@@ -1279,10 +1286,12 @@ Pokemon = MEDICHAM,28
 LoseText = "Out matched, once again!"
 Pokemon = GROVYLE,18
     Moves = LEAFBLADE,QUICKATTACK,LEECHSEED,GLARE
+    Role = SPEEDCONTROL
 Pokemon = CRYOGONAL,18
-Moves = ICEBEAM,SWIFT,WATERPULSE,WILLOWISP
+    Moves = ICEBEAM,SWIFT,WATERPULSE,WILLOWISP
 Pokemon = COCONAB,18
     Moves = LEECHSEED,MEGADRAIN,WATERPULSE,SHELLSMASH
+    Role = SETUPSWEEPER
 Pokemon = RUFFLET,18
     Moves = WINGATTACK,ROOST,QUICKATTACK,LEER
 #-------------------------------
@@ -2655,15 +2664,17 @@ Moves = WATERGUN,HYPNOSIS,AQUAJET
 LoseText = "Out matched, once again!"
 Pokemon = GROVYLE,20
     Moves = LEAFBLADE,QUICKATTACK,LEECHSEED,GLARE
+    Role = SPEEDCONTROL
 Pokemon = CRYOGONAL,20
-Moves = ICEBEAM,SWIFT,WATERPULSE,WILLOWISP
+    Moves = ICEBEAM,SWIFT,WATERPULSE,WILLOWISP
 Pokemon = COCONAB,20
     Moves = LEECHSEED,MEGADRAIN,WATERPULSE,SHELLSMASH
+    Role = SETUPSWEEPER
 Pokemon = ZUBAT,21
-Item = QUICKCLAW
-Moves = POISONFANG,WINGATTACK,GLARE,QUICKATTACK
+    Item = QUICKCLAW
+    Moves = POISONFANG,WINGATTACK,ROOST,QUICKATTACK
 Pokemon = VULPIX,20
-Item = CHARCOAL
-Moves = FLAMECHARGE,WILLOWISP,GLARE,QUICKATTACK
+    Item = CHARCOAL
+    Moves = FLAMECHARGE,WILLOWISP,FLAMEBURST,QUICKATTACK
 Pokemon = RUFFLET,21
     Moves = WINGATTACK,ROOST,QUICKATTACK,LEER
