@@ -270,7 +270,7 @@ end
 
 PBAI::SwitchHandler.add_out do |switch,ai,battler,target|
 	if battler.choice_locked?
-    choiced_move_name = getID(PBMove,self.effects[PBEffects::ChoiceBand])
+    choiced_move_name = getID(PBMove,battler.effects[PBEffects::ChoiceBand])
     factor = 0
     battler.opposing_side.battlers.each do |pkmn|
       factor += pkmn.calculate_move_matchup(choiced_move_name)
