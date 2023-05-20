@@ -1092,8 +1092,9 @@ PBAI::ScoreHandler.add("103", "104", "105") do |score, ai, user, target, move|
     score += add
     PBAI.log("+ #{add} for there are #{inactive} pokemon to be sent out at some point")
     if [PBRoles::HAZARDLEAD,PBRoles::PHYSICALWALL,PBRoles::SPECIALWALL].include?(user.role)
-      score += user.role == PBRoles::HAZARDLEAD ? 40 : 30
-      PBAI.log("+ 40 for being a #{user.role}")
+      plus = 0
+      plus += user.role == PBRoles::HAZARDLEAD ? 100 : 60
+      PBAI.log("+ #{plus} for being a #{user.role}")
     end
   end
   next score
