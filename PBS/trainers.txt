@@ -389,19 +389,19 @@ Pokemon = SANDSLASH,32
 #-------------------------------
 [LILY,Lily,25]
 LoseText = "You really know what your doing."
-Pokemon = SERVINE,21
+Pokemon = SERVINE,23
     Moves = RAZORLEAF,LEECHSEED,GLARE,SUBSTITUTE
     Item = LIFEORB
-Pokemon = MIGHTYENA,21
+Pokemon = MIGHTYENA,23
     Moves = ICEFANG,THUNDERFANG,FIREFANG,CRUNCH
     Item = CHOICEBAND
 Pokemon = CARBINK,22
     Moves = PSYBEAM,DISARMINGVOICE,TRICKROOM,CONFUSION
     Item = POWERHERB
-Pokemon = FLAAFFY,23
-    Moves = FLAMEWHEEL,BITE,THUNDERBOLT,NASTYPLOT
+Pokemon = DUOSION,23
+    Moves = PSYBEAM,CALMMIND,TOXIC,REFLECT
     Item = FOCUSSASH
-Pokemon = FEEBAS,24
+Pokemon = MILOTIC,24
     Moves = SURF,ICYWIND,AQUARING,RECOVER
     Item = LEFTOVERS
 #-------------------------------

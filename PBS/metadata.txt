@@ -456,6 +456,10 @@ ShowArea = true
 # Eclipse Gym
 BattleBack = gym
 #-------------------------------
+[112]
+# Infusion Inc. HQ
+BattleBack = InfusionLabs
+#-------------------------------
 [089]
 # Route 2
 SnapEdges = true
