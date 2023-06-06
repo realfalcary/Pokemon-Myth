@@ -399,18 +399,35 @@ LoseText = "You really know what your doing."
 Pokemon = SERVINE,23
     Moves = RAZORLEAF,LEECHSEED,GLARE,SUBSTITUTE
     Item = LIFEORB
+<<<<<<< Updated upstream
 Pokemon = MIGHTYENA,23
+=======
+    Role = SPEEDCONTROL
+Pokemon = MIGHTYENA,21
+>>>>>>> Stashed changes
     Moves = ICEFANG,THUNDERFANG,FIREFANG,CRUNCH
     Item = CHOICEBAND
+    Role = PHYSICALBREAKER
 Pokemon = CARBINK,22
-    Moves = PSYBEAM,DISARMINGVOICE,TRICKROOM,CONFUSION
+    Moves = ANCIENTPOWER,DISARMINGVOICE,TRICKROOM,TOXIC
     Item = POWERHERB
+<<<<<<< Updated upstream
 Pokemon = DUOSION,23
     Moves = PSYBEAM,CALMMIND,TOXIC,REFLECT
     Item = FOCUSSASH
 Pokemon = MILOTIC,24
     Moves = SURF,ICYWIND,AQUARING,RECOVER
+=======
+    Role = TRICKROOMSETTER
+Pokemon = FLAAFFY,23
+    Moves = POWERGEM,SIGNALBEAM,SHOCKWAVE,TAILGLOW
+    Item = FOCUSSASH
+    Role = SETUPSWEEPER
+Pokemon = FEEBAS,24
+    Moves = SURF,ICYWIND,PROTECT,RECOVER
+>>>>>>> Stashed changes
     Item = LEFTOVERS
+    Role = SPECIALBREAKER
 #-------------------------------
 [LASS,Marissa,1]
 Pokemon = CLEFABLE,32

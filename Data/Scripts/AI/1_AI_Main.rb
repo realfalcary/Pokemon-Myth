@@ -869,7 +869,11 @@ class PBAI
       $d_switch = 0
       $d_switch = 1 if $doubles_switch != nil
       $target_strong_moves = false
-      switch = ai_should_switch?
+      if self.hasRole?(PBRoles::NONE)
+      	switch = false
+      else
+      	switch = ai_should_switch?
+      end
       # Get the optimal switch choice by type
       scores = get_optimal_switch_choice
       # If we should switch due to effects in battle
