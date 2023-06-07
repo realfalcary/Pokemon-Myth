@@ -1421,10 +1421,14 @@ class PBAI
     end
 
     def get_move_damage(target, move)
+	    if target.nil?
+		    return 0
+		    else
       calcType = move.pbCalcType(@battler)
       target.battler.damageState.typeMod = move.pbCalcTypeMod(calcType, @battler, target.battler)
       move.pbCalcDamage(@battler, target.battler)
       return target.battler.damageState.calcDamage
+		    end
     end
 
     # Calculates the combined type effectiveness of all user and target types
