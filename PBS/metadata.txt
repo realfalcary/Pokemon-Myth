@@ -456,10 +456,6 @@ ShowArea = true
 # Eclipse Gym
 BattleBack = gym
 #-------------------------------
-[112]
-# Infusion Inc. HQ
-BattleBack = InfusionLabs
-#-------------------------------
 [089]
 # Route 2
 SnapEdges = true
@@ -551,6 +547,15 @@ ShowArea = true
 BattleBack = gym
 Outdoor = false
 ShowArea = true
+#-------------------------------
+[111]
+# Catacombs Entrance
+BattleBack = cave1
+Outdoor = false
+#-------------------------------
+[112]
+# Infusion Inc. HQ
+BattleBack = InfusionLabs
 #-------------------------------
 [113]
 # Regina's Hideout
@@ -1047,6 +1052,7 @@ Outdoor = false
 ShowArea = false
 #-------------------------------
 [239]
+# Poke Center
 SnapEdges = true
 MapPosition = 0,15,17
 ShowArea = true

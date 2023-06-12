@@ -16,6 +16,22 @@ Land
     MUNCHLAX,3,5
     MUNCHLAX,3,5
 #-------------------------------
+111 # Catacombs Entrance
+25,10,10
+Cave
+    RIOLU,21,23
+    RIOLU,21,23
+    ZORUA_3,22,24
+    ZORUA_3,22,24
+    MAGNEMITE,21,22
+    SABLEYE,22,24
+    SABLEYE,21,23
+    MAWILE,22,24
+    MAROWAK,22,24
+    WAELIN,21,22
+    WAELIN,21,22
+    WAELIN,21,22
+#-------------------------------
 222 # Cold Storage
 25,10,10
 Cave
