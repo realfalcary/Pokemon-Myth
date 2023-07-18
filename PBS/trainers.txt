@@ -85,8 +85,13 @@ Pokemon = MAGBY,8
 Pokemon = TEPIG,8
 #-------------------------------
 [LEADER1,Kilo,1]
+Pokemon = CAITLIT,13
+    InfusionType1 = FIRE
+    Moves = FLAMECHARGE,PLAYROUGH,UTURN
+    Role = WINCON
+    Item = BERRYJUICE
 LoseText = "You burnt this arena up, you deserve this badge!"
-Pokemon = TORKOAL,13
+Pokemon = TORKOAL,14
     Moves = FLAMECHARGE,BULLDOZE,HEADBUTT,EXPLOSION
     Role = PHYSICALBREAKER
     Item = HEATROCK
@@ -94,11 +99,6 @@ Pokemon = GROWLITHE,12
     Moves = FLAMECHARGE,WILDCHARGE,MORNINGSUN,WILLOWISP
     Role = PHYSICALWALL
     Item = ORANBERRY
-Pokemon = CAITLIT,14
-    InfusionType1 = FIRE
-    Moves = FLAMECHARGE,PLAYROUGH,UTURN
-    Role = WINCON
-    Item = BERRYJUICE
 #-------------------------------
 [FISHERMAN,Kyle,1]
 LoseText = "Are we done?"
@@ -399,8 +399,6 @@ LoseText = "You really know what your doing."
 Pokemon = SERVINE,23
     Moves = RAZORLEAF,LEECHSEED,GLARE,SUBSTITUTE
     Item = LIFEORB
-Pokemon = MIGHTYENA,23
-    Role = SPEEDCONTROL
 Pokemon = MIGHTYENA,21
     Moves = ICEFANG,THUNDERFANG,FIREFANG,CRUNCH
     Item = CHOICEBAND
@@ -418,10 +416,6 @@ Pokemon = FLAAFFY,23
     Moves = POWERGEM,SIGNALBEAM,SHOCKWAVE,TAILGLOW
     Item = FOCUSSASH
     Role = SETUPSWEEPER
-Pokemon = FEEBAS,24
-    Moves = SURF,ICYWIND,PROTECT,RECOVER
-    Item = LEFTOVERS
-    Role = SPECIALBREAKER
 #-------------------------------
 [LASS,Marissa,1]
 Pokemon = CLEFABLE,32
@@ -745,6 +739,9 @@ Pokemon = MEDICHAM,65
 Pokemon = LUCARIO,64
 #-------------------------------
 [LEADER6,Yeri,1]
+Pokemon = LAPRAS,47
+    Moves = DRAGONPULSE,FREEZEDRY,GEYSERPULSE
+    Item = ASSAULTVEST
 LoseText = "Marvelous, you have a great sense of hearing!"
 Pokemon = BINDSHII,46
     Moves = HYPERBEAM,DRAGONPULSE,MOONBLAST,AURASPHERE
@@ -752,9 +749,6 @@ Pokemon = BINDSHII,46
     Item = ASSAULTVEST
 Pokemon = NOIVERN,45
     Moves = JETBOOM,DRAGONPULSE,AIRCANNON,GLACIERPULSE
-    Item = ASSAULTVEST
-Pokemon = LAPRAS,47
-    Moves = DRAGONPULSE,FREEZEDRY,GEYSERPULSE
     Item = ASSAULTVEST
 Pokemon = NOCTOWL,46
     Moves = EXTRASENSORY,AIRSLASH,SONARPULSE,MOONBLAST
@@ -784,11 +778,11 @@ Pokemon = GOODRA,63
 [VANILLA,Vanilla,2]
 Items = FULLRESTORE,FULLRESTORE,REVIVE,FULLHEAL,FULLHEAL
 LoseText = "Love it... I really do, I'm glad I get to call you the new Champion."
-Pokemon = BLAZESIDHE,70
-    Moves = FIREBLAST,MOONBLAST,STARBOLT,TOXIC
-    Item = LIFEORB
 Pokemon = ASCENTEON,70
     Moves = DRAGONDANCE,OUTRAGE,CRUNCH,EARTHQUAKE
+    Item = LIFEORB
+Pokemon = BLAZESIDHE,70
+    Moves = FIREBLAST,MOONBLAST,STARBOLT,TOXIC
     Item = LIFEORB
 Pokemon = DEOXYS,70
     Form = 1
@@ -972,11 +966,14 @@ Pokemon = ZAMAZENTA,68
 [E42,Skylar,1]
 Items = FULLRESTORE,REVIVE,FULLHEAL,FULLHEAL
 LoseText = "Incredible! I cannot believe it!"
+Pokemon = VOLCARONA,69
+    Moves = PSYCHIC,CALMMIND,OVERHEAT,MOONBLAST
+    Item = LIFEORB
 Pokemon = MILOTIC,68
     Moves = SCALD,TOXIC,ICEBEAM,RECOVER
     Ability = 2
     Item = LEFTOVERS
-Pokemon = MEW,68
+Pokemon = MEW,70
     Moves = PSYCHIC,THUNDERBOLT,ICEBEAM,FLAMETHROWER
     Item = EXPERTBELT
 Pokemon = MOLTRES,68
@@ -989,9 +986,6 @@ Pokemon = AMPHAROS,68
 Pokemon = AZUMARILL,68
     Moves = BELLYDRUM,AQUAJET,MOONBLAST,LIQUIDATION
     Item = WHITEHERB
-Pokemon = VOLCARONA,70
-    Moves = PSYCHIC,CALMMIND,OVERHEAT,MOONBLAST
-    Item = LIFEORB
 #-------------------------------
 [E43,Lucas,1]
 LoseText = "Power, and dedication.. I sense it all within you!"
@@ -1260,26 +1254,26 @@ Pokemon = NUZLEAF,16
     Item = QUICKCLAW
 #-------------------------------
 [ASTRAPIXIE,Pixie,1]
-Pokemon = WAELIN,19
+Pokemon = WAELIN,22
     Moves = DRAININGKISS,BIND,DISARMINGVOICE,CONFUSION
     Item = ORANBERRY
-Pokemon = CAITFYR,19
+Pokemon = CAITFYR,22
     Moves = TRANSFORM,DRAININGKISS,WILLOWISP,EMBER
     Ability = 1
     Item = ORANBERRY
-Pokemon = EEVEE,20
+Pokemon = SYLVEON,23
     Moves = SWIFT,DRAININGKISS,TAILWHIP,CUTECLAW
     Ability = 2
     Item = PIXIEPLATE
 #-------------------------------
 [ASTRASPECTRAL,Spectral,1]
-Pokemon = GASTLY,19
+Pokemon = GASTLY,21
     Moves = HYPNOSIS,CURSE,LICK,CONFUSERAY
     Item = BLACKSLUDGE
-Pokemon = HONEDGE,19
+Pokemon = HONEDGE,22
     Moves = AERIALACE,TACKLE,SHADOWSNEAK,FURYCUTTER
     Item = MUSCLEBAND
-Pokemon = MISDREAVUS,20
+Pokemon = MISDREAVUS,23
     Moves = CONFUSION,ASTONISH,BITE,CONFUSERAY
     Item = ORANBERRY
 #-------------------------------
@@ -1295,15 +1289,22 @@ Pokemon = MEDICHAM,28
 #-------------------------------
 [RIVAL1,Marcus,3]
 LoseText = "Out matched, once again!"
-Pokemon = GROVYLE,18
+Pokemon = GROVYLE,20
     Moves = LEAFBLADE,QUICKATTACK,LEECHSEED,GLARE
     Role = SPEEDCONTROL
-Pokemon = CRYOGONAL,18
+Pokemon = CRYOGONAL,20
     Moves = ICEBEAM,SWIFT,WATERPULSE,WILLOWISP
-Pokemon = COCONAB,18
+Pokemon = COCONAB,20
     Moves = LEECHSEED,MEGADRAIN,WATERPULSE,SHELLSMASH
     Role = SETUPSWEEPER
-Pokemon = RUFFLET,18
+Pokemon = ZUBAT,21
+    Item = QUICKCLAW
+    Shiny = yes
+    Moves = POISONFANG,WINGATTACK,ROOST,QUICKATTACK
+Pokemon = VULPIX,20
+    Item = CHARCOAL
+    Moves = FLAMECHARGE,WILLOWISP,FLAMEBURST,QUICKATTACK
+Pokemon = RUFFLET,21
     Moves = WINGATTACK,ROOST,QUICKATTACK,LEER
 #-------------------------------
 [MONIKA,Monika,1]
@@ -2683,6 +2684,7 @@ Pokemon = COCONAB,20
     Role = SETUPSWEEPER
 Pokemon = ZUBAT,21
     Item = QUICKCLAW
+    Shiny = yes
     Moves = POISONFANG,WINGATTACK,ROOST,QUICKATTACK
 Pokemon = VULPIX,20
     Item = CHARCOAL

@@ -5,7 +5,7 @@ PlayerA = POKEMONTRAINER_Red,trchar000,boy_bike,boy_surf,boy_run,boy_surf,boy_fi
 PlayerB = POKEMONTRAINER_Leaf,trchar001,girl_bike,girl_surf,girl_run,girl_surf,girl_fish_offset,girl_fish_offset
 TrainerVictoryME = Battle victory trainer.ogg
 WildVictoryME = Battle victory wild.ogg
-TrainerBattleBGM = Trainer Battle!.ogg
+TrainerBattleBGM = Battle! vs Pokemon Trainer!.mp3
 SurfBGM = Surf!.mp3
 BicycleBGM = Bicycle.mid
 Home = 33,10,5,8
@@ -652,6 +652,11 @@ MapPosition = 0,19,9
 Outdoor = true
 ShowArea = true
 #-------------------------------
+[141]
+# East Catacombs
+BattleBack = cave1
+Outdoor = false
+#-------------------------------
 [142]
 # Crystal Cavern
 BattleBack = elite8
@@ -1058,51 +1063,73 @@ MapPosition = 0,15,17
 ShowArea = true
 #-------------------------------
 [240]
+# East Grotto
 SnapEdges = true
+BattleBack = field
 MapPosition = 0,15,17
 Outdoor = true
 ShowArea = true
 #-------------------------------
 [241]
+# Secret 1
 SnapEdges = true
 MapPosition = 0,15,17
 ShowArea = true
 #-------------------------------
 [242]
+# Daycare Nursery
 SnapEdges = true
 ShowArea = true
 #-------------------------------
 [243]
+# Burnt Forest
 SnapEdges = true
 MapPosition = 0,15,17
 Outdoor = true
 ShowArea = true
 #-------------------------------
 [244]
+# Burnt Forest
 SnapEdges = true
 MapPosition = 0,15,17
 Outdoor = true
 ShowArea = true
 #-------------------------------
 [245]
+# Mythan Volcano
 SnapEdges = true
+BattleBack = volcano
 MapPosition = 0,17,17
+Outdoor = false
+ShowArea = false
+#-------------------------------
+[246]
+# Kindle Grotto
+SnapEdges = true
+BattleBack = field
 Outdoor = true
 ShowArea = true
 #-------------------------------
 [247]
-BattleBack = fen
+# Kindle Ash Peak
+SnapEdges = true
+BattleBack = volcanopeak
 MapPosition = 0,17,17
+Outdoor = false
+ShowArea = true
 #-------------------------------
 [248]
-BattleBack = olivia
+# Fakemon Test
+BattleBack = 
 MapPosition = 0,17,17
 #-------------------------------
 [249]
+# Kindle Cave F1
 BattleBack = champion1
 MapPosition = 0,17,17
 #-------------------------------
 [250]
+# ??? Cave
 BattleBack = izu
 MapPosition = 0,17,17
 #-------------------------------

@@ -876,3 +876,5 @@
 852,BLOOMINFUSEDGEM,Bloom Infused Gem,Bloom Infused Gems,1,2200,"A very old geode-like cracked crystal, the colors inside sparkle and pulse.",1,0,7,
 853,HYDROINFUSEDGEM,Hydro Infused Gem,Hydro Infused Gems,1,2200,"A very old geode-like cracked crystal, the colors inside sparkle and pulse.",1,0,7,
 854,TOXICINFUSEDGEM,Toxic Infused Gem,Toxic Infused Gems,1,2200,"A very old geode-like cracked crystal, the colors inside sparkle and pulse.",1,0,7,
+855,FORESTPASS,Forest Pass,Forest Passes,8,0,"This pass is required to investigate the Burnt Forest.",0,0,6,
+856,TUMBLEFOSSIL,Tumble Fossil,Tumble Fossils,1,7000,"A fossil of an ancient golem from the ancient ruins of Mythan. It's texture feels very similar to a cracked rock.",0,0,8,

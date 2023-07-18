@@ -16,11 +16,43 @@ Land
     MUNCHLAX,3,5
     MUNCHLAX,3,5
 #-------------------------------
+247 # Kindle Ash Peak
+25,10,10
+Land
+    ZORUA,24,26
+    COMBUSKEN,24,25
+    PONYTA,22,24
+    GROWLITHE,21,25
+    SIZZLIPEDE,24,26
+    FLAAFFY,22,25
+    SLUGMA,22,25
+    TORKOAL,22,25
+    MONFERNO,22,25
+    VULPIX,23,25
+    FLAREON,22,25
+    CAITFYR,22,24
+#-------------------------------
 111 # Catacombs Entrance
 25,10,10
 Cave
-    RIOLU,21,23
-    RIOLU,21,23
+    RIOLU_2,21,23
+    RIOLU_2,21,23
+    ZORUA_3,22,24
+    ZORUA_3,22,24
+    MAGNEMITE,21,22
+    SABLEYE,22,24
+    SABLEYE,21,23
+    MAWILE,22,24
+    MAROWAK,22,24
+    WAELIN,21,22
+    WAELIN,21,22
+    WAELIN,21,22
+#-------------------------------
+141 # East Catacombs
+25,10,10
+Cave
+    RIOLU_2,21,23
+    RIOLU_2,21,23
     ZORUA_3,22,24
     ZORUA_3,22,24
     MAGNEMITE,21,22
@@ -615,21 +647,37 @@ Water
     MILOTIC,68
     SWAMPERT,68
 #-------------------------------
-240
+240 # East Grotto
 25,10,10
 Land
-    LEAVANNY,71
-    LEAVANNY,71
-    NOIVERN,71
-    NOIVERN,71
-    FALINKS,71
-    FALINKS,71
-    RAICHU,71
-    RAICHU,71
-    GOLEM,71
-    GOLEM,71
-    DUNEON,71
-    DUNEON,71
+    YAMASK,24
+    MORELULL,24
+    SHROOMISH,24
+    WAELIN,24
+    HERACROSS,24
+    PINSIR,24
+    PINECO,24
+    CUTIEFLY,24
+    BUTTERFREE,24
+    BAGON,24
+    DRATINI,24
+    BELDUM,24
+#-------------------------------
+246 # Kindle Grotto
+25,10,10
+Land
+    YAMASK,24
+    MORELULL,24
+    SHROOMISH,24
+    WAELIN,24
+    HERACROSS,24
+    PINSIR,24
+    PINECO,24
+    CUTIEFLY,24
+    BUTTERFREE,24
+    BAGON,24
+    DRATINI,24
+    BELDUM,24
 #-------------------------------
 241
 25,10,10
