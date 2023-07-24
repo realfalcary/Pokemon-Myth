@@ -1130,8 +1130,13 @@ MapPosition = 0,17,17
 #-------------------------------
 [250]
 # ??? Cave
-BattleBack = izu
-MapPosition = 0,17,17
+BattleBack = volcano
+SnapEdges = true
+#-------------------------------
+[265]
+# ??? Cave
+BattleBack = volcano
+SnapEdges = true
 #-------------------------------
 [252]
 # Serene Ranch
@@ -1140,20 +1145,23 @@ Outdoor = true
 ShowArea = true
 #-------------------------------
 [253]
+# Kindle Cave F2
 SnapEdges = true
-BattleBack = Giratina
-ShowArea = true
+BattleBack = cave1
+ShowArea = false
 #-------------------------------
 [254]
+# Kindle Cave F3
 SnapEdges = true
-Outdoor = true
-ShowArea = true
+Outdoor = false
+ShowArea = false
 #-------------------------------
 [257]
+# Kindle Heart
 SnapEdges = true
-BattleBack = howliage
-Outdoor = true
-ShowArea = true
+BattleBack = 
+Outdoor = false
+ShowArea = false
 #-------------------------------
 [259]
 # Lost Temple

@@ -7,6 +7,11 @@ Pokemon = VULPIX,2
 Pokemon = RUFFLET,3
     Moves = PECK,GROWL
 #-------------------------------
+[RIVAL1,Marcus,34958]
+LoseText = "Wow! Pokemon battling is actually fun!"
+Pokemon = PORYGONZ,30
+Item = PORYGONITE
+#-------------------------------
 [RIVAL1,Marcus,2]
 LoseText = "I guess I need to keep training, dont you think?"
 Pokemon = ZUBAT,9
@@ -127,11 +132,11 @@ Pokemon = BEEDRILL,13
 #-------------------------------
 [BUGCATCHER,Nich,1]
 LoseText = "Nice one!"
-Pokemon = BUTTERFREE,15
+Pokemon = BUTTERFREE,20
 #-------------------------------
 [HIKER,Jake,1]
 LoseText = "You should read more about this route."
-Pokemon = CHARMANDER,18
+Pokemon = CHARMELEON,20
 Pokemon = GLIGAR,18
 #-------------------------------
 [IZU,Izu,1]
@@ -277,19 +282,19 @@ Item = LEFTOVERS
 Moves = AQUAJET,ICEBEAM,AQUARING,BOUNCE
 #-------------------------------
 [BRI,Bri,1]
-LoseText = "Heh, as expected your actually quite strong.."
-Pokemon = VULPIX,21
-    Moves = QUICKATTACK,FLAMEWHEEL,BITE,SUNNYDAY
-    Item = CHARCOAL
-Pokemon = BARBOACH,21
-    Moves = SURF,WATERPULSE,DIG,BOUNCE
-    Item = MYSTICWATER
-Pokemon = CHARMELEON,21
-    Moves = SLASH,QUICKATTACK,SWORDSDANCE,FLAMEWHEEL
-    Item = QUICKCLAW
-Pokemon = TOXEON,24
+LoseText = "No! You don't understand... We need to fix the world!"
+Pokemon = AZUMARILL,26
+Item = QUICKCLAW
+Moves = LIQUIDATION,AQUAJET,TOXIC,PLAYROUGH
+Pokemon = TOXEON,26
     Moves = SLUDGEBOMB,POISONGAS,GENETICALPULSE,EXTREMESPEED
     Item = BLACKSLUDGE
+Pokemon = SCYTHER,26
+Item = EXPERTBELT
+Moves = FLAMETHROWER,THUNDERBOLT,SHADOWBALL,AURASPHERE
+Pokemon = PORYGONZ,28
+Item = PORYGONITE
+Moves = TRIATTACK,STARBOLT,ICEBEAM,RECOVER
 #-------------------------------
 [LEADER3,Acica,1]
 LoseText = "Here you are my friend, your third badge."
