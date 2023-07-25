@@ -337,7 +337,7 @@ Pokemon = ELEKID,25
 #-------------------------------
 [ENGINEER,Gary,1]
 LoseText = "Indeed you do."
-Pokemon = TYNAMO,28
+Pokemon = EELEKTRIK,27
     Moves = CHARGEBEAM,THUNDERWAVE,SPARK,TACKLE
     Item = ELECTRICGEM
 #-------------------------------
