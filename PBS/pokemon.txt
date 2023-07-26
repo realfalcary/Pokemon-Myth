@@ -3952,8 +3952,8 @@ Evolutions =
 [123]
 Name = Scyther
 InternalName = SCYTHER
-Type1 = GHOST
-Type2 = FLYING
+Type1 = FIRE
+Type2 = GHOST
 BaseStats = 70,110,80,105,55,80
 GenderRate = Female50Percent
 GrowthRate = Medium
