@@ -8,7 +8,7 @@ WildVictoryME = Battle victory wild.ogg
 TrainerBattleBGM = Battle! vs Pokemon Trainer!.mp3
 SurfBGM = Surf!.mp3
 BicycleBGM = Bicycle.mid
-Home = 33,10,5,8
+Home = 33,9,4,8
 WildBattleBGM = Wild Battle!.ogg
 #-------------------------------
 [001]
