@@ -438,6 +438,7 @@ SnapEdges = true
 [085]
 # Infusion Labs A1
 SnapEdges = false
+MapPosition = 0,21,13
 BattleBack = InfusionLabs
 Outdoor = false
 Environment = None
@@ -454,6 +455,7 @@ ShowArea = true
 #-------------------------------
 [088]
 # Eclipse Gym
+MapPosition = 0,17,13
 BattleBack = gym
 #-------------------------------
 [089]
@@ -473,7 +475,7 @@ ShowArea = true
 #-------------------------------
 [092]
 # Avialodge Cafe
-MapPosition = 0,22,13
+MapPosition = 0,21,13
 Outdoor = true
 ShowArea = true
 #-------------------------------
@@ -484,13 +486,14 @@ BattleBack = cave1
 #-------------------------------
 [095]
 # Pokemon Daycare
-MapPosition = 0,22,13
+MapPosition = 0,19,9
 Outdoor = false
 ShowArea = false
 #-------------------------------
 [098]
 # Maycrop Cave
 SnapEdges = true
+MapPosition = 0,17,5
 BattleBack = cave1
 Outdoor = false
 #-------------------------------
@@ -498,11 +501,13 @@ Outdoor = false
 # Hilloway Outskirts
 SnapEdges = true
 Outdoor = true
+MapPosition = 0,17,7
 ShowArea = true
 #-------------------------------
 [100]
 # Hilloway Tunnel
 SnapEdges = true
+MapPosition = 0,17,7
 BattleBack = cave1
 Environment = Cave
 #-------------------------------
@@ -523,17 +528,19 @@ ShowArea = true
 [104]
 # Fairloom Ruins
 SnapEdges = true
+MapPosition = 0,24,13
 Outdoor = true
 ShowArea = true
 #-------------------------------
 [106]
 # Backyard
-BattleBack = elite8
+BattleBack = field
 MapPosition = 0,17,13
 #-------------------------------
 [107]
 # Hilloway Tower
 DarkMap = true
+MapPosition = 0,17,7
 #-------------------------------
 [109]
 # Mt. Maycrop
@@ -545,16 +552,19 @@ ShowArea = true
 [110]
 # Fairloom Gym
 BattleBack = gym
+MapPosition = 0,13,26
 Outdoor = false
 ShowArea = true
 #-------------------------------
 [111]
 # Catacombs Entrance
+MapPosition = 0,21,8
 BattleBack = cave1
 Outdoor = false
 #-------------------------------
 [112]
 # Infusion Inc. HQ
+MapPosition = 0,21,9
 BattleBack = InfusionLabs
 #-------------------------------
 [113]
@@ -599,13 +609,13 @@ ShowArea = true
 # Maycrop Town
 SnapEdges = true
 BattleBack = field
-MapPosition = 0,22,6
+MapPosition = 0,17,6
 #-------------------------------
 [128]
 # Connection Cave
 SnapEdges = true
 BattleBack = cave1
-MapPosition = 0,22,6
+MapPosition = 0,19,9
 #-------------------------------
 [130]
 # Moplart Town
@@ -616,7 +626,7 @@ ShowArea = true
 #-------------------------------
 [131]
 # Moplart Gym
-BattleBack = indoor7
+BattleBack = gym
 MapPosition = 0,21,9
 #-------------------------------
 [132]
