@@ -4427,7 +4427,7 @@ BattlerEnemyX = 0
 BattlerEnemyY = 32
 BattlerShadowX = 0
 BattlerShadowSize = 2
-Evolutions = PORYGON2,Item,MOTHERBOARD
+Evolutions = PORYGON2,HoldItem,UPGRADE
 #-------------------------------
 [138]
 Name = Omanyte
@@ -7529,7 +7529,7 @@ BattlerEnemyX = 0
 BattlerEnemyY = 28
 BattlerShadowX = 0
 BattlerShadowSize = 2
-Evolutions = PORYGONZ,Item,MOTHERBOARD
+Evolutions = PORYGONZ,HoldItem,DUBIOUSDISC
 #-------------------------------
 [234]
 Name = Stantler
