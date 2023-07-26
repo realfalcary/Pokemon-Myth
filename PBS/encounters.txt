@@ -19,7 +19,7 @@ Land
 247 # Kindle Ash Peak
 25,10,10
 Land
-    ZORUA,24,26
+    ZORUA_2,24,26
     COMBUSKEN,24,25
     PONYTA,22,24
     GROWLITHE,21,25
