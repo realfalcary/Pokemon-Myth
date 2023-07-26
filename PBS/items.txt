@@ -878,3 +878,5 @@
 855,FORESTPASS,Forest Pass,Forest Passes,8,0,"This pass is required to investigate the Burnt Forest.",0,0,6,
 856,TUMBLEFOSSIL,Tumble Fossil,Tumble Fossils,1,7000,"A fossil of an ancient golem from the ancient ruins of Mythan. It's texture feels very similar to a cracked rock.",0,0,8,
 857,PORYGONITE,Porygonite,Porygonites,1,0,"One of a variety of mysterious Mega Stones. Have Porygon-Z hold it, and it will be able to Mega Evolve.",0,0,12,
+858,FAEINFUSEDGEM,Fae Infused Gem,Fae Infused Gems,1,2200,"A very old geode-like cracked crystal, the colors inside sparkle and pulse.",1,0,7,
+859,TITANIUMINFUSEDGEM,Titanium Infused Gem,Titanium Infused Gems,1,2200,"A very old geode-like cracked crystal, the colors inside sparkle and pulse.",1,0,7,
