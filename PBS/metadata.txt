@@ -693,7 +693,7 @@ ShowArea = true
 #-------------------------------
 [152]
 # Maycrop Gym
-BattleBack = distortion
+BattleBack = gym
 Weather = Rain,100
 MapPosition = 0,17,6
 Environment = None
@@ -1130,13 +1130,8 @@ MapPosition = 0,17,17
 #-------------------------------
 [250]
 # ??? Cave
-BattleBack = volcano
 SnapEdges = true
-#-------------------------------
-[265]
-# ??? Cave
 BattleBack = volcano
-SnapEdges = true
 #-------------------------------
 [252]
 # Serene Ranch
@@ -1171,6 +1166,7 @@ Outdoor = true
 ShowArea = true
 #-------------------------------
 [260]
+# Courmine Village
 SnapEdges = true
 BattleBack = darkgym
 #-------------------------------
@@ -1193,6 +1189,11 @@ SnapEdges = true
 BattleBack = 
 Outdoor = true
 ShowArea = true
+#-------------------------------
+[265]
+# ??? Cave
+SnapEdges = true
+BattleBack = volcano
 #-------------------------------
 [270]
 SnapEdges = false

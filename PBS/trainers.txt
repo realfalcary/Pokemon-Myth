@@ -298,20 +298,20 @@ Moves = TRIATTACK,STARBOLT,ICEBEAM,RECOVER
 #-------------------------------
 [LEADER3,Acica,1]
 LoseText = "Here you are my friend, your third badge."
-Pokemon = PINCURCHIN,25
+Pokemon = PINCURCHIN,28
     Moves = MEMENTO
     Ability = 2
     Role = SUICIDELEAD
     Item = TERRAINEXTENDER
-Pokemon = MANECTRIC,25
+Pokemon = MANECTRIC,28
     Moves = ELECTROBALL,FLAMEBURST,HIDDENPOWER,MAGNETRISE
     Role = SPECIALBREAKER
     Item = PETAYABERRY
-Pokemon = ZEBSTRIKA,25
+Pokemon = ZEBSTRIKA,28
     Moves = SPARK,FLAMECHARGE,PURSUIT,MAGNETRISE
     Role = PHYSICALBREAKER
     Item = LIECHIBERRY
-Pokemon = LANTURN,27
+Pokemon = LANTURN,28
     Moves = SCALD,STOCKPILE,AQUARING,PROTECT
     Item = LEFTOVERS
     Role = SPECIALWALL
@@ -351,18 +351,18 @@ Pokemon = EEVEE,33
 [BRI,Bri,2]
 Items = FULLRESTORE,REVIVE,FULLHEAL,FULLHEAL
 LoseText = "Huh? I- I cant believe it..."
-Pokemon = WHISCASH,27
-    Moves = CALMMIND,WATERPULSE,SURF,EARTHPOWER
-    Item = LEFTOVERS
-Pokemon = VULPIX,27
-    Moves = FLAMETHROWER,WILLOWISP,QUICKATTACK,SUNNYDAY
-    Item = CHARCOAL
-Pokemon = CHARMELEON,27
-    Moves = FLAMETHROWER,BITE,SLASH,DRAGONRAGE
-    Item = QUICKCLAW
-Pokemon = TOXEON,28
-    Moves = SLUDGEBOMB,TOXIC,EXTREMESPEED,MOONLIGHT
+Pokemon = AZUMARILL,31
+Item = QUICKCLAW
+Moves = LIQUIDATION,AQUAJET,TOXIC,PLAYROUGH
+Pokemon = TOXEON,30
+    Moves = SLUDGEBOMB,POISONGAS,GENETICALPULSE,EXTREMESPEED
     Item = BLACKSLUDGE
+Pokemon = KLEAVOR,31
+Item = EXPERTBELT
+Moves = FLAMETHROWER,THUNDERBOLT,SHADOWBALL,AURASPHERE
+Pokemon = PORYGONZ,33
+Item = PORYGONITE
+Moves = TRIATTACK,STARBOLT,ICEBEAM,RECOVER
 #-------------------------------
 [HEX,Marie,1]
 LoseText = "You my child have a strong spirit..."
@@ -459,6 +459,29 @@ Pokemon = RUFFLET,40
 LoseText = "Woah.."
 Pokemon = SEADRA,33
 Pokemon = MARSHTOMP,34
+#-------------------------------
+[SWIMMER_M,Tennison,1]
+LoseText = "I'm suprised you actually beat me!"
+Pokemon = TENTACRUEL,32
+Ability = 2
+Role = TOXICSTALLER
+Item = BLACKSLUDGE
+Moves = AQUARING,PROTECT,TOXIC,MUDDYWATER
+Pokemon = TENTACRUEL,32
+Ability = 2
+Role = TOXICSTALLER
+Item = BLACKSLUDGE
+Moves = AQUARING,PROTECT,TOXIC,MUDDYWATER
+Pokemon = TENTACRUEL,32
+Ability = 2
+Role = TOXICSTALLER
+Item = BLACKSLUDGE
+Moves = AQUARING,PROTECT,TOXIC,MUDDYWATER
+Pokemon = TENTACRUEL,32
+Ability = 2
+Role = TOXICSTALLER
+Item = BLACKSLUDGE
+Moves = AQUARING,PROTECT,TOXIC,MUDDYWATER
 #-------------------------------
 [SWIMMER_M,Micheal,1]
 LoseText = "Good one, but you won't beat Crystal."
@@ -2273,17 +2296,17 @@ Pokemon = SIMISAGE,22
 #-------------------------------
 [N,N,1]
 LoseText = "Very unique battle style..."
-Pokemon = ARCHEN,24
+Pokemon = ARCHEN,28
     Moves = STEALTHROCK,WINGATTACK,ROCKTHROW,ROOST
     Item = FOCUSSASH
-Pokemon = KLINK,25
+Pokemon = KLINK,28
     Moves = GEARGRIND,IRONHEAD,SPARK,EMBARGO
     Item = ASSAULTVEST
-Pokemon = ZORUA,26
+Pokemon = ZORUA,28
     Moves = KNOCKOFF,NASTYPLOT,TAUNT,QUICKATTACK
     Item = EVIOLITE
-Pokemon = VANILLITE,24
-    Moves = ICEBEAM,QUICKATTACK,TAUNT,CALMMIND
+Pokemon = YAMASK,28
+    Moves = SHADOWBALL,CALMMIND,SHADOWSNEAK,HYPNOSIS
     Item = FOCUSSASH
 #-------------------------------
 [GENTLEMAN,Dustin,1]
@@ -2357,16 +2380,25 @@ Moves = CROSSPOISON,BRAVEBIRD,ROOST,FLY
 #-------------------------------
 [MONIKA,Monika,2]
 Items = REVIVE,REVIVE,FULLRESTORE,FULLHEAL
-LoseText = "No way, I trained so hard for this!"
-Pokemon = WORMADAM,40
-    Moves = BUGBUZZ,GIGADRAIN,HIDDENPOWER,QUIVERDANCE
+LoseText = "You may have beaten me, but you will not defeat Bri..."
+Pokemon = JOLTIK,29
+    Moves = STICKYWEB,TOXIC,BUGBITE,QUICKATTACK
+    Item = FOCUSSASH
+Pokemon = COMBUSKEN,30
+Item = QUICKCLAW
+Moves = BLAZEKICK,WINGATTACK,DOUBLEKICK,EXTREMESPEED
+Ability = 2
+Pokemon = SCIZOR,30
+Form = 2
+Item = LIFEORB
+Moves = BLAZEKICK,SHADOWSNEAK,SHADOWCLAW,EXTREMESPEED
+Pokemon = ZOROARK,30
+Form = 3
+Item = EXPERTBELT
+Moves = FLAMETHROWER,WILLOWISP,SHADOWSNEAK,CRUNCH
+Pokemon = MAWILE,31
+    Moves = SANDATTACK,FAKEOUT,BITE,FAIRYWIND
     Item = LEFTOVERS
-Pokemon = VAPOREON,40
-    Moves = HYDROPUMP,SCALD,QUICKATTACK,WISH
-    Item = WATERGEM
-Pokemon = MAWILE,40
-    Moves = IRONHEAD,METALSOUND,MOONBLAST,SHADOWBALL
-    Item = MAWILITE
 #-------------------------------
 [ROMAYA,Romaya,2]
 Items = REVIVE,REVIVE,FULLRESTORE,FULLHEAL
