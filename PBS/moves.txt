@@ -778,7 +778,7 @@
 759,AURABALL,Aura Ball,000,40,FIGHTING,Special,100,30,0,NearOther,0,bef,"The user yeets a ball of their aura."
 760,MUDSPIT,Mud Spit,000,40,GROUND,Special,100,30,0,NearOther,0,bef,"The user spits mud at their target."
 761,SWOOSH,Swoosh,000,40,FLYING,Special,100,30,0,NearOther,0,bef,"The user creates a small swoosh of wind."
-762,WEBBALL,WEBBALL,000,40,BUG,Special,100,30,0,NearOther,0,bef,"The user shoots a ball of web at the target."
+762,WEBBALL,Web Ball,000,40,BUG,Special,100,30,0,NearOther,0,bef,"The user shoots a ball of web at the target."
 763,PEBBLESHOT,Pebbleshot,000,40,ROCK,Special,100,30,0,NearOther,0,bef,"The user shoots a bunch of pebbles at the target."
 764,SCARYSHOT,Scary Shot,000,40,GHOST,Special,100,30,0,NearOther,0,bef,"The user uses a scary attack."
 765,NIGHTBALL,Night Ball,000,40,DARK,Special,100,30,0,NearOther,0,bef,"The user shoots a ball as dark as night."
