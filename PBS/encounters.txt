@@ -19,7 +19,7 @@ Land
 247 # Kindle Ash Peak
 25,10,10
 Land
-    ZORUA_2,24,26
+    ZORUA_3,24,26
     COMBUSKEN,24,25
     PONYTA,22,24
     GROWLITHE,21,25
@@ -311,7 +311,7 @@ Cave
     HITMONCHAN,22
     HITMONTOP,22
     HITMONLEE,22
-    ZORUA,25
+    ZORUA_3,25
 #-------------------------------
 132 # Mythic Forest
 25,10,10
@@ -390,7 +390,7 @@ Land
     SANDSLASH,28,29
     TRAPINCH,27,30
     PINSIR,25,28
-    ZORUA,27,29
+    ZORUA_3,27,29
     DRILBUR,28,29
     CROBAT,28,30
     DUSKULL,27,29
@@ -568,8 +568,8 @@ Water
 231 # Passage of Night
 25,10,10
 Land
-    ZOROARK,36
-    ZOROARK,36
+    ZOROARK_3,36
+    ZOROARK_3,36
     LAMPENT,35
     LAMPENT,35
     MIGHTYENA,36
