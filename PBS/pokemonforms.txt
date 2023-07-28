@@ -459,7 +459,7 @@ Pokedex = Its shining gold hair provides it with protection. It's reputed that k
 BattlerEnemyY = 29
 #-------------------------------
 [PIKACHU,17]
-FormName = Mythanian
+FormName = Mythan
 Type1 = POISON
 Type2 = DARK
 BaseStats = 45,55,50,100,50,50
@@ -471,7 +471,7 @@ Pokedex = A very toxic Pokemon, people who touch these Pikachu will suffer from 
 Evolutions = RAICHU,Level,35
 #-------------------------------
 [RAICHU,17]
-FormName = Mythanian
+FormName = Mythan
 Type1 = POISON
 Type2 = DARK
 Abilities = POISONPOINT
@@ -1020,7 +1020,7 @@ Weight = 740.0
 BattlerEnemyY = 7
 #-------------------------------
 [SCYTHER,1]
-FormName = Mythanian Scyther
+FormName = Mythan Scyther
 Type1 = FIRE
 Type2 = GHOST
 Abilities = SHEERFORCE,CURSEDBODY
@@ -1030,7 +1030,7 @@ BattlerEnemyY = 5
 Evolutions = KLEAVOR,Item,PREADITE,KLEAVOR,Item,PREADITE
 #-------------------------------
 [SCIZOR,1]
-FormName = Mythanian Scizor
+FormName = Mythan Scizor
 Type1 = FIRE
 Type2 = GHOST
 Abilities = SHEERFORCE,CURSEDBODY

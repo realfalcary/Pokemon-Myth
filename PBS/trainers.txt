@@ -2013,6 +2013,14 @@ Pokemon = JOLTEON,58
     Item = JOLTEITE
 Pokemon = BINDSHII,58
 #-------------------------------
+[SCIENTIST,Greg,1]
+LoseText = "No, my notes!"
+Pokemon = APPLIN,15
+Item = LEFTOVERS
+Pokemon = MAGNEMITE,16
+Item = EXPERTBELT
+Moves = IRONHEAD,SPARK,METALSOUND
+#-------------------------------
 [ASTRASPECTRAL,Spectral,2]
 LoseText = "Through thick in thin..."
 Pokemon = SPIRITOMB,55
@@ -2391,7 +2399,7 @@ Item = QUICKCLAW
 Moves = BLAZEKICK,WINGATTACK,DOUBLEKICK,EXTREMESPEED
 Ability = 2
 Pokemon = SCIZOR,30
-Form = 2
+Form = 1
 Item = LIFEORB
 Moves = BLAZEKICK,SHADOWSNEAK,SHADOWCLAW,EXTREMESPEED
 Pokemon = ZOROARK,30
