@@ -722,6 +722,19 @@ PBAI::ScoreHandler.add_damaging do |score, ai, user, target, move|
   next score
 end
 
+#Discount Status Moves if Taunted
+PBAI::ScoreHandler.add do |score, ai, user, target, move|
+  if move.statusMove? && user.effects[PBEffects::Taunt] > 0
+      score -= 1000
+      PBAI.log("- 1000 to prevent failing")
+  end
+  if $spam_block_triggered && move.statusMove? && target.faster_than?(user) && $spam_block_flags[:choice].is_a?(PokeBattle_Move) && $spam_block_flags[:choice].function == "0BA"
+    score -= 1000
+    PBAI.log("- 1000 because target is going for Taunt")
+  end
+  next score
+end
+
 
 
 #=============================================================================#
@@ -1326,7 +1339,7 @@ PBAI::ScoreHandler.add("0EB", "0EC", "0EE") do |score, ai, user, target, move|
       fnt +=1 if pkmn.fainted?
     end
     diff = user.side.party.length - fnt
-    if user.should_switch?(target) && kill == 0 && diff > 1
+    if user.predict_switch?(target) && kill == 0 && diff > 1 && !$spam_block_triggered
       score += 100
       PBAI.log("+ 100 for predicting the target to switch, being unable to kill, and having something to switch to")
     end
@@ -1413,8 +1426,8 @@ PBAI::ScoreHandler.add("0D5", "0D6", "0D7") do |score, ai, user, target, move|
   end
   score += 40 if user.role.id == PBRoles::CLERIC && move.function == "0D7"
   PBAI.log("+ 40 for being #{PBRoles.getName(user.role)} and potentially passing a Wish") if user.role.id == PBRoles::CLERIC && move.function == "0D7"
-  score += 50 if user.should_switch?(target)
-  PBAI.log("+ 50 for predicting the switch") if user.should_switch?(target)
+  score += 50 if user.predict_switch?(target)
+  PBAI.log("+ 50 for predicting the switch") if user.predict_switch?(target)
   score += 60 if user.flags[:should_heal] == true
   PBAI.log("+ 60 because there are no better moves") if user.flags[:should_heal] == true
   if move.function == "0D7" && ai.battle.positions[user.index].effects[PBEffects::Wish] > 0
@@ -1624,6 +1637,15 @@ PBAI::ScoreHandler.add("0BA") do |score, ai, user, target, move|
       PBAI.log("+ 30 for being a #{PBRoles.getName(user.role)}")
     end
   end
+  if $learned_flags[:should_taunt].include?(target) || $spam_block_flags[:no_attacking_flag] == target
+      score += 150
+      PBAI.log("+ 150 for stallbreaking")
+    end
+    if $spam_block_triggered && $spam_block_flags[:choice].is_a?(PokeBattle_Move) && ["035","02A","032","10D","02B","02C","14E","032","024","026","518"].include?($spam_block_flags[:choice].function)
+      buff = user.faster_than?(target) ? 300 : 150
+      score += buff
+      PBAI.log("+ #{buff} to prevent setup")
+    end
   next score
 end
 
@@ -1724,8 +1746,16 @@ PBAI::ScoreHandler.add("035") do |score, ai, user, target, move|
       score -= diff
       PBAI.log("- #{diff} for boosted stats") if diff > 0
       PBAI.log("+ #{diff} for lowered stats") if diff < 0
-      score += 20 if user.should_switch?(target)
-      PBAI.log("+ 20 for predicting the switch") if user.should_switch?(target)
+      score += 20 if user.predict_switch?(target)
+      PBAI.log("+ 20 for predicting the switch") if user.predict_switch?(target)
+    end
+    if $spam_block_flags[:haze_flag].include?(target)
+      score = 0
+      PBAI.log("* 0 because target has Haze")
+    end
+    if $spam_block_triggered && $spam_block_flags[:choice].is_a?(PokeBattle_Pokemon) && user.set_up_score == 0
+      score += 1000
+      PBAI.log("+ 1000 to set up on the switch")
     end
   next score
 end
@@ -1763,10 +1793,18 @@ PBAI::ScoreHandler.add("02E") do |score, ai, user, target, move|
       score -= diff
       PBAI.log("- #{diff} for boosted stats") if diff > 0
       PBAI.log("+ #{diff} for lowered stats") if diff < 0
-      score += 20 if user.should_switch?(target)
-      PBAI.log("+ 20 for predicting the switch") if user.should_switch?(target)
+      score += 20 if user.predict_switch?(target)
+      PBAI.log("+ 20 for predicting the switch") if user.predict_switch?(target)
     end
   end
+  if $spam_block_flags[:haze_flag].include?(target)
+      score = 0
+      PBAI.log("* 0 because target has Haze")
+    end
+    if $spam_block_triggered && $spam_block_flags[:choice].is_a?(PokeBattle_Pokemon) && user.set_up_score == 0
+      score += 1000
+      PBAI.log("+ 1000 to set up on the switch")
+    end
   next score
 end
 
@@ -1805,8 +1843,16 @@ PBAI::ScoreHandler.add("024", "518", "026") do |score, ai, user, target, move|
       score -= diff
       PBAI.log("- #{diff} for boosted stats") if diff > 0
       PBAI.log("+ #{diff} for lowered stats") if diff < 0
-      score += 20 if user.should_switch?(target)
-      PBAI.log("+ 20 for predicting the switch") if user.should_switch?(target)
+      score += 20 if user.predict_switch?(target)
+      PBAI.log("+ 20 for predicting the switch") if user.predict_switch?(target)
+    end
+    if $spam_block_flags[:haze_flag].include?(target)
+      score = 0
+      PBAI.log("* 0 because target has Haze")
+    end
+    if $spam_block_triggered && $spam_block_flags[:choice].is_a?(PokeBattle_Pokemon) && user.set_up_score == 0
+      score += 1000
+      PBAI.log("+ 1000 to set up on the switch")
     end
   next score
 end
@@ -1844,10 +1890,18 @@ PBAI::ScoreHandler.add("032") do |score, ai, user, target, move|
       score -= diff
       PBAI.log("- #{diff} for boosted stats") if diff > 0
       PBAI.log("+ #{diff} for lowered stats") if diff < 0
-      score += 20 if user.should_switch?(target)
-      PBAI.log("+ 20 for predicting the switch") if user.should_switch?(target)
+      score += 20 if user.predict_switch?(target)
+      PBAI.log("+ 20 for predicting the switch") if user.predict_switch?(target)
     end
   end
+  if $spam_block_flags[:haze_flag].include?(target)
+      score = 0
+      PBAI.log("* 0 because target has Haze")
+    end
+    if $spam_block_triggered && $spam_block_flags[:choice].is_a?(PokeBattle_Pokemon) && user.set_up_score == 0
+      score += 1000
+      PBAI.log("+ 1000 to set up on the switch")
+    end
   next score
 end
 
@@ -1886,9 +1940,17 @@ PBAI::ScoreHandler.add("02B", "02C") do |score, ai, user, target, move|
     score -= diff
     PBAI.log("- #{diff} for boosted stats") if diff > 0
     PBAI.log("+ #{diff} for lowered stats") if diff < 0
-    score += 20 if user.should_switch?(target)
-    PBAI.log("+ 20 for predicting the switch") if user.should_switch?(target)
+    score += 20 if user.predict_switch?(target)
+    PBAI.log("+ 20 for predicting the switch") if user.predict_switch?(target)
   end
+  if $spam_block_flags[:haze_flag].include?(target)
+      score = 0
+      PBAI.log("* 0 because target has Haze")
+    end
+    if $spam_block_triggered && $spam_block_flags[:choice].is_a?(PokeBattle_Pokemon) && user.set_up_score == 0
+      score += 1000
+      PBAI.log("+ 1000 to set up on the switch")
+    end
   next score
 end
 
@@ -1931,7 +1993,7 @@ PBAI::ScoreHandler.add("0AA") do |score, ai, user, target, move|
     PBAI.log("+ 50 for encouraging use of Protect in Double battles")
   end
   if user.effects[PBEffects::Substitute] > 0 && user.effects[PBEffects::ProtectRate] == 1
-    if user.hasActiveAbility?(PBStats::SPEEDBOOST) && target.faster_than?(user)
+    if user.hasActiveAbility?(PBAbilities::SPEEDBOOST) && target.faster_than?(user)
       score += 100
       PBAI.log("+ 100 for boosting speed to outspeed opponent")
     end
@@ -1963,8 +2025,8 @@ PBAI::ScoreHandler.add("0AA") do |score, ai, user, target, move|
       PBAI.log("+ 30 for being a #{PBRoles.getName(user.role)}")
     end
   end
-  score -= 40 if user.should_switch?(target)
-  if user.should_switch?(target)
+  score -= 40 if user.predict_switch?(target)
+  if user.predict_switch?(target)
     PBAI.log("- 40 for predicting the switch")
   end
   if user.effects[PBEffects::ProtectRate] > 1
@@ -1979,7 +2041,7 @@ end
 
 # Teleport
 PBAI::ScoreHandler.add("0EA") do |score, ai, user, target, move|
-  if user.effects[PBEffects::Trapping] > 0 && !user.should_switch?(target)
+  if user.effects[PBEffects::Trapping] > 0 && !user.predict_switch?(target)
     score += 300
     PBAI.log("+ 300 for escaping the trap")
   end
@@ -2031,7 +2093,7 @@ PBAI::ScoreHandler.add("10C") do |score, ai, user, target, move|
       score += 30
       PBAI.log("+ 30 for capitalizing on target's residual damage")
     end
-    if user.should_switch?(target)
+    if user.predict_switch?(target)
       score += 30
       PBAI.log("+ 30 for capitalizing on target's predicted switch")
     end
@@ -2067,23 +2129,6 @@ PBAI::ScoreHandler.add("03F","03C","03B","03E","15F","193","114") do |score, ai,
   if user.hasActiveAbility?(:CONTRARY) && !["114"].include?(move.function)
     score += 50
     PBAI.log("+ 50 for boosting")
-  end
-  if user.hasActiveAbility?(:UNSHAKEN)
-    score += 50
-    PBAI.log("+ 50 for stat drops being prevented")
-  end
-  next score
-end
-
-#Bonemerang
-PBAI::ScoreHandler.add("520") do |score, ai, user, target, move|
-  if target.pbHasType?(:FLYING)
-    score += 50
-    PBAI.log("+ 50 for being effective against Flying types")
-  end
-  if target.hasActiveAbility?(:LEVITATE) && target.pbHasType?([:FIRE,:ELECTRIC,:ROCK,:STEEL])
-    score += 50
-    PBAI.log("+ 50 for move ignoring abilities and potentially being strong against target")
   end
   next score
 end
@@ -2133,6 +2178,10 @@ PBAI::ScoreHandler.add("0E7") do |score, ai, user, target, move|
     else
       score = 0
       PBAI.log("* 0 because the target has Protect and can choose it")
+    end
+    if $spam_block_triggered && $spam_block_flags[:choice].is_a?(PokeBattle_ProtectMove) && target.effects[PBEffects::ProtectRate] == 0
+      score -= 1000
+      PBAI.log("- 1000 to not explode on Protect")
     end
   end
   next score
@@ -2236,8 +2285,8 @@ PBAI::ScoreHandler.add("036") do |score, ai, user, target, move|
       score -= diff
       PBAI.log("- #{diff} for boosted stats") if diff > 0
       PBAI.log("+ #{diff} for lowered stats") if diff < 0
-      score += 20 if user.should_switch?(target)
-      PBAI.log("+ 20 for predicting the switch") if user.should_switch?(target)
+      score += 20 if user.predict_switch?(target)
+      PBAI.log("+ 20 for predicting the switch") if user.predict_switch?(target)
       if user.faster_than?(target) && user.is_special_attacker?
         score = 0
         PBAI.log("* 0 because we outspeed and Special Attackers don't factor Attack")

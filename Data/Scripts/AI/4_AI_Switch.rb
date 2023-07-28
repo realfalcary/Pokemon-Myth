@@ -325,6 +325,7 @@ PBAI::SwitchHandler.add_out do |switch,ai,battler,target|
 	battler.opposing_side.battlers.each do |target|
 	  next if ai.battle.wildBattle?
 	  next if target_moves == nil
+	  next if target.nil?
 		for i in target_moves
 		  calc += 1 if i.damagingMove?
 		end
@@ -416,6 +417,7 @@ PBAI::SwitchHandler.add_out do |switch,ai,battler,target|
 	calc = 0
 	battler.opposing_side.battlers.each do |target|
 	  next if ai.battle.wildBattle?
+	  next if target.nil?
 	  for i in battler.moves
 	    dmg = battler.get_move_damage(target, i)
 	    calc += 1 if dmg >= target.totalhp/3
@@ -639,7 +641,73 @@ PBAI::SwitchHandler.add_out do |switch,ai,battler,target|
 	next switch
 end
 
+PBAI::SwitchHandler.add_out do |switch,ai,battler,target|
+	next switch if !ai.battle.doublebattle
+	ally = battler.side.battlers.find {|proj| proj && proj != battler && !proj.fainted?}
+	for move in ally.moves
+		if ally.target_is_immune?(move,battler) && [PBTargets::AllNearOthers,PBTargets::AllBattlers,PBTargets::BothSides].include?(move.pbTarget(battler))
+			switch = false
+		end
+	end
+	next switch
+end
 
+PBAI::SwitchHandler.add do |score,ai,battler,proj,target|
+  next score if !ai.battle.doublebattle
+	ally = battler.side.battlers.find {|proj| proj && proj != battler && !proj.fainted?}
+	for move in ally.moves
+		if ally.target_is_immune?(move,battler) && [PBTargets::AllNearOthers,PBTargets::AllBattlers,PBTargets::BothSides].include?(move.pbTarget(battler))
+			score += 100
+			PBAI.log("+ 100")
+		end
+	end
+  next score
+end
+
+PBAI::SwitchHandler.add_out do |switch,ai,battler,target|
+	next switch if !$spam_block_triggered
+	next switch if !$spam_block_flags[:choice].is_a?(PokeBattle_Move)
+	nextMove = $spam_block_flags[:choice]
+	nextDmg = target.get_move_damage(battler,nextMove)
+  if nextDmg < battler.hp/2 || nextDmg < battler.totalhp/3
+  	switch = false
+  end
+  next switch
+end
+
+PBAI::SwitchHandler.add do |score,ai,battler,proj,target|
+	if $spam_block_triggered && $spam_block_flags[:choice].is_a?(PokeBattle_Move)
+		nextMove = $spam_block_flags[:choice]
+		nextDmg = target.get_move_damage(battler,nextMove)
+		damage = 0
+		if nextDmg >= battler.hp
+			score -= 1000
+			PBAI.log("- 1000 because the battler will faint switching in")
+		else
+			if battler.faster_than?(target)
+				for move in battler.moves
+					damage += 1 if battler.get_move_damage(target,move) >= (target.hp || target.totalhp/2)
+				end
+				if damage > 0
+					score += 200
+					PBAI.log("+ 300 because battler can kill or do significant damage before being killed")
+				else
+					score -= 300
+					PBAI.log("- 300 because battler will be killed before it can kill")
+				end
+			end
+		end
+	end
+  next score
+end
+
+#Battler Yawned
+PBAI::SwitchHandler.add_out do |switch,ai,battler,target|
+	if battler.effects[PBEffects::Yawn] == 1
+		switch = true
+	end
+	next switch
+end
 
 PBAI::SwitchHandler.add_out do |switch,ai,battler,target|
 	next if $switch_flags[:switch] == nil
