@@ -12,6 +12,22 @@ LoseText = "Wow! Pokemon battling is actually fun!"
 Pokemon = PORYGONZ,30
 Item = PORYGONITE
 #-------------------------------
+[CYNTHIA,Cynthia,1]
+LoseText = "Amazing, I see why she talks so highly about you."
+Pokemon = ROSERADE,37
+Item = LEFTOVERS
+Moves = TOXIC,GIGADRAIN,SOLARBEAM,SLUDGEBOMB
+Pokemon = SPIRITOMB,35
+Item = LIFEORB
+Moves = SHADOWBALL,FLAMETHROWER,ICEBEAM,ENERGYBALL
+Pokemon = VOLCARONA,34
+Item = EXPERTBELT
+Moves = DAZZLINGGLEAM,HYPNOSIS,PSYCHIC,CALMMIND
+Pokemon = LUCARIO,36
+Form = 2
+Item = LUCARIONITE
+Moves = EARTHQUAKE,SHADOWCLAW,EXTREMESPEED,AURASPHERE
+#-------------------------------
 [RIVAL1,Marcus,2]
 LoseText = "I guess I need to keep training, dont you think?"
 Pokemon = ZUBAT,9

@@ -438,8 +438,8 @@ SnapEdges = true
 [085]
 # Infusion Labs A1
 SnapEdges = false
-MapPosition = 0,21,13
 BattleBack = InfusionLabs
+MapPosition = 0,21,13
 Outdoor = false
 Environment = None
 ShowArea = false
@@ -455,8 +455,8 @@ ShowArea = true
 #-------------------------------
 [088]
 # Eclipse Gym
-MapPosition = 0,17,13
 BattleBack = gym
+MapPosition = 0,17,13
 #-------------------------------
 [089]
 # Route 2
@@ -493,22 +493,22 @@ ShowArea = false
 [098]
 # Maycrop Cave
 SnapEdges = true
-MapPosition = 0,17,5
 BattleBack = cave1
+MapPosition = 0,17,5
 Outdoor = false
 #-------------------------------
 [099]
 # Hilloway Outskirts
 SnapEdges = true
-Outdoor = true
 MapPosition = 0,17,7
+Outdoor = true
 ShowArea = true
 #-------------------------------
 [100]
 # Hilloway Tunnel
 SnapEdges = true
-MapPosition = 0,17,7
 BattleBack = cave1
+MapPosition = 0,17,7
 Environment = Cave
 #-------------------------------
 [102]
@@ -539,8 +539,8 @@ MapPosition = 0,17,13
 #-------------------------------
 [107]
 # Hilloway Tower
-DarkMap = true
 MapPosition = 0,17,7
+DarkMap = true
 #-------------------------------
 [109]
 # Mt. Maycrop
@@ -558,14 +558,14 @@ ShowArea = true
 #-------------------------------
 [111]
 # Catacombs Entrance
-MapPosition = 0,21,8
 BattleBack = cave1
+MapPosition = 0,21,8
 Outdoor = false
 #-------------------------------
 [112]
 # Infusion Inc. HQ
-MapPosition = 0,21,9
 BattleBack = InfusionLabs
+MapPosition = 0,21,9
 #-------------------------------
 [113]
 # Regina's Hideout
@@ -1205,6 +1205,14 @@ ShowArea = true
 SnapEdges = true
 BattleBack = volcano
 #-------------------------------
+[268]
+# Repole Town
+SnapEdges = true
+BattleBack = water
+MapPosition = 0,11,6
+Outdoor = true
+ShowArea = true
+#-------------------------------
 [270]
 SnapEdges = false
 BattleBack = arceus
@@ -1269,7 +1277,7 @@ ShowArea = true
 # Roycloud Passway
 SnapEdges = true
 BattleBack = desert
-Weather = Sun,100
+Weather = Sunny,100
 MapPosition = 0,13,10
 Outdoor = true
 ShowArea = true

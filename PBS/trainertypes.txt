@@ -127,3 +127,4 @@
 124,CMARCUS,Corrupt Leader,200,Battle Gym Leader,Battle victory leader,,Male,,
 125,SKY,Lead Developer,200,Battle Gym Leader,Battle victory leader,,Female,,
 126,INFUSIONINCLEORE,Infusion Inc.,200,Battle Gym Leader,Battle victory leader,,Male,,
+127,CYNTHIA,Sinnoh Champion Cynthia,200,Battle Gym Leader,Battle victory leader,,Female,,

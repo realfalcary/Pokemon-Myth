@@ -1467,15 +1467,18 @@ Pokedex = Its vaunted wings become scythes, sending it mad with rage. It swings 
 BattlerPlayerY = 11
 BattlerEnemyY = 13
 #-------------------------------
-[LUCARIO,1]
+[LUCARIO,3]
 FormName = Mega Lucario
+UnmegaForm = 2
+Type1 = GROUND
+Type2 = GHOST
 MegaStone = LUCARIONITE
 BaseStats = 70,145,88,112,140,70
-Abilities = ADAPTABILITY
-HiddenAbility = ADAPTABILITY
+Abilities = LEVITATE,ARENATRAP
+HiddenAbility = DRYSKIN
 Height = 1.3
 Weight = 57.5
-Pokedex = It readies itself to face its enemies by focusing its mental energies. Its fighting style can be summed up in a single word: heartless.
+Pokedex = Mega Mythan Lucario is among the best, and most powerful Pokemon. It's ghostly punches can break through any reality barrier.
 BattlerPlayerY = 15
 BattlerEnemyY = 20
 #-------------------------------

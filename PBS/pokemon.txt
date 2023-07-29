@@ -29786,7 +29786,7 @@ BattlerEnemyX = 0
 BattlerEnemyY = 20
 BattlerShadowX = 0
 BattlerShadowSize = 2
-Evolutions = COCONAB,Level,27
+Evolutions = COCONAB,Level,16
 #-------------------------------
 [944]
 Name = Coconab
@@ -29817,7 +29817,7 @@ BattlerEnemyX = 0
 BattlerEnemyY = 5
 BattlerShadowX = 0
 BattlerShadowSize = 2
-Evolutions = COCOFESTED,Level,40
+Evolutions = COCOFESTED,Level,36
 #-------------------------------
 [945]
 Name = Cocofested
