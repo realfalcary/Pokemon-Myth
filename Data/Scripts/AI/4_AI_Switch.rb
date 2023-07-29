@@ -231,12 +231,10 @@ PBAI::SwitchHandler.add_type(:DARK) do |score,ai,battler,proj,target|
 end
 
 PBAI::SwitchHandler.add_type(:SOUND) do |score,ai,battler,proj,target|
-	if $switch_flags[:cosmic] == true
 	  if battler.hasActiveAbility?(:SOUNDPROOF)
 	    score += 200
 	    PBAI.log("+ 200")
 	  end
-	end
 	next score
 end
 
@@ -583,6 +581,7 @@ PBAI::SwitchHandler.add_out do |switch,ai,battler,target|
 	pivot = nil
 	if target.bad_against?(battler)
 		battler.opposing_side.battlers.each do |target|
+			next if target.nil?
 		  next if ai.battle.wildBattle?
 			for i in target_moves
 				next if target_moves == nil
@@ -591,6 +590,7 @@ PBAI::SwitchHandler.add_out do |switch,ai,battler,target|
 			end
 		end
 		battler.opposing_side.battlers.each do |target|
+			next if target.nil?
 		  next if ai.battle.wildBattle?
 		  for i in battler.moves
 		    dmg = battler.get_move_damage(target, i)
