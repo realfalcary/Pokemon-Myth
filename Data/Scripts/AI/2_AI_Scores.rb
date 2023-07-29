@@ -1155,7 +1155,7 @@ PBAI::ScoreHandler.add("071") do |score, ai, user, target, move|
   prevDmg = user.get_damage_by_user(target)
   if prevDmg.size > 0
     lastDmg = prevDmg[-1]
-    lastMove = lastDmg[1]
+    lastMove = target.lastRegularMoveUsed
     expect = true if lastMove.physicalMove?
   end
   # If we can reasonably expect the target to use a physical move
@@ -1173,7 +1173,7 @@ PBAI::ScoreHandler.add("072") do |score, ai, user, target, move|
   prevDmg = user.get_damage_by_user(target)
   if prevDmg.size > 0
     lastDmg = prevDmg[-1]
-    lastMove = lastDmg[1]
+    lastMove = target.lastRegularMoveUsed
     expect = true if lastMove.specialMove?
   end
   # If we can reasonably expect the target to use a special move
