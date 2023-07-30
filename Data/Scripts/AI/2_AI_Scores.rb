@@ -1147,7 +1147,7 @@ PBAI::ScoreHandler.add("0B9") do |score, ai, user, target, move|
   next score
 end
 
-
+=begin
 # Counter
 PBAI::ScoreHandler.add("071") do |score, ai, user, target, move|
   expect = false
@@ -1183,7 +1183,7 @@ PBAI::ScoreHandler.add("072") do |score, ai, user, target, move|
   end
   next score
 end
-
+=end
 # Aqua Ring
 PBAI::ScoreHandler.add("0DA") do |score, ai, user, target, move|
   if !user.effects[PBEffects::AquaRing]
