@@ -554,7 +554,7 @@ class PBAI
             set_flags(target)
           end
         end
-        if target.hp < target.totalhp/5 && !$spam_block_flags[:no_priority_flag].include?(target) && self.turnCount > 0 && @battle.doublebattle == false
+        if target.hp < target.totalhp/5 && !$spam_block_flags[:no_priority_flag].include?(target) && self.turnCount > 0 && @battle.doublebattle == false && !$spam_block_triggered
           rand_trigger = true
         end
         if @battle.wildBattle?

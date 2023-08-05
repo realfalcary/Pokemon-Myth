@@ -644,10 +644,12 @@ end
 PBAI::SwitchHandler.add_out do |switch,ai,battler,target|
 	next switch if !ai.battle.doublebattle
 	ally = battler.side.battlers.find {|proj| proj && proj != battler && !proj.fainted?}
+	if !ally.nil?
 	for move in ally.moves
 		if ally.target_is_immune?(move,battler) && [PBTargets::AllNearOthers,PBTargets::AllBattlers,PBTargets::BothSides].include?(move.pbTarget(battler))
 			switch = false
 		end
+	end
 	end
 	next switch
 end
@@ -655,11 +657,13 @@ end
 PBAI::SwitchHandler.add do |score,ai,battler,proj,target|
   next score if !ai.battle.doublebattle
 	ally = battler.side.battlers.find {|proj| proj && proj != battler && !proj.fainted?}
+	if !ally.nil?
 	for move in ally.moves
 		if ally.target_is_immune?(move,battler) && [PBTargets::AllNearOthers,PBTargets::AllBattlers,PBTargets::BothSides].include?(move.pbTarget(battler))
 			score += 100
 			PBAI.log("+ 100")
 		end
+	end
 	end
   next score
 end
