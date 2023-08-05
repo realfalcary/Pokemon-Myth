@@ -545,6 +545,8 @@ DarkMap = true
 [109]
 # Mt. Maycrop
 SnapEdges = true
+BattleBack = mtmaycrop
+Weather = Snow,100
 MapPosition = 0,17,5
 Outdoor = true
 ShowArea = true
@@ -630,7 +632,7 @@ BattleBack = gym
 MapPosition = 0,21,9
 #-------------------------------
 [132]
-# Mythic Forest
+# Valor Cave
 SnapEdges = true
 #-------------------------------
 [133]
@@ -1021,6 +1023,7 @@ ShowArea = true
 # Passage of Night
 SnapEdges = true
 BattleBack = 
+Weather = Snow,100
 MapPosition = 0,12,12
 Outdoor = true
 ShowArea = true
@@ -1196,7 +1199,8 @@ ShowArea = true
 [263]
 # Shrine Of Night
 SnapEdges = true
-BattleBack = 
+BattleBack = mtmaycrop
+Weather = Snow,100
 Outdoor = true
 ShowArea = true
 #-------------------------------
@@ -1214,11 +1218,11 @@ Outdoor = true
 ShowArea = true
 #-------------------------------
 [270]
+# Moplart Town
 SnapEdges = false
-BattleBack = arceus
-Weather = Snow,100
-Outdoor = true
-ShowArea = true
+BattleBack = 
+Outdoor = false
+ShowArea = false
 #-------------------------------
 [271]
 # Route 121

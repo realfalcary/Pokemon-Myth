@@ -43,7 +43,7 @@ Point=15,5,Mythic Forest,,,,,
 Point=16,9,Route 121,,,,,
 Point=16,9,Route 121,,161,,,
 Point=17,5,Shrine Of Night,,,,,
-Point=15,9,Templon Town,,176,32,12,
+Point=15,9,Templon Town,,176,53,7,
 Point=12,9,Sunside Village,,220,7,10,
 Point=13,10,Roycloud Passway,,,,,
 Point=13,11,Desert Resort,,,,,
@@ -114,6 +114,7 @@ Point=6,8,Watro Sea,,,,,
 Point=5,8,Watro Sea,,,,,
 Point=5,9,Watro Sea,,,,,
 Point=17,4,,,,,,
+Point = 11,6,Repole Town,,268,26,9,
 #-------------------------------
 [1]
 Name=

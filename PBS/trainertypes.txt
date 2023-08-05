@@ -2,7 +2,7 @@
 #-------------------------------
 0,POKEMONTRAINER_Red,Pokémon Trainer,200,,,,Male,,
 1,POKEMONTRAINER_Leaf,Pokémon Trainer,200,,,,Female,,
-2,IZU,Pokémon Trainer,200,,,,Male,,
+2,HOPE,Infusion Inc.,200,,,,Female,,
 3,POKEMONTRAINER_May,Pokémon Trainer,200,,,,Female,,
 4,TESTRIVAL1,Rival,200,,,,Male,,
 5,TESTRIVAL2,Rival,200,,,,Male,,
