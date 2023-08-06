@@ -522,7 +522,7 @@ ShowArea = true
 # Fairloom City
 SnapEdges = true
 MapPosition = 0,13,26
-Outdoor = false
+Outdoor = true
 ShowArea = true
 #-------------------------------
 [104]
@@ -1249,10 +1249,12 @@ Outdoor = false
 ShowArea = true
 #-------------------------------
 [277]
+# Poke Center
 SnapEdges = true
 BattleBack = cave1
 #-------------------------------
 [278]
+# Poke Mart
 BattleBack = cave1
 #-------------------------------
 [279]
