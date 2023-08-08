@@ -835,28 +835,6 @@ Water
     VAPOREON,50
     SWAMPERT,53
 #-------------------------------
-278
-25,10,10
-Cave
-    WOBBUFFET,50
-    WOBBUFFET,50
-    WOBBUFFET,50
-    WOBBUFFET,50
-    WOBBUFFET,50
-    WOBBUFFET,50
-    WOBBUFFET,50
-    WOBBUFFET,50
-    WOBBUFFET,50
-    WOBBUFFET,50
-    WOBBUFFET,50
-    WOBBUFFET,50
-Water
-    JELLICENT,47
-    JELLICENT,47
-    JELLICENT,47
-    JELLICENT,47
-    FEEBAS,5
-#-------------------------------
 285 # Roycloud Passway
 25,10,10
 Land

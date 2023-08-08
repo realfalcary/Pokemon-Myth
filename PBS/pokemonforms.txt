@@ -1037,6 +1037,16 @@ Moves = 0,BULLETPUNCH,1,BULLETPUNCH,1,FLAMECHARGE,1,AGILITY,1,AIRSLASH,1,QUICKAT
 BattlerPlayerY = 6
 BattlerEnemyY = 14
 #-------------------------------
+[SCIZOR,3]
+FormName = Mega Scizor
+Type1 = FIRE
+Type2 = GHOST
+Abilities = SHEERFORCE,CURSEDBODY
+HiddenAbility = SHADOWTAG
+UnmegaForm = 1
+BattlerPlayerY = 6
+BattlerEnemyY = 14
+#-------------------------------
 [HERACROSS,1]
 FormName = Mega Heracross
 MegaStone = HERACRONITE
