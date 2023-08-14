@@ -42,6 +42,12 @@ FormName = Mega Porygon-Z
 MegaStone = PORYGONITE
 BaseStats = 85,85,60,100,150,75
 #-------------------------------
+[PIDGEOT,1]
+FormName = Mega Pidgeot
+Type1 = ELECTRIC
+Type2 = FLYING
+MegaStone = PIDGEOTITE
+#-------------------------------
 [CROBAT,1]
 FormName = Mega Crobat
 MegaStone = CROBATITE
