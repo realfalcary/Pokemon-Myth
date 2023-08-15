@@ -710,6 +710,12 @@ Weather = Rain,100
 MapPosition = 0,17,6
 Environment = None
 #-------------------------------
+[154]
+# Myth Forest
+SnapEdges = true
+Outdoor = true
+ShowArea = true
+#-------------------------------
 [155]
 # Diamond Inn
 Outdoor = false
@@ -954,7 +960,7 @@ Outdoor = true
 ShowArea = true
 #-------------------------------
 [216]
-# Sunside Poke Center
+# Poke Center
 BattleBack = indoor7
 MapPosition = 0,12,9
 #-------------------------------
@@ -1258,6 +1264,7 @@ BattleBack = cave1
 BattleBack = cave1
 #-------------------------------
 [279]
+# Poke Center
 SnapEdges = true
 #-------------------------------
 [281]

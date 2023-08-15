@@ -880,3 +880,4 @@
 857,PORYGONITE,Porygonite,Porygonites,1,0,"One of a variety of mysterious Mega Stones. Have Porygon-Z hold it, and it will be able to Mega Evolve.",0,0,12,
 858,FAEINFUSEDGEM,Fae Infused Gem,Fae Infused Gems,1,2200,"A very old geode-like cracked crystal, the colors inside sparkle and pulse.",1,0,7,
 859,TITANIUMINFUSEDGEM,Titanium Infused Gem,Titanium Infused Gems,1,2200,"A very old geode-like cracked crystal, the colors inside sparkle and pulse.",1,0,7,
+860,PIXIEDUST,Pixie Dust,Pixie Dust's,1,2200,"A bag full of a fine, pink dust. It's loved by a certain Pokemon.",1,0,7,
