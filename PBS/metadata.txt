@@ -419,7 +419,7 @@ Outdoor = true
 SnapEdges = true
 BattleBack = desert
 Weather = Sandstorm,100
-MapPosition = 0,12,10
+MapPosition = 0,12,11
 Outdoor = true
 ShowArea = true
 #-------------------------------
@@ -534,6 +534,7 @@ ShowArea = true
 #-------------------------------
 [106]
 # Backyard
+SnapEdges = true
 BattleBack = field
 MapPosition = 0,17,13
 #-------------------------------
@@ -731,6 +732,7 @@ ShowArea = false
 [157]
 # Route 13
 SnapEdges = true
+BattleBack = desert
 MapPosition = 0,12,14
 Outdoor = true
 ShowArea = true
@@ -757,12 +759,14 @@ Outdoor = true
 [162]
 # Molstrus Gym
 BattleBack = 
+MapPosition = 0,15,15
 Outdoor = false
 ShowArea = false
 #-------------------------------
 [164]
 # Molstrus Gym
-BattleBack = darkgym
+BattleBack = champion2
+MapPosition = 0,15,15
 #-------------------------------
 [168]
 # Victory Road
@@ -780,9 +784,14 @@ ShowArea = true
 # Sunside Village
 SnapEdges = true
 #-------------------------------
+[171]
+# Molstrus City
+MapPosition = 0,15,15
+#-------------------------------
 [172]
 # Pokemon League
 SnapEdges = true
+MapPosition = 0,22,17
 Outdoor = true
 ShowArea = true
 #-------------------------------
@@ -904,6 +913,13 @@ ShowArea = true
 #-------------------------------
 [204]
 # Smithest Town
+MapPosition = 0,5,10
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[206]
+# Burnt Forest
+SnapEdges = true
 Outdoor = true
 ShowArea = true
 #-------------------------------
@@ -911,6 +927,7 @@ ShowArea = true
 # Smithest Cavern
 SnapEdges = true
 BattleBack = cave1
+MapPosition = 0,5,10
 Outdoor = false
 ShowArea = false
 #-------------------------------
@@ -940,11 +957,11 @@ ShowArea = false
 #-------------------------------
 [213]
 # Molstrus City
-SnapEdges = true
-BattleBack = indoor3
-MapPosition = 0,19,17
-Outdoor = true
-ShowArea = true
+SnapEdges = false
+BattleBack = 
+MapPosition = 0,15,15
+Outdoor = false
+ShowArea = false
 #-------------------------------
 [214]
 # Myth Forest
@@ -1281,9 +1298,11 @@ SnapEdges = true
 Outdoor = false
 #-------------------------------
 [284]
-SnapEdges = true
-BattleBack = true
-Outdoor = false
+# Floral Island
+SnapEdges = false
+BattleBack = 
+MapPosition = 0,7,6
+Outdoor = true
 ShowArea = true
 #-------------------------------
 [285]
@@ -1292,5 +1311,11 @@ SnapEdges = true
 BattleBack = desert
 Weather = Sunny,100
 MapPosition = 0,13,10
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[288]
+# Burnt Forest
+SnapEdges = true
 Outdoor = true
 ShowArea = true

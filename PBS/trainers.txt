@@ -12,6 +12,27 @@ LoseText = "Wow! Pokemon battling is actually fun!"
 Pokemon = PORYGONZ,30
 Item = PORYGONITE
 #-------------------------------
+[CHARM,Charm,1]
+LoseText = "WHY! I WANT THAT PSYDUCK!"
+Pokemon = PSYDUCK,100
+Shiny = yes
+Moves = METRONOME
+Pokemon = PSYDUCK,100
+Shiny = yes
+Moves = METRONOME
+Pokemon = PSYDUCK,100
+Shiny = yes
+Moves = METRONOME
+Pokemon = PSYDUCK,100
+Shiny = yes
+Moves = METRONOME
+Pokemon = PSYDUCK,100
+Shiny = yes
+Moves = METRONOME
+Pokemon = PSYDUCK,100
+Shiny = yes
+Moves = METRONOME
+#-------------------------------
 [CYNTHIA,Cynthia,1]
 LoseText = "Amazing, I see why she talks so highly about you."
 Pokemon = ROSERADE,37
@@ -250,6 +271,29 @@ Shiny = yes
 Item = ABSOLITE
 Moves = PSYCHOCUT,PSYCHIC,CRUNCH,EXTREMESPEED
 Pokemon = ROTOM,55
+Form = 1
+Item = LEFTOVERS
+Moves = OVERHEAT,SHADOWBALL,THUNDERBOLT,ICEBEAM
+#-------------------------------
+[HOPE,Hope,5]
+LoseText = "I understand now, I can't beat you no matter what I do. Hey, what can I say? You've always been better than all of us... You'll become champion, I'm sure of it."
+Pokemon = MUSHARNA,66
+Item = LEFTOVERS
+Moves = PSYBEAM,HYPNOSIS,HYPERVOICE,REST
+Pokemon = LUNALA,66
+Item = FOCUSSASH
+Moves = PSYCHIC,HYPNOSIS,MOONGEISTBEAM,PHANTOMFORCE
+Pokemon = PLAINEON,66
+Item = LIFEORB
+Moves = EXTREMESPEED,HYPERBEAM,STARBOLT,TAILGLOW
+Pokemon = RACCOLOSSUS,66
+Item = CHOICESCARF
+Moves = CRUNCH,SHADOWSNEAK,DRAGONTAIL,CROSSPOISON
+Pokemon = ABSOL,66
+Shiny = yes
+Item = ABSOLITE
+Moves = PSYCHOCUT,PSYCHIC,CRUNCH,EXTREMESPEED
+Pokemon = ROTOM,66
 Form = 1
 Item = LEFTOVERS
 Moves = OVERHEAT,SHADOWBALL,THUNDERBOLT,ICEBEAM
@@ -928,9 +972,9 @@ Pokemon = TYRANITAR,65
 Pokemon = KROOKODILE,65
     Moves = SWORDSDANCE,FOULPLAY,EARTHQUAKE,DRAGONCLAW
     Item = BLACKGLASSES
-Pokemon = ZOROARK,65
-    Moves = FOULPLAY,DARKPULSE,FLAMETHROWER,DRACOMETEOR
-    Item = ZOROARKITE
+Pokemon = HOUNDOOM,65
+    Moves = NASTYPLOT,FIREBLAST,DARKPULSE,SLUDGEBOMB
+    Item = HOUNDOOMINITE
 Pokemon = BISHARP,65
     Moves = IRONHEAD,FOULPLAY,EARTHQUAKE,SWORDSDANCE
     Item = LIFEORB
@@ -1048,71 +1092,71 @@ Pokemon = MEDICHAM,78
 #-------------------------------
 [E41,Maxim,1]
 LoseText = "Outclassed by a small child, well done..."
-Pokemon = GOLURK,68
+Pokemon = GOLURK,70
     Moves = EARTHQUAKE,PHANTOMFORCE,HAMMERARM,HEAVYSLAM
     Item = LIFEORB
-Pokemon = CORVIKNIGHT,68
+Pokemon = CORVIKNIGHT,70
     Moves = ROOST,BRAVEBIRD,STEELWING,SCREECH
     Item = LEFTOVERS
-Pokemon = VOLCARONA,68
+Pokemon = VOLCARONA,70
     Shiny = yes
     Moves = MOONBLAST,PSYCHIC,CALMMIND,DRACOMETEOR
     Item = LIFEORB
-Pokemon = EMPOLEON,68
+Pokemon = EMPOLEON,70
     Shiny = yes
     Moves = AQUAJET,HYDROPUMP,SCALD,ICEBEAM
     Item = LIFEORB
-Pokemon = ZACIAN,68
+Pokemon = ZACIAN,70
     Moves = BEHEMOTHBLADE,CRUNCH,SWORDSDANCE,SACREDSWORD
     Item = LIFEORB
-Pokemon = ZAMAZENTA,68
+Pokemon = ZAMAZENTA,70
     Moves = BEHEMOTHBASH,WIDEGUARD,CRUNCH,PSYCHICFANGS
     Item = LIFEORB
 #-------------------------------
-[E42,Skylar,1]
+[E42,Luna,1]
 Items = FULLRESTORE,REVIVE,FULLHEAL,FULLHEAL
 LoseText = "Incredible! I cannot believe it!"
-Pokemon = VOLCARONA,69
+Pokemon = VOLCARONA,70
     Moves = PSYCHIC,CALMMIND,OVERHEAT,MOONBLAST
     Item = LIFEORB
-Pokemon = MILOTIC,68
+Pokemon = MILOTIC,70
     Moves = SCALD,TOXIC,ICEBEAM,RECOVER
     Ability = 2
     Item = LEFTOVERS
 Pokemon = MEW,70
     Moves = PSYCHIC,THUNDERBOLT,ICEBEAM,FLAMETHROWER
     Item = EXPERTBELT
-Pokemon = MOLTRES,68
+Pokemon = MOLTRES,70
     Form = 1
     Moves = DARKVOID,FLAMETHROWER,DARKPULSE,KNOCKOFF
     Item = POWERHERB
-Pokemon = AMPHAROS,68
+Pokemon = AMPHAROS,70
     Moves = FLAMETHROWER,BITE,THUNDERBOLT,NASTYPLOT
     Item = AMPHAROSITE
-Pokemon = AZUMARILL,68
+Pokemon = AZUMARILL,70
     Moves = BELLYDRUM,AQUAJET,MOONBLAST,LIQUIDATION
     Item = WHITEHERB
 #-------------------------------
 [E43,Lucas,1]
 LoseText = "Power, and dedication.. I sense it all within you!"
-Pokemon = MAWILE,68
+Pokemon = MAWILE,70
     Shiny = yes
     Moves = PLAYROUGH,FAKEOUT,METEORMASH,EARTHQUAKE
     Item = LEFTOVERS
-Pokemon = MARSHADOW,68
+Pokemon = MARSHADOW,70
     Moves = SHADOWSNEAK,DRAININGPUNCH,BULKUP,FOULPLAY
     Shiny = yes
     Item = LIFEORB
-Pokemon = LAPRAS,68
+Pokemon = LAPRAS,70
     Moves = THUNDERBOLT,ICEBEAM,CALMMIND,EARTHQUAKE
     Shiny = yes
     Item = LEFTOVERS
-Pokemon = DUDUNSPARCE,68
+Pokemon = DUDUNSPARCE,70
     Moves = DRILLRUN,IRONHEAD,POISONJAB,HEADBUTT
     Shiny = yes
     Ability = 0
     Item = LEFTOVERS
-Pokemon = ARCANINE,68
+Pokemon = ARCANINE,70
     Moves = FIREFANG,EXTREMESPEED,CRUNCH,EARTHQUAKE
     Item = ARCANITE
     Shiny = yes
@@ -1122,27 +1166,29 @@ Pokemon = GIRATINA,70
     Moves = SHADOWBALL,DRACOMETEOR,FOULPLAY,FIREBLAST
     Item = GRISEOUSORB
 #-------------------------------
-[E44,Izu,1]
-LoseText = "Even with all I had, you still beat me? I guess we all weren't created equally."
-Pokemon = DECIDUEYE,68
-    Moves = DIAMONDSTORM,SPIRITSHACKLE,BULLETSEED,EARTHQUAKE
-    Item = CHOICEBAND
-Pokemon = MELMETAL,69
-    Moves = DOUBLEIRONBASH,ICEPUNCH,DARKESTLARIAT,EARTQUAKE
-    Item = ASSAULTVEST
-Pokemon = HOUNDOOM,68
-    Moves = FLAMETHROWER,EXTREMESPEED,CRUNCH,ROAR
-    Item = HOUNDOOMINITE
-Pokemon = MAGNEZONE,68
-    Moves = IRONHEAD,THUNDERBOLT,IRONDEFENSE,GEARGRIND
-    Item = WEAKNESSPOLICY
-Pokemon = BINDSHII,68
-    Moves = MOONBLAST,FAIRYWIND,HYPERVOICE,WISH
-    Item = PIXIEPLATE
-Pokemon = SCIZOR,68
-    Form = 1
-    Moves = FIREPUNCH,IRONHEAD,BULLETPUNCH,ROLLOUT
-    Item = CHOICESCARF
+[E44,Hope,1]
+LoseText = "Even after this unexpected twist, you still win. Congratulations..."
+Pokemon = MUSHARNA,70
+Item = LEFTOVERS
+Moves = PSYBEAM,HYPNOSIS,HYPERVOICE,REST
+Pokemon = LUNALA,70
+Form = 1
+Item = FOCUSSASH
+Moves = PSYCHIC,HYPNOSIS,MOONGEISTBEAM,PHANTOMFORCE
+Pokemon = PLAINEON,70
+Item = LIFEORB
+Moves = EXTREMESPEED,HYPERBEAM,STARBOLT,TAILGLOW
+Pokemon = RACCOLOSSUS,70
+Item = CHOICESCARF
+Moves = CRUNCH,SHADOWSNEAK,DRAGONTAIL,CROSSPOISON
+Pokemon = ABSOL,70
+Shiny = yes
+Item = ABSOLITE
+Moves = PSYCHOCUT,PSYCHIC,CRUNCH,EXTREMESPEED
+Pokemon = ROTOM,70
+Form = 1
+Item = LEFTOVERS
+Moves = OVERHEAT,SHADOWBALL,THUNDERBOLT,ICEBEAM
 #-------------------------------
 [LEADER2,Alexander,2]
 LoseText = "Very well, you deserve my badge."
@@ -1941,51 +1987,51 @@ Pokemon = SCIZOR,50
 #-------------------------------
 [BLACKBELT,Jan,1]
 LoseText = "Well fought, proceed!"
-Pokemon = INFERNAPE,50
+Pokemon = INFERNAPE,54
     Moves = CLOSECOMBAT,BLAZEKICK,ICEPUNCH,THUNDERPUNCH
     Item = CHOICEBAND
-Pokemon = TOXICROAK,50
+Pokemon = TOXICROAK,53
     Moves = CLOSECOMBAT,DARKPULSE,EARTHQUAKE,SUCKERPUNCH
     Item = LIFEORB
 #-------------------------------
 [BLACKBELT,Zach,1]
 LoseText = "Who trained you?"
-Pokemon = SAWK,52
-Pokemon = THROH,52
+Pokemon = SAWK,55
+Pokemon = THROH,55
 #-------------------------------
 [BLACKBELT,Randal,1]
 LoseText = "You will never find our Dojo..."
-Pokemon = MACHAMP,50
+Pokemon = MACHAMP,54
     Moves = EARTHQUAKE,ROCKSLIDE,CLOSECOMBAT,FIREPUNCH
     Item = EXPERTBELT
-Pokemon = LUCARIO,52
+Pokemon = LUCARIO,54
     Moves = EARTHQUAKE,CLOSECOMBAT,ICEPUNCH
     Item = LIFEORB
 #-------------------------------
 [BLACKBELT,Leeon,1]
 LoseText = "Hitmonlee's... No!"
-Pokemon = HITMONLEE,53
+Pokemon = HITMONLEE,55
     Moves = HIGHJUMPKICK,TRIPLEAXEL,LOWKICK,CLOSECOMBAT
     Item = EXPERTBELT
-Pokemon = HITMONLEE,53
+Pokemon = HITMONLEE,55
     Moves = HIGHJUMPKICK,TRIPLEAXEL,LOWKICK,CLOSECOMBAT
     Item = EXPERTBELT
 #-------------------------------
 [BLACKBELT,Toplo,1]
 LoseText = "Knocked me all the way to the bottom!"
-Pokemon = HITMONTOP,53
+Pokemon = HITMONTOP,55
     Moves = HIGHJUMPKICK,TRIPLEAXEL,LOWKICK,CLOSECOMBAT
     Item = EXPERTBELT
-Pokemon = HITMONTOP,53
+Pokemon = HITMONTOP,55
     Moves = HIGHJUMPKICK,TRIPLEAXEL,LOWKICK,CLOSECOMBAT
     Item = EXPERTBELT
 #-------------------------------
 [BLACKBELT,Chandler,1]
 LoseText = "I Chant believe this!"
-Pokemon = HITMONCHAN,53
+Pokemon = HITMONCHAN,55
     Moves = HIGHJUMPKICK,TRIPLEAXEL,LOWKICK,CLOSECOMBAT
     Item = EXPERTBELT
-Pokemon = HITMONCHAN,53
+Pokemon = HITMONCHAN,55
     Moves = HIGHJUMPKICK,TRIPLEAXEL,LOWKICK,CLOSECOMBAT
     Item = EXPERTBELT
 #-------------------------------
@@ -2722,6 +2768,56 @@ Pokemon = MIENSHAO,54
     Role = PIVOT
     Moves = HIGHJUMPKICK,KNOCKOFF,UTURN,FAKEOUT
 #-------------------------------
+[IVY,Ivy,6]
+LoseText = "Blown away, what's new?!"
+Pokemon = VENUSAUR,60
+Item = VENUSAURITE
+Role = HAZARDLEAD
+Moves = LEECHSEED,TOXICSPIKES,SPIKES,SOLARBEAM
+Pokemon = LUXRAY,60
+    Moves = THUNDER,CRUNCH,EXTREMESPEED,THUNDERWAVE
+    Item = LEFTOVERS
+Pokemon = ARCHEOPS,60
+    Moves = ROCKSLIDE,BRAVEBIRD,CRUNCH,ROOST
+    Item = BERRYJUICE
+Pokemon = VAPOREON,60
+    Moves = ICEBEAM,SURF,EXTREMESPEED,TAILGLOW
+    InfusionType1 = WATER
+    InfusionType2 = ICE
+    Item = MYSTICWATER
+Pokemon = MELOETTA,60
+Form = 2
+    Moves = SONARPULSE,PSYCHIC,MOONBLAST,FIREBLAST
+Pokemon = MIENSHAO,60
+    Item = ASSAULTVEST
+    Role = PIVOT
+    Moves = HIGHJUMPKICK,KNOCKOFF,UTURN,FAKEOUT
+#-------------------------------
+[IVY,Ivy,7]
+LoseText = "Now, our story finally comes to an end... Thanks to you, I've finally found out the type of person I want to be. I don't want to be a research assistant, I want to do something on my own that will make people proud. I want to become a strong trainer and travel the world, explore all kinds of places, and regions! Thank you... Nothing in this world can ever make up for what you've done for me."
+Pokemon = VENUSAUR,65
+Item = VENUSAURITE
+Role = HAZARDLEAD
+Moves = LEECHSEED,TOXICSPIKES,SPIKES,SOLARBEAM
+Pokemon = LUXRAY,65
+    Moves = THUNDER,CRUNCH,EXTREMESPEED,THUNDERWAVE
+    Item = LEFTOVERS
+Pokemon = ARCHEOPS,65
+    Moves = ROCKSLIDE,BRAVEBIRD,CRUNCH,ROOST
+    Item = BERRYJUICE
+Pokemon = VAPOREON,65
+    Moves = ICEBEAM,SURF,EXTREMESPEED,TAILGLOW
+    InfusionType1 = WATER
+    InfusionType2 = ICE
+    Item = MYSTICWATER
+Pokemon = MELOETTA,65
+Form = 2
+    Moves = SONARPULSE,PSYCHIC,MOONBLAST,FIREBLAST
+Pokemon = MIENSHAO,65
+    Item = ASSAULTVEST
+    Role = PIVOT
+    Moves = HIGHJUMPKICK,KNOCKOFF,UTURN,FAKEOUT
+#-------------------------------
 [EXPERTSPECIALIST_F,Linda,1]
 LoseText = "That's the type of power we need in Mythan!"
 Pokemon = GOODRA,66
@@ -2781,3 +2877,23 @@ Pokemon = VULPIX,20
     Moves = FLAMECHARGE,WILLOWISP,FLAMEBURST,QUICKATTACK
 Pokemon = RUFFLET,21
     Moves = WINGATTACK,ROOST,QUICKATTACK,LEER
+#-------------------------------
+[RIVAL1,Marcus,251]
+LoseText = "Of course, what was I expecting. Hm... I guess it's a well deserved victory."
+Pokemon = SCEPTILE,100
+    Moves = LEAFBLADE,EXTREMESPEED,LEECHSEED,GLARE
+    Role = SPEEDCONTROL
+Pokemon = FROSLASS,100
+    Moves = ICEBEAM,SWIFT,SHADOWBALL,WILLOWISP
+Pokemon = COCOFESTED,100
+    Moves = LEECHSEED,MEGADRAIN,WATERPULSE,SHELLSMASH
+    Role = SETUPSWEEPER
+Pokemon = CROBAT,100
+    Item = CROBATITE
+    Shiny = yes
+    Moves = VENOMBLADE,BRAVEBIRD,ROOST,EXTREMESPEED
+Pokemon = TYPHLOSION,100
+    Item = CHARCOAL
+    Moves = OVERHEAT,FLAMETHROWER,EARTHPOWER,WILLIWISP
+Pokemon = BRAVIARY,100
+    Moves = BRAVEBIRD,ROOST,FLY,EXTREMESPEED

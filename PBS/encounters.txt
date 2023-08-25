@@ -1,6 +1,6 @@
 ﻿# See the documentation on the wiki to learn how to edit this file.
 #-------------------------------
-043 # Route 1
+042 # Eclipse Passage
 25,10,10
 Land
     SUNKERN,3,4
@@ -16,71 +16,7 @@ Land
     MUNCHLAX,3,5
     MUNCHLAX,3,5
 #-------------------------------
-247 # Kindle Ash Peak
-25,10,10
-Land
-    ZORUA_3,24,26
-    COMBUSKEN,24,25
-    PONYTA,22,24
-    GROWLITHE,21,25
-    SIZZLIPEDE,24,26
-    FLAAFFY,22,25
-    SLUGMA,22,25
-    TORKOAL,22,25
-    MONFERNO,22,25
-    VULPIX,23,25
-    FLAREON,22,25
-    CAITFYR,22,24
-#-------------------------------
-111 # Catacombs Entrance
-25,10,10
-Cave
-    RIOLU_2,21,23
-    RIOLU_2,21,23
-    ZORUA_3,22,24
-    ZORUA_3,22,24
-    MAGNEMITE,21,22
-    SABLEYE,22,24
-    SABLEYE,21,23
-    MAWILE,22,24
-    MAROWAK,22,24
-    WAELIN,21,22
-    WAELIN,21,22
-    WAELIN,21,22
-#-------------------------------
-141 # East Catacombs
-25,10,10
-Cave
-    RIOLU_2,21,23
-    RIOLU_2,21,23
-    ZORUA_3,22,24
-    ZORUA_3,22,24
-    MAGNEMITE,21,22
-    SABLEYE,22,24
-    SABLEYE,21,23
-    MAWILE,22,24
-    MAROWAK,22,24
-    WAELIN,21,22
-    WAELIN,21,22
-    WAELIN,21,22
-#-------------------------------
-222 # Cold Storage
-25,10,10
-Cave
-    CUBCHOO,17
-    SNORUNT,17
-    CUBCHOO,17
-    SMOOCHUM,17
-    VANILLITE,17
-    BERGMITE,17
-    SNOM,17
-    SNOVER,17
-    SNORUNT,17
-    SHELLDER,17
-    SANDSHREW_1,17
-    VULPIX_1,17
-#-------------------------------
-042 # Eclipse Passage
+043 # Route 1
 25,10,10
 Land
     SUNKERN,3,4
@@ -265,6 +201,22 @@ Water
     GYARADOS,40
     KINGDRA,40
 #-------------------------------
+111 # Catacombs Entrance
+25,10,10
+Cave
+    RIOLU_2,21,23
+    RIOLU_2,21,23
+    ZORUA_3,22,24
+    ZORUA_3,22,24
+    MAGNEMITE,21,22
+    SABLEYE,22,24
+    SABLEYE,21,23
+    MAWILE,22,24
+    MAROWAK,22,24
+    WAELIN,21,22
+    WAELIN,21,22
+    WAELIN,21,22
+#-------------------------------
 118 # Route 4
 25,10,10
 Land
@@ -313,7 +265,7 @@ Cave
     HITMONLEE,22
     ZORUA_3,25
 #-------------------------------
-132 # Mythic Forest
+132 # Valor Cave
 25,10,10
 Land
     WOBBUFFET,42
@@ -367,6 +319,22 @@ Land
     DEERLING,22,24
     DITTO,25
 #-------------------------------
+141 # East Catacombs
+25,10,10
+Cave
+    RIOLU_2,21,23
+    RIOLU_2,21,23
+    ZORUA_3,22,24
+    ZORUA_3,22,24
+    MAGNEMITE,21,22
+    SABLEYE,22,24
+    SABLEYE,21,23
+    MAWILE,22,24
+    MAROWAK,22,24
+    WAELIN,21,22
+    WAELIN,21,22
+    WAELIN,21,22
+#-------------------------------
 144 # Route 6
 25,10,10
 Land
@@ -415,6 +383,41 @@ Land
     AMAURA,39
     CRABOMINABLE,40
 #-------------------------------
+157 # Route 13
+25,10,10
+Land
+    FLYGON,64
+    FLYGON,64
+    ROSERADE,65
+    ROSERADE,65
+    ABSOL,64
+    ABSOL,64
+    YANMEGA,64
+    YANMEGA,64
+    PRIMEAPE,65
+    PRIMEAPE,65
+    HIPPOWDON,65
+    HIPPOWDON,65
+Water
+    WAVSTISNAIL,64
+    GYARADOS,65
+    STARMIE,65
+    SERPENSYNC,64
+    SERPENSYNC,64
+OldRod
+    WAVSTISNAIL,64
+    GYARADOS,65
+GoodRod
+    WAVSTISNAIL,64
+    GYARADOS,65
+    STARMIE,65
+SuperRod
+    WAVSTISNAIL,64
+    GYARADOS,65
+    STARMIE,65
+    SERPENSYNC,64
+    SERPENSYNC,64
+#-------------------------------
 161 # Route 121
 25,10,10
 Land
@@ -430,6 +433,76 @@ Land
     NINJASK,39
     ABSOL,40
     ABSOL,40
+#-------------------------------
+168 # Victory Road
+25,10,10
+Land
+    FLYGON,64
+    FLYGON,64
+    ROSERADE,65
+    ROSERADE,65
+    ABSOL,64
+    ABSOL,64
+    YANMEGA,64
+    YANMEGA,64
+    PRIMEAPE,65
+    PRIMEAPE,65
+    HIPPOWDON,65
+    HIPPOWDON,65
+Water
+    WAVSTISNAIL,64
+    GYARADOS,65
+    STARMIE,65
+    SERPENSYNC,64
+    SERPENSYNC,64
+OldRod
+    WAVSTISNAIL,64
+    GYARADOS,65
+GoodRod
+    WAVSTISNAIL,64
+    GYARADOS,65
+    STARMIE,65
+SuperRod
+    WAVSTISNAIL,64
+    GYARADOS,65
+    STARMIE,65
+    SERPENSYNC,64
+    SERPENSYNC,64
+#-------------------------------
+169 # Victory Road
+25,10,10
+Land
+    FLYGON,64
+    FLYGON,64
+    ROSERADE,65
+    ROSERADE,65
+    ABSOL,64
+    ABSOL,64
+    YANMEGA,64
+    YANMEGA,64
+    PRIMEAPE,65
+    PRIMEAPE,65
+    HIPPOWDON,65
+    HIPPOWDON,65
+Water
+    WAVSTISNAIL,64
+    GYARADOS,65
+    STARMIE,65
+    SERPENSYNC,64
+    SERPENSYNC,64
+OldRod
+    WAVSTISNAIL,64
+    GYARADOS,65
+GoodRod
+    WAVSTISNAIL,64
+    GYARADOS,65
+    STARMIE,65
+SuperRod
+    WAVSTISNAIL,64
+    GYARADOS,65
+    STARMIE,65
+    SERPENSYNC,64
+    SERPENSYNC,64
 #-------------------------------
 175 # Route 8
 25,10,10
@@ -505,6 +578,22 @@ Water
     SHARPEDO,58
     WAILORD,58
 #-------------------------------
+215 # Betty's Ranch
+25,10,10
+Land
+    MILTANK,12
+    MILTANK,12
+    MILTANK,13
+    MILTANK,14
+    MILTANK,13
+    MILTANK,14
+    MILTANK,15
+    MILTANK,12
+    MILTANK,13
+    MILTANK,14
+    MILTANK,14
+    MILTANK,15
+#-------------------------------
 218 # Route 9
 25,10,10
 Land
@@ -542,6 +631,22 @@ Water
     COCOFESTED,50
     VAPOREON,50
     SWAMPERT,53
+#-------------------------------
+222 # Cold Storage
+25,10,10
+Cave
+    CUBCHOO,17
+    SNORUNT,17
+    CUBCHOO,17
+    SMOOCHUM,17
+    VANILLITE,17
+    BERGMITE,17
+    SNOM,17
+    SNOVER,17
+    SNORUNT,17
+    SHELLDER,17
+    SANDSHREW_1,17
+    VULPIX_1,17
 #-------------------------------
 224 # Route 10
 25,10,10
@@ -631,7 +736,7 @@ Water
     MILOTIC,68
     SWAMPERT,68
 #-------------------------------
-237 # Molstrus Museum and Dock
+237 # Poke Center
 25,10,10
 Land
     SWELLOW,67
@@ -669,6 +774,102 @@ Land
     DRATINI,24
     BELDUM,24
 #-------------------------------
+241 # Secret 1
+25,10,10
+Land
+    LEAVANNY,71
+    LEAVANNY,71
+    NOIVERN,71
+    NOIVERN,71
+    FALINKS,71
+    FALINKS,71
+    RAICHU,71
+    RAICHU,71
+    GOLEM,71
+    GOLEM,71
+    DUNEON,71
+    DUNEON,71
+#-------------------------------
+242 # Daycare Nursery
+25,10,10
+Land
+    LEAVANNY,51
+    LEAVANNY,51
+    NOIVERN,51
+    NOIVERN,51
+    FALINKS,51
+    FALINKS,51
+    RAICHU,51
+    RAICHU,51
+    GOLEM,51
+    GOLEM,51
+    DUNEON,51
+    DUNEON,51
+#-------------------------------
+243 # Burnt Forest
+25,10,10
+Land
+    ARCANINE,58
+    ARCANINE,58
+    ARCANINE,58
+    GOURGEIST,58
+    GOURGEIST,58
+    GOURGEIST,58
+    CENTISKORCH,58
+    CENTISKORCH,58
+    CENTISKORCH,58
+    TREVENANT,58
+    TREVENANT,58
+    TREVENANT,58
+#-------------------------------
+288 # Burnt Forest
+25,10,10
+Land
+    WOBBUFFET,55
+    WOBBUFFET,55
+    WOBBUFFET,55
+    WOBBUFFET,55
+    WOBBUFFET,55
+    WOBBUFFET,55
+    WOBBUFFET,55
+    WOBBUFFET,55
+    WOBBUFFET,55
+    WOBBUFFET,55
+    WOBBUFFET,55
+    DRAGONITE,55
+#-------------------------------
+244 # Burnt Forest
+25,10,10
+Land
+    ARCANINE,58
+    ARCANINE,58
+    ARCANINE,58
+    GOURGEIST,58
+    GOURGEIST,58
+    GOURGEIST,58
+    CENTISKORCH,58
+    CENTISKORCH,58
+    CENTISKORCH,58
+    TREVENANT,58
+    TREVENANT,58
+    TREVENANT,58
+#-------------------------------
+206 # Burnt Forest
+25,10,10
+Land
+    ARCANINE,58
+    ARCANINE,58
+    ARCANINE,58
+    GOURGEIST,58
+    GOURGEIST,58
+    GOURGEIST,58
+    CENTISKORCH,58
+    CENTISKORCH,58
+    CENTISKORCH,58
+    TREVENANT,58
+    TREVENANT,58
+    TREVENANT,58
+#-------------------------------
 246 # Kindle Grotto
 25,10,10
 Land
@@ -685,71 +886,23 @@ Land
     DRATINI,24
     BELDUM,24
 #-------------------------------
-241
+247 # Kindle Ash Peak
 25,10,10
 Land
-    LEAVANNY,71
-    LEAVANNY,71
-    NOIVERN,71
-    NOIVERN,71
-    FALINKS,71
-    FALINKS,71
-    RAICHU,71
-    RAICHU,71
-    GOLEM,71
-    GOLEM,71
-    DUNEON,71
-    DUNEON,71
+    ZORUA_3,24,26
+    COMBUSKEN,24,25
+    PONYTA,22,24
+    GROWLITHE,21,25
+    SIZZLIPEDE,24,26
+    FLAAFFY,22,25
+    SLUGMA,22,25
+    TORKOAL,22,25
+    MONFERNO,22,25
+    VULPIX,23,25
+    FLAREON,22,25
+    CAITFYR,22,24
 #-------------------------------
-242
-25,10,10
-Land
-    LEAVANNY,51
-    LEAVANNY,51
-    NOIVERN,51
-    NOIVERN,51
-    FALINKS,51
-    FALINKS,51
-    RAICHU,51
-    RAICHU,51
-    GOLEM,51
-    GOLEM,51
-    DUNEON,51
-    DUNEON,51
-#-------------------------------
-243
-25,10,10
-Land
-    LEAVANNY,71
-    LEAVANNY,71
-    NOIVERN,71
-    NOIVERN,71
-    FALINKS,71
-    FALINKS,71
-    RAICHU,71
-    RAICHU,71
-    GOLEM,71
-    GOLEM,71
-    DUNEON,71
-    DUNEON,71
-#-------------------------------
-244
-25,10,10
-Land
-    LEAVANNY,71
-    LEAVANNY,71
-    NOIVERN,71
-    NOIVERN,71
-    FALINKS,71
-    FALINKS,71
-    RAICHU,71
-    RAICHU,71
-    GOLEM,71
-    GOLEM,71
-    DUNEON,71
-    DUNEON,71
-#-------------------------------
-254 # Serene Onboard
+254 # Kindle Cave F3
 25,10,10
 Land
     RAICHU,76
@@ -856,124 +1009,3 @@ Water
     TENTACRUEL,50
     MILOTIC,50
     SWAMPERT,50
-#-------------------------------
-157 # Route 13
-25,10,10
-Land
-    FLYGON,64
-    FLYGON,64
-    ROSERADE,65
-    ROSERADE,65
-    ABSOL,64
-    ABSOL,64
-    YANMEGA,64
-    YANMEGA,64
-    PRIMEAPE,65
-    PRIMEAPE,65
-    HIPPOWDON,65
-    HIPPOWDON,65
-Water
-    WAVSTISNAIL,64
-    GYARADOS,65
-    STARMIE,65
-    SERPENSYNC,64
-    SERPENSYNC,64
-OldRod
-    WAVSTISNAIL,64
-    GYARADOS,65
-GoodRod
-    WAVSTISNAIL,64
-    GYARADOS,65
-    STARMIE,65
-SuperRod
-    WAVSTISNAIL,64
-    GYARADOS,65
-    STARMIE,65
-    SERPENSYNC,64
-    SERPENSYNC,64
-#-------------------------------
-168 # Victory Road
-25,10,10
-Land
-    FLYGON,64
-    FLYGON,64
-    ROSERADE,65
-    ROSERADE,65
-    ABSOL,64
-    ABSOL,64
-    YANMEGA,64
-    YANMEGA,64
-    PRIMEAPE,65
-    PRIMEAPE,65
-    HIPPOWDON,65
-    HIPPOWDON,65
-Water
-    WAVSTISNAIL,64
-    GYARADOS,65
-    STARMIE,65
-    SERPENSYNC,64
-    SERPENSYNC,64
-OldRod
-    WAVSTISNAIL,64
-    GYARADOS,65
-GoodRod
-    WAVSTISNAIL,64
-    GYARADOS,65
-    STARMIE,65
-SuperRod
-    WAVSTISNAIL,64
-    GYARADOS,65
-    STARMIE,65
-    SERPENSYNC,64
-    SERPENSYNC,64
-#-------------------------------
-169 # Victory Road
-25,10,10
-Land
-    FLYGON,64
-    FLYGON,64
-    ROSERADE,65
-    ROSERADE,65
-    ABSOL,64
-    ABSOL,64
-    YANMEGA,64
-    YANMEGA,64
-    PRIMEAPE,65
-    PRIMEAPE,65
-    HIPPOWDON,65
-    HIPPOWDON,65
-Water
-    WAVSTISNAIL,64
-    GYARADOS,65
-    STARMIE,65
-    SERPENSYNC,64
-    SERPENSYNC,64
-OldRod
-    WAVSTISNAIL,64
-    GYARADOS,65
-GoodRod
-    WAVSTISNAIL,64
-    GYARADOS,65
-    STARMIE,65
-SuperRod
-    WAVSTISNAIL,64
-    GYARADOS,65
-    STARMIE,65
-    SERPENSYNC,64
-    SERPENSYNC,64
-#-------------------------------
-215 # Betty's Ranch
-25,10,10
-Land
-    MILTANK,12
-    MILTANK,12
-    MILTANK,13
-    MILTANK,14
-    MILTANK,13
-    MILTANK,14
-    MILTANK,15
-    MILTANK,12
-    MILTANK,13
-    MILTANK,14
-    MILTANK,14
-    MILTANK,15

@@ -16,19 +16,19 @@
 159,59,0,271,0,242
 # Molstrus City (159) - Route 7 (145)
 159,109,0,145,0,256
-# Molstrus City (159) - rock filler (96)
+# Molstrus City (159) - Maycrop Dept. (96)
 159,175,0,96,0,186
 # Molstrus City (159) - Route 13 (157)
 159,43,0,157,0,85
 # tree filler (48) - Route 11 (80)
 48,South,0,80,North,65
-# Molstrus City (159) - rock filler (42)
+# Molstrus City (159) - Eclipse Passage (42)
 159,165,0,42,0,227
 # Molstrus City (159) - Route 9 (218)
 159,0,0,218,90,258
 # Molstrus City (159) - Route 5 (136)
 159,198,0,136,0,255
-# Molstrus City (159) - Route 13 (158)
+# Molstrus City (159) - Sunside Village (158)
 159,0,0,158,26,51
 # Molstrus City (159) - Route 10 (224)
 159,0,0,224,94,176
@@ -52,11 +52,17 @@
 194,South,0,203,North,32
 # Watro Sea (201) - Watro Sea (203)
 201,South,0,203,North,2
-# Watro Sea (194) - Resivor Village (193)
-194,East,0,193,West,9
-# Dream Land (196) - Resivor Village (193)
-196,West,0,193,East,1
+# Resivor Village (193) - WATER (280)
+193,East,0,280,West,9
+# CHEATER LAND (196) - WATER (280)
+196,North,0,280,South,0
 # Clayground Valley (210) - Smithest Town (204)
 210,West,0,204,East,0
+# Watro Sea (194) - Resivor Village (193)
+194,East,0,193,West,9
+# Floral Island (284) - Resivor Village (193)
+284,South,0,193,North,4
+# CHEATER LAND (196) - Resivor Village (193)
+196,West,0,193,East,6
 # Watro Sea (201) - Watro Sea (194)
 201,East,0,194,West,0
