@@ -591,14 +591,14 @@ ShowArea = true
 # Aether Cave F1
 SnapEdges = true
 BattleBack = cave1
-MapPosition = 0,22,6
+MapPosition = 0,22,8
 Outdoor = false
 #-------------------------------
 [125]
 # Aether Cave F2
 SnapEdges = true
 BattleBack = cave1
-MapPosition = 0,22,6
+MapPosition = 0,22,8
 #-------------------------------
 [126]
 # Diamond Town
