@@ -105,7 +105,7 @@
 102,ASTRANINJA,Astra Ninja,200,Battle Gym Leader,Battle victory leader,,Male,,
 103,ASTRASPECTRAL,Astra Admin,200,Battle Gym Leader,Battle victory team astra,,Female,,
 104,BOARDER,Boarder,200,,,,Male,,
-105,MONIKA,Corrupt Commander,200,Battle Gym Leader,Battle team corrupt,,Female,,
+105,MONIKA,Corrupt Commander,200,Battle Gym Leader,Battle victory team corrupt,,Female,,
 106,JENNY,Officer,200,,,,Female,,
 107,CHARLEAH,Pokemon Perfectionist,200,Battle Gym Leader,Battle victory leader,,Female,,
 108,LEADER1HARD,Gym Leader,200,Battle Gym Leader,Battle victory leader,,Male,,
