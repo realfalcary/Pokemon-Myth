@@ -1045,6 +1045,7 @@ BattlerEnemyY = 14
 #-------------------------------
 [SCIZOR,3]
 FormName = Mega Scizor
+MegaStone = SCIZORITE
 Type1 = FIRE
 Type2 = GHOST
 Abilities = SHEERFORCE,CURSEDBODY

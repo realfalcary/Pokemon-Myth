@@ -791,7 +791,7 @@ MapPosition = 0,15,15
 [172]
 # Pokemon League
 SnapEdges = true
-MapPosition = 0,22,17
+MapPosition = 0,18,17
 Outdoor = true
 ShowArea = true
 #-------------------------------
