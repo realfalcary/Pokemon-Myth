@@ -949,6 +949,30 @@ Pokemon = ALTARIA,70
     Moves = OUTRAGE,EXTREMESPEED,PROTECT,ROOST
     Item = ALTARIANITE
 #-------------------------------
+[VANILLA,Vanilla,3]
+Items = FULLRESTORE,FULLRESTORE,REVIVE,FULLHEAL,FULLHEAL
+LoseText = "Well, I guess we still have a clear winner! You've done fantastic!"
+Pokemon = ASCENTEON,100
+    Moves = DRAGONDANCE,OUTRAGE,CRUNCH,EARTHQUAKE
+    Item = LIFEORB
+Pokemon = BLAZESIDHE,100
+    Moves = FIREBLAST,MOONBLAST,STARBOLT,TOXIC
+    Item = LIFEORB
+Pokemon = DEOXYS,100
+    Form = 1
+    Moves = PSYCHIC,CALMMIND,DRACOMETEOR,EXTREMESPEED
+    Item = LIFEORB
+Pokemon = LUGIA,100
+    Shiny = yes
+    Moves = ICEBEAM,SCALD,BRAVEBIRD,ROOST
+    Item = QUICKCLAW
+Pokemon = PHENELPHA,100
+    Moves = FLAMETHROWER,BRAVEBIRD,ROOST,TRIPLEAXEL
+Pokemon = ALTARIA,100
+    Shiny = yes
+    Moves = OUTRAGE,EXTREMESPEED,PROTECT,ROOST
+    Item = ALTARIANITE
+#-------------------------------
 [ACETRAINER,Val,1]
 LoseText = "Amazing tactics, well performed aswell!"
 Pokemon = DRAGONITE,66
@@ -1982,6 +2006,7 @@ Pokemon = FROSMOTH,50
     Moves = ICEBEAM,BLIZZARD,BUGBUZZ,QUIVERDANCE
     Item = NEVERMELTICE
 Pokemon = SCIZOR,50
+Form = 1
     Moves = BULLETPUNCH,IRONHEAD,BUGBUZZ,THUNDERPUNCH
     Item = SCIZORITE
 #-------------------------------

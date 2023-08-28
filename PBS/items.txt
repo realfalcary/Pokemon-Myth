@@ -882,5 +882,6 @@
 859,TITANIUMINFUSEDGEM,Titanium Infused Gem,Titanium Infused Gems,1,2200,"A very old geode-like cracked crystal, the colors inside sparkle and pulse.",1,0,7,
 860,PIXIEDUST,Pixie Dust,Pixie Dust's,1,2200,"A bag full of a fine, pink dust. It's loved by a certain Pokemon.",1,0,7,
 861,WYRMINFUSEDGEM,Wyrm Infused Gem,Wyrm Infused Gems,1,2200,"A very old geode-like cracked crystal, the colors inside sparkle and pulse.",1,0,7,
-862,AZUREFLUTE,Azure Flute,Azure Flutes,1,2200,"An old flute that is said to be able to play music loved by Arceus. The origin of the item is unknown.",1,0,7,
-863,SEETERPASS,Seeter Pass,Seeter Passes,1,2200,"A ticket used to board a boat to Mt. Seeter.",1,0,7,
+862,AZUREFLUTE,Azure Flute,Azure Flutes,1,2200,"An old flute that is said to be able to play music loved by Arceus. The origin of the item is unknown.",5,0,6,
+863,SEETERPASS,Seeter Pass,Seeter Passes,1,2200,"A ticket used to board a boat to Mt. Seeter.",5,0,6,
+864,MININGGEAR,Mining Gear,Mining Gears,1,2200,"A set of mining gear developed by Morlea, it can be used to mine small cracks in the wall.",5,0,6,

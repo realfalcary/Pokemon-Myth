@@ -198,7 +198,7 @@ MapPosition = 0,13,6
 # Route 4
 MapSize = 2,11
 BattleBack = field
-MapPosition = 0,11,6
+MapPosition = 0,20,11
 Outdoor = true
 ShowArea = true
 #-------------------------------
@@ -827,8 +827,13 @@ BattleBack = CrystalCavernPink
 Outdoor = false
 ShowArea = false
 #-------------------------------
+[180]
+# Valor Lake
+SnapEdges = true
+Outdoor = true
+ShowArea = true
+#-------------------------------
 [181]
-# Mythic Caverns
 SnapEdges = true
 BattleBack = CrystalCavernPink
 MapPosition = 0,11,6
@@ -901,6 +906,7 @@ ShowArea = true
 #-------------------------------
 [201]
 # Watro Sea
+DiveMap = 293
 MapPosition = 0,5,8
 Outdoor = true
 ShowArea = true
@@ -1268,7 +1274,7 @@ ShowArea = false
 [276]
 # Templon Path
 SnapEdges = true
-Outdoor = false
+Outdoor = true
 ShowArea = true
 #-------------------------------
 [277]
@@ -1309,7 +1315,7 @@ ShowArea = true
 # Roycloud Passway
 SnapEdges = true
 BattleBack = desert
-Weather = Sunny,100
+Weather = Sun,100
 MapPosition = 0,13,10
 Outdoor = true
 ShowArea = true
@@ -1317,5 +1323,10 @@ ShowArea = true
 [288]
 # Burnt Forest
 SnapEdges = true
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[291]
+# Bahka Town
 Outdoor = true
 ShowArea = true
