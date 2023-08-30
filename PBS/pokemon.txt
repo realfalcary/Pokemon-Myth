@@ -20214,7 +20214,7 @@ BattlerEnemyX = 0
 BattlerEnemyY = 30
 BattlerShadowX = 0
 BattlerShadowSize = 2
-Evolutions = VOLCARONA,Item,MOONSTONE
+Evolutions = VOLCARONA,Item,PIXIEDUST
 #-------------------------------
 [637]
 Name = Volcarona
