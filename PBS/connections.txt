@@ -70,15 +70,5 @@
 291,South,0,192,North,11
 # Route 16 (296) - Resivor Islands (192)
 296,West,0,192,East,0
-# Hidden Pass (305) - Bahka Town (291)
-305,West,0,291,East,27
-# Mizzy's Driveway (306) - Bahka Town (291)
-306,West,0,291,East,7
 # Route 16 (296) - Bahka Town (291)
 296,North,0,291,South,19
-# Mizzy's Driveway (306) - Hidden Pass (305)
-306,South,0,305,North,0
-# Route 16 (296) - Hidden Pass (305)
-296,East,0,305,West,23
-# Route 16 (296) - Mizzy's Driveway (306)
-296,East,0,306,West,43
