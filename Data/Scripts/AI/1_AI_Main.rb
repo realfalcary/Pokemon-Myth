@@ -386,8 +386,8 @@ class PBAI
 
 	  def effective_speed
   		stageMul = [2,2,2,2,2,2, 2, 3,4,5,6,7,8]
+		  stageDiv = [8,7,6,5,4,3, 2, 2,2,2,2,2,2]
 	    stage = @battler.nil? ? 6 : @battler.stages[PBStats::SPEED] + 6
-	    stage = @battler.stages[PBStats::SPEED] + 6
 	    return (@battler.speed.to_f * stageMul[stage] / stageDiv[stage]).floor
 	  end
 
