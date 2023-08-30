@@ -581,6 +581,7 @@ PBAI::SwitchHandler.add_out do |switch,ai,battler,target|
 	damage = 0
 	pivot = nil
 	if target.bad_against?(battler)
+		if !battler.nil?
 		battler.opposing_side.battlers.each do |target|
 			next if target.nil?
 		  next if ai.battle.wildBattle?
@@ -617,6 +618,7 @@ PBAI::SwitchHandler.add_out do |switch,ai,battler,target|
 			switch = false
 		elsif move == 0
 			switch = true
+		end
 		end
 	elsif target.bad_against?(battler) && target_moves == nil
 		switch = false
