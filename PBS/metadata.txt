@@ -3,8 +3,8 @@
 [000]
 PlayerA = POKEMONTRAINER_Red,trchar000,boy_bike,boy_surf,boy_run,boy_surf,boy_fish_offset,boy_fish_offset
 PlayerB = POKEMONTRAINER_Leaf,trchar001,girl_bike,girl_surf,girl_run,girl_surf,girl_fish_offset,girl_fish_offset
-TrainerVictoryME = Battle victory trainer.ogg
-WildVictoryME = Battle victory wild.ogg
+TrainerVictoryME = Battle victory trainer.mp3
+WildVictoryME = Battle victory wild.mp3
 TrainerBattleBGM = Battle! vs Pokemon Trainer!.mp3
 SurfBGM = Surf!.mp3
 BicycleBGM = Bicycle.mid
@@ -911,6 +911,13 @@ MapPosition = 0,5,8
 Outdoor = true
 ShowArea = true
 #-------------------------------
+[202]
+# Mythan Island
+SnapEdges = true
+MapPosition = 0,3,13
+Outdoor = true
+ShowArea = true
+#-------------------------------
 [203]
 # Watro Sea
 MapPosition = 0,5,9
@@ -1349,11 +1356,9 @@ SnapEdges = true
 Outdoor = false
 #-------------------------------
 [305]
-# Hidden Pass
 Outdoor = true
 ShowArea = true
 #-------------------------------
 [306]
-# Mizzy's Driveway
 Outdoor = true
 ShowArea = true
