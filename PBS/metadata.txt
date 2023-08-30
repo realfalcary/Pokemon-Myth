@@ -198,13 +198,13 @@ MapPosition = 0,13,6
 # Route 4
 MapSize = 2,11
 BattleBack = field
-MapPosition = 0,20,11
+MapPosition = 0,22,11
 Outdoor = true
 ShowArea = true
 #-------------------------------
 [040]
 # Route 4
-MapPosition = 0,11,6
+MapPosition = 0,22,11
 Outdoor = true
 BicycleAlways = true
 ShowArea = true
@@ -834,11 +834,11 @@ Outdoor = true
 ShowArea = true
 #-------------------------------
 [181]
+# Bahka Cave
 SnapEdges = true
-BattleBack = CrystalCavernPink
-MapPosition = 0,11,6
-Outdoor = true
-ShowArea = true
+BattleBack = 
+Outdoor = false
+ShowArea = false
 #-------------------------------
 [184]
 # Serene City
@@ -1328,5 +1328,32 @@ ShowArea = true
 #-------------------------------
 [291]
 # Bahka Town
+MapPosition = 0,3,10
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[296]
+# Route 16
+SnapEdges = false
+MapPosition = 0,4,10
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[300]
+# Platoh Cave
+SnapEdges = true
+#-------------------------------
+[302]
+# Glacient Cave
+SnapEdges = true
+Outdoor = false
+#-------------------------------
+[305]
+# Hidden Pass
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[306]
+# Mizzy's Driveway
 Outdoor = true
 ShowArea = true

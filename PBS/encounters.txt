@@ -578,6 +578,22 @@ Water
     SHARPEDO,58
     WAILORD,58
 #-------------------------------
+206 # Burnt Forest
+25,10,10
+Land
+    ARCANINE,58
+    ARCANINE,58
+    ARCANINE,58
+    GOURGEIST,58
+    GOURGEIST,58
+    GOURGEIST,58
+    CENTISKORCH,58
+    CENTISKORCH,58
+    CENTISKORCH,58
+    TREVENANT,58
+    TREVENANT,58
+    TREVENANT,58
+#-------------------------------
 215 # Betty's Ranch
 25,10,10
 Land
@@ -822,39 +838,7 @@ Land
     TREVENANT,58
     TREVENANT,58
 #-------------------------------
-288 # Burnt Forest
-25,10,10
-Land
-    WOBBUFFET,55
-    WOBBUFFET,55
-    WOBBUFFET,55
-    WOBBUFFET,55
-    WOBBUFFET,55
-    WOBBUFFET,55
-    WOBBUFFET,55
-    WOBBUFFET,55
-    WOBBUFFET,55
-    WOBBUFFET,55
-    WOBBUFFET,55
-    DRAGONITE,55
-#-------------------------------
 244 # Burnt Forest
-25,10,10
-Land
-    ARCANINE,58
-    ARCANINE,58
-    ARCANINE,58
-    GOURGEIST,58
-    GOURGEIST,58
-    GOURGEIST,58
-    CENTISKORCH,58
-    CENTISKORCH,58
-    CENTISKORCH,58
-    TREVENANT,58
-    TREVENANT,58
-    TREVENANT,58
-#-------------------------------
-206 # Burnt Forest
 25,10,10
 Land
     ARCANINE,58
@@ -1009,3 +993,19 @@ Water
     TENTACRUEL,50
     MILOTIC,50
     SWAMPERT,50
+#-------------------------------
+288 # Burnt Forest
+25,10,10
+Land
+    WOBBUFFET,55
+    WOBBUFFET,55
+    WOBBUFFET,55
+    WOBBUFFET,55
+    WOBBUFFET,55
+    WOBBUFFET,55
+    WOBBUFFET,55
+    WOBBUFFET,55
+    WOBBUFFET,55
+    WOBBUFFET,55
+    WOBBUFFET,55
+    DRAGONITE,55

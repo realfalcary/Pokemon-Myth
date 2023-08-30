@@ -573,6 +573,7 @@ PBAI::SwitchHandler.add_out do |switch,ai,battler,target|
 end
 
 PBAI::SwitchHandler.add_out do |switch,ai,battler,target|
+  next switch if battler.nil?
 	best = battler.get_optimal_switch_choice
 	move = 0
 	target_moves = target.used_moves
