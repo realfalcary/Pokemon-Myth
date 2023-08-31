@@ -392,6 +392,7 @@ class PBAI
 	  end
 
     def faster_than?(target)
+	return false if self.nil?
       return self.effective_speed >= target.effective_speed
     end
 
