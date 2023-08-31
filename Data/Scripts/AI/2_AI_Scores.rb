@@ -1522,9 +1522,8 @@ PBAI::ScoreHandler.add("0A2") do |score, ai, user, target, move|
     score = 0
     PBAI.log("- 30 for another battler will already use reflect")
   else
-    enemies = target.side.battlers.select { |proj| !proj.fainted? }.size
     physenemies = target.side.battlers.select { |proj| proj.is_physical_attacker? }.size
-    add = enemies * 20 + physenemies * 30
+    add = physenemies * 30
     score += add
     PBAI.log("+ #{add} based on enemy and physical enemy count")
     if user.role == PBRoles::SCREENS
@@ -1545,9 +1544,8 @@ PBAI::ScoreHandler.add("0A3") do |score, ai, user, target, move|
     score = 0
     PBAI.log("- 30 for another battler will already use light screen")
   else
-    enemies = target.side.battlers.select { |proj| !proj.fainted? }.size
     specenemies = target.side.battlers.select { |proj| proj.is_special_attacker? }.size
-    add = enemies * 20 + specenemies * 30
+    add = specenemies * 30
     score += add
     PBAI.log("+ #{add} based on enemy and special enemy count")
     if user.role == PBRoles::SCREENS
