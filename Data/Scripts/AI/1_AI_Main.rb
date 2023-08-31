@@ -669,7 +669,8 @@ class PBAI
       weights = scores.map { |e| e[1] }
       total = weights.sum
       scores.each_with_index do |e, i|
-        finalPerc = total == 0 ? 0 : (weights[i] / total.to_f * 100).round
+        finalPerc = total == 0 ? 0 : (weights[i] / total.to_f * 100).round rescue FloatDomainError
+	      finalPerc = (weights[i] / total.to_f * 100) if finalPerc == nil
         if i == 0
           # Item
           name = PBItems.getName(e[2])
