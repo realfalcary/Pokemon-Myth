@@ -1085,6 +1085,8 @@ class PBAI
       switch = nil
       self.opposing_side.battlers.each do |target|
         next if target.nil?
+	next if self.nil?
+	next if target.index == (1||3)
         switch = PBAI::SwitchHandler.trigger_out(switch,@ai,self,target)
       end
       return switch
