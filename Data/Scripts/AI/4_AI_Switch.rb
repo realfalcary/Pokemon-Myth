@@ -299,7 +299,7 @@ end
 PBAI::SwitchHandler.add_out do |switch,ai,battler,target|
 	party = ai.battle.pbParty(battler.index)
 	if battler.status != :NONE
-		if party.any? {|pkmn| [PBRoles::CLERIC].include?(pkmn.role) && !battler.role == PBRoles::CLERIC}
+		if party.any? {|pkmn| pkmn.hasRole?(PBRoles::CLERIC) && !battler.hasRole?(PBRoles::CLERIC)}
     	switch = true
     	$switch_flags[:need_cleric] = true
     end
@@ -442,8 +442,8 @@ PBAI::SwitchHandler.add do |score,ai,battler,proj,target|
   		score += 200
   		PBAI.log("+ 200")
   	end
-  	if ![PBRoles::PHYSICALWALL,PBRoles::SPECIALWALL].include?(battler.role)
-  		if [PBRoles::PIVOT,PBRoles::CLERIC,PBRoles::TOXICSTALLER,PBRoles::HAZARDLEAD].include?(battler.role)
+  	if !battler.hasRole?([PBRoles::PHYSICALWALL,PBRoles::SPECIALWALL])#.include?(battler.role)
+  		if battler.hasRole?([PBRoles::OFFENSIVEPIVOT,PBRoles::DEFENSIVEPIVOT,PBRoles::CLERIC,PBRoles::TOXICSTALLER,PBRoles::HAZARDLEAD])#.include?(battler.role)
   			score += 150
   			PBAI.log("+ 150")
   		else

@@ -1,4 +1,4 @@
-PHANTOMBASS_AI_VERSION = "3.1"
+PHANTOMBASS_AI_VERSION = "3.2"
 
 class PBAI
 	attr_reader :battle
@@ -9,6 +9,7 @@ class PBAI
   	@sides = [Side.new(self, 0), Side.new(self, 1, wild_battle)]
 		$d_switch = 0
     $doubles_switch = nil
+    $revive = nil
     $switch_flags = {}
     $chosen_move = nil
   	$spam_block_flags = {
@@ -269,17 +270,18 @@ class PBAI
       return opposing_side.party.find {|mon| mon && mon.pokemon == pokemon}
     end
 
-		def role
-      return getID(PBRoles,@battler.role)
+		def roles
+      return @battler.roles
     end
 
-		def hasRole?(id)
-			return @pokemon.hasRole?(id)
-		end
+		def hasRole?(role=0)
+			#return @pokemon.hasRole?(role)
+	    return self.roles.include?(getID(PBRoles,role))
+	  end
 
 		def defensive?
 			return true if @pokemon.hasRole?(PBRoles::SCREENS)
-			return true if @pokemon.hasRole?(PBRoles::PIVOT)
+			return true if @pokemon.hasRole?(PBRoles::DEFENSIVEPIVOT)
 			return true if @pokemon.hasRole?(PBRoles::PHYSICALWALL)
 			return true if @pokemon.hasRole?(PBRoles::SPECIALWALL)
 			return true if @pokemon.hasRole?(PBRoles::TOXICSTALLER)
@@ -289,12 +291,17 @@ class PBAI
 			return true if @pokemon.hasRole?(PBRoles::REDIRECTION)
 			return true if @pokemon.hasRole?(PBRoles::CLERIC)
 			return true if @pokemon.hasRole?(PBRoles::HAZARDLEAD)
+			return true if @pokemon.hasRole?(PBRoles::SPEEDCONTROL)
+			return true if @pokemon.hasRole?(PBRoles::SUPPORT)
 			return false
 		end
 
 		def setup?
+			return true if @pokemon.hasRole?(PBRoles::PHYSICALBREAKER)
+			return true if @pokemon.hasRole?(PBRoles::SPECIALBREAKER)
 			return true if @pokemon.hasRole?(PBRoles::SETUPSWEEPER)
 			return true if @pokemon.hasRole?(PBRoles::WINCON)
+			return false
 		end
 
 		def choiced?
@@ -392,7 +399,7 @@ class PBAI
 	  end
 
     def faster_than?(target)
-	return false if self.nil?
+			return false if self.nil?
       return self.effective_speed >= target.effective_speed
     end
 
@@ -490,11 +497,6 @@ class PBAI
 
 		def choice_locked?
       return true if self.choiced?
-      return false
-    end
-
-    def can_switch?
-      return true if @battle.pbCanSwitch?(@battler.index)
       return false
     end
 
@@ -770,6 +772,7 @@ class PBAI
       @flags = {}
 			$doubles_switch = nil
       $d_switch = 0
+      $revive = nil
       $test_trigger = false
     end
 
@@ -927,9 +930,11 @@ class PBAI
             # our item and without using our move. So if this is the case, we dramatically increase
             # the score of using our item.
             last_dmg = last_damage_taken
-            if last_dmg && !self.faster_than?(last_dmg[0])
-              delayEff = 2.5
-            end
+            self.opposing_side.battlers.each do |target|
+	            if !self.faster_than?(target)
+	              delayEff = 2.5
+	            end
+	          end
           end
           finalFrac = hpFraction * itemEff * delayEff
           score = (finalFrac * 200).round
@@ -991,6 +996,8 @@ class PBAI
               score = 400
             end
             index = party.index(candidate)
+            score = 0 if index == $revive
+            $revive = $index if $revive == nil
             next [score, item, index]
           end
         end
@@ -1067,13 +1074,22 @@ class PBAI
    end
 
     def can_switch?
+    	ret = true
       party = @ai.battle.pbParty(self.battler.index)
       fainted = 0
       for i in party
         fainted += 1
       end
-      return false if fainted == party.length - 1
-      return true
+      ret = false if fainted == party.length - 1
+      ret = false if self.trapped?
+      self.opposing_side.battlers.each do |target|
+      	next if target.nil?
+      	if (target.hasActiveAbility?(:ARENATRAP) && !self.airborne? && !self.pokemon.hasType?(:GHOST) && !self.hasActiveItem?(:SHEDSHELL) ||
+      		target.hasActiveAbility?(:SHADOWTAG) && !self.pokemon.hasType?(:GHOST) && !self.hasActiveItem?(:SHEDSHELL))
+      		ret = false
+      	end
+      end
+      return ret
     end
     def set_up_score
       boosts = 0 
@@ -1085,8 +1101,8 @@ class PBAI
       switch = nil
       self.opposing_side.battlers.each do |target|
         next if target.nil?
-	next if self.nil?
-	next if target.index == (1||3)
+				next if self.nil?
+				next if target.index == (1 || 3)
         switch = PBAI::SwitchHandler.trigger_out(switch,@ai,self,target)
       end
       return switch
@@ -1103,7 +1119,7 @@ class PBAI
       if self.hasRole?(PBRoles::NONE)
       	switch = false
       else
-      	switch = ai_should_switch?
+      	switch = self.ai_should_switch?
       end
       # Get the optimal switch choice by type
       scores = get_optimal_switch_choice
@@ -1846,14 +1862,42 @@ class PBAI
 
   def pbDefaultChooseEnemyCommand(idxBattler)
   	sideIndex = idxBattler % 2
-  	index = PBAI.battler_to_proj_index(idxBattler)
-  	side = @sides[sideIndex]
-  	projection = side.battlers[index]
+    index = PBAI.battler_to_proj_index(idxBattler)
+    side = @sides[sideIndex]
+    projection = side.battlers[index]
     # Choose move
     data = projection.choose_move
-    if data.nil?
+    if data.nil? && !@battle.wildBattle?
       # Struggle
       @battle.pbAutoChooseMove(idxBattler)
+    elsif data.nil? && @battle.wildBattle?
+      move = []
+      idx = -1
+      for i in projection.battler.moves
+        idx += 1
+        move.push(idx) if i.pp > 0
+      end
+      if move.length == 0
+        @battle.pbAutoChooseMove(idxBattler)
+      else
+        move_index = move[rand(move.length)]
+        move_target = 0
+        data = [move_index,move_target]
+        @battle.pbRegisterMegaEvolution(idxBattler) if projection.should_mega_evolve?(idxBattler)
+      # Register our move
+      @battle.pbRegisterMove(idxBattler, move_index, false)
+      # Register the move's target
+      @battle.pbRegisterTarget(idxBattler, move_target)
+      end
+    elsif data[0] == :SWITCH
+      # [:SWITCH, pokemon_index]
+      @battle.pbRegisterSwitch(idxBattler, data[1])
+   # elsif data[0] == :FLEE
+   #   pbSEPlay("Battle flee")
+   #   @battle.pbDisplay(_INTL("{1} fled from battle!",projection.pbThis))
+   #   @battle.decision = 3
+   #   @battle.scene.clearMessageWindow
+   #   @battle.scene.pbEndBattle(@battle.decision)
     elsif data[0] == :ITEM
       # [:ITEM, item_id, target&]
       item = data[1]
@@ -1869,16 +1913,14 @@ class PBAI
       end
       # Register our item
       @battle.pbRegisterItem(idxBattler, item, target_index)
-    elsif data[0] == :SWITCH
-      # [:SWITCH, pokemon_index]
-      @battle.pbRegisterSwitch(idxBattler, data[1])
     else
-      # [move_index, move_target]
-    	move_index, move_target = data
+       if move_index.nil?
+        move_index,move_target = data
+      end
       # Mega evolve if we determine that we should
-      @battle.pbRegisterMegaEvolution(idxBattler) if projection.should_mega_evolve?(idxBattler)
+          @battle.pbRegisterMegaEvolution(idxBattler) if projection.should_mega_evolve?(idxBattler)
       # Register our move
-    	@battle.pbRegisterMove(idxBattler, move_index, false)
+      @battle.pbRegisterMove(idxBattler, move_index, false)
       # Register the move's target
       @battle.pbRegisterTarget(idxBattler, move_target)
     end
@@ -1915,6 +1957,20 @@ class PokeBattle_Battler
   def pbFaint(*args)
     pbai_pbFaint(*args)
     @battle.battleAI.faint_battler(self)
+  end
+
+  def trappedInBattle?
+    return true if @effects[PBEffects::Trapping] > 0
+    return true if @effects[PBEffects::MeanLook] >= 0
+    return true if @effects[PBEffects::JawLock] >= 0
+    @battle.eachBattler { |b| return true if b.effects[PBEffects::JawLock] == @index }
+    return true if @effects[PBEffects::Octolock] >= 0
+    return true if @effects[PBEffects::Ingrain]
+    return true if @effects[PBEffects::NoRetreat]
+    return true if @battle.field.effects[PBEffects::FairyLock] > 0
+    @battle.eachOpposing { |b| return true if b.hasActiveAbility?(:ARENATRAP) && !@battler.airborne? && !@battler.hasType?(:GHOST) && !@battler.hasActiveItem?(:SHEDSHELL)}
+    @battle.eachOpposing { |b| return true if b.hasActiveAbility?(:SHADOWTAG) && !@battler.hasType?(:GHOST) && !@battler.hasActiveItem?(:SHEDSHELL)}
+    return false
   end
 end
 
