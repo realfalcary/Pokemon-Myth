@@ -4,6 +4,13 @@
 FormName = Stoned Mesprit
 BattlerEnemyY = 27
 #-------------------------------
+[CRADILY,1]
+FormName = Mega Cradily
+Type1 = GRASS
+Type2 = ROCK
+MegaStone = CRADILITE
+BaseStats = 86,91,127,43,111,137
+#-------------------------------
 [RIOLU,2]
 FormName = Mythan Form
 Type1 = GROUND
