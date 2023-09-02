@@ -2043,7 +2043,7 @@ PBAI::ScoreHandler.add("0EA") do |score, ai, user, target, move|
     score += 300
     PBAI.log("+ 300 for escaping the trap")
   end
-  if user.hasRole?([PBRoles::PHYSICALWALL,PBRoles::SPECIALWALL,PBRoles::PIVOT,PBRoles::TOXICSTALLER])#.include?(user.role)
+  if user.hasRole?([PBRoles::PHYSICALWALL,PBRoles::SPECIALWALL,PBRoles::DEFENSIVEPIVOT,PBRoles::TOXICSTALLER])#.include?(user.role)
     score += 50
     PBAI.log("+ 50 for being a")
   end
@@ -2075,7 +2075,7 @@ PBAI::ScoreHandler.add("10C") do |score, ai, user, target, move|
       score += 100
       PBAI.log("+ 100 for Substituting on the first turn and being guaranteed to have a Sub stay up")
     end
-    if user.hasRole?([PBRoles::TOXICSTALLER,PBRoles::PHYSICALWALL,PBRoles::SPECIALWALL,PBRoles::STALLBREAKER,PBRoles::PIVOT,PBRoles::SETUPSWEEPER])#.include?(user.role)
+    if user.hasRole?([PBRoles::TOXICSTALLER,PBRoles::PHYSICALWALL,PBRoles::SPECIALWALL,PBRoles::STALLBREAKER,PBRoles::DEFENSIVEPIVOT,PBRoles::OFFENSIVEPIVOT,PBRoles::SETUPSWEEPER])#.include?(user.role)
       score += 30
       PBAI.log("+ 30 for being a")
     end
