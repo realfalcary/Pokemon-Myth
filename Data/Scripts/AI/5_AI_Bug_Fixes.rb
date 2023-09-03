@@ -33,6 +33,21 @@ BattleHandlers::UserAbilityEndOfMove.add(:MASQUERADE,
   }
 )
 
+BattleHandlers::EORHealingAbility.add(:PHOTOSYNTHESIS,
+  proc { |ability,battler,battle|
+    next if !battler.canHeal?
+    battle.pbShowAbilitySplash(battler)
+    amount = [PBWeather::Sun,PBWeather::HarshSun].include?(battle.pbWeather) ? battler.totalhp/8 : battler.totalhp/16
+    battler.pbRecoverHP(amount)
+    if PokeBattle_SceneConstants::USE_ABILITY_SPLASH
+      battle.pbDisplay(_INTL("{1}'s HP was restored.",battler.pbThis))
+    else
+      battle.pbDisplay(_INTL("{1}'s {2} restored its HP.",battler.pbThis,battler.abilityName))
+    end
+    battle.pbHideAbilitySplash(battler)
+  }
+)
+
 class PokeBattle_Move_181 < PokeBattle_Move
   def pbFailsAgainstTarget?(user,target)
     failed = true
@@ -85,14 +100,5 @@ class PokeBattle_Move_14E < PokeBattle_TwoTurnMove
         showAnim = false
       end
     end
-  end
-end
-
-class PokeBattle_Battler
-  def trappedInBattle?
-    return true if @effects[PBEffects::Trapping] > 0
-    return true if @effects[PBEffects::MeanLook] >= 0
-    return true if @effects[PBEffects::Ingrain]
-    return true if @battle.field.effects[PBEffects::FairyLock] > 0
   end
 end

@@ -277,3 +277,4 @@
 275,MOSSARMOR,Moss Armor,"Contact with it lowers the attacker's Defense."
 276,SPRINGLOADED,Spring Loaded,"Doubles the power of priority moves."
 277,TUNGSTENCAST,Tungsten Cast,"Grants immunity to Fire-Type moves."
+278,PHOTOSYNTHESIS,Photosynthesis,"Heals HP every turn, more in Sun."
