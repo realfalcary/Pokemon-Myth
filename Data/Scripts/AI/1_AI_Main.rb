@@ -1969,9 +1969,12 @@ class PokeBattle_Battler
     return true if @effects[PBEffects::Ingrain]
     #return true if @effects[PBEffects::NoRetreat]
     return true if @battle.field.effects[PBEffects::FairyLock] > 0
-    @battle.eachOpposing { |b| return true if b.hasActiveAbility?(:ARENATRAP) && !@battler.airborne? && !@battler.hasType?(:GHOST) && !@battler.hasActiveItem?(:SHEDSHELL)}
-    @battle.eachOpposing { |b| return true if b.hasActiveAbility?(:SHADOWTAG) && !@battler.hasType?(:GHOST) && !@battler.hasActiveItem?(:SHEDSHELL)}
+    eachOpposing { |b| return true if b.hasActiveAbility?(:ARENATRAP) && !@battler.airborne? && !@battler.hasType?(:GHOST) && !@battler.hasActiveItem?(:SHEDSHELL)}
+    eachOpposing { |b| return true if b.hasActiveAbility?(:SHADOWTAG) && !@battler.hasType?(:GHOST) && !@battler.hasActiveItem?(:SHEDSHELL)}
     return false
+  end
+def eachOpposing
+    @battle.battlers.each { |b| yield b if b && !b.fainted? && b.opposes?(@index) }
   end
 end
 
