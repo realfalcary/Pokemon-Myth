@@ -1962,11 +1962,11 @@ class PokeBattle_Battler
   def trappedInBattle?
     return true if @effects[PBEffects::Trapping] > 0
     return true if @effects[PBEffects::MeanLook] >= 0
-    return true if @effects[PBEffects::JawLock] >= 0
-    @battle.eachBattler { |b| return true if b.effects[PBEffects::JawLock] == @index }
-    return true if @effects[PBEffects::Octolock] >= 0
+    #return true if @effects[PBEffects::JawLock] >= 0
+   # @battle.eachBattler { |b| return true if b.effects[PBEffects::JawLock] == @index }
+   # return true if @effects[PBEffects::Octolock] >= 0
     return true if @effects[PBEffects::Ingrain]
-    return true if @effects[PBEffects::NoRetreat]
+    #return true if @effects[PBEffects::NoRetreat]
     return true if @battle.field.effects[PBEffects::FairyLock] > 0
     @battle.eachOpposing { |b| return true if b.hasActiveAbility?(:ARENATRAP) && !@battler.airborne? && !@battler.hasType?(:GHOST) && !@battler.hasActiveItem?(:SHEDSHELL)}
     @battle.eachOpposing { |b| return true if b.hasActiveAbility?(:SHADOWTAG) && !@battler.hasType?(:GHOST) && !@battler.hasActiveItem?(:SHEDSHELL)}
