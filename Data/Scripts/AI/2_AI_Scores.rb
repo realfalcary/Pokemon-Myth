@@ -1522,7 +1522,7 @@ PBAI::ScoreHandler.add("0A2") do |score, ai, user, target, move|
     score = 0
     PBAI.log("- 30 for another battler will already use reflect")
   else
-    physenemies = target.side.battlers.select { |proj| proj.is_physical_attacker? }.size
+    physenemies = target.side.battlers.select { |proj| !proj.nil? && proj.is_physical_attacker? }.size
     add = physenemies * 30
     score += add
     PBAI.log("+ #{add} based on enemy and physical enemy count")
@@ -1544,7 +1544,7 @@ PBAI::ScoreHandler.add("0A3") do |score, ai, user, target, move|
     score = 0
     PBAI.log("- 30 for another battler will already use light screen")
   else
-    specenemies = target.side.battlers.select { |proj| proj.is_special_attacker? }.size
+    specenemies = target.side.battlers.select { |proj| !proj.nil? && proj.is_special_attacker? }.size
     add = specenemies * 30
     score += add
     PBAI.log("+ #{add} based on enemy and special enemy count")
