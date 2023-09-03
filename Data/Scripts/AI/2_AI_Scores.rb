@@ -2018,7 +2018,7 @@ PBAI::ScoreHandler.add("0AA") do |score, ai, user, target, move|
     protect = 60 - (user.effects[PBEffects::ProtectRate]-1) * 40
     score += protect
     PBAI.log("+ #{protect} for stalling status damage")
-    if user.hasRole(PBRoles::TOXICSTALLER) && target.status == PBStatuses::POISON
+    if user.hasRole?(PBRoles::TOXICSTALLER) && target.status == PBStatuses::POISON
       score += 30
       PBAI.log("+ 30 for being a Toxic Staller")
     end
