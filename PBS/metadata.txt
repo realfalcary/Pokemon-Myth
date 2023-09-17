@@ -521,7 +521,7 @@ ShowArea = true
 [103]
 # Fairloom City
 SnapEdges = true
-MapPosition = 0,13,26
+MapPosition = 0,25,13
 Outdoor = true
 ShowArea = true
 #-------------------------------

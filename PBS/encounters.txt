@@ -25,7 +25,7 @@ Land
     COMBEE,3,4
     SWOVE,3,4
     PIDGEY,3,4
-    SHINX,4,5
+    WURMPLE,4,5
     SHINX,4,5
     SHINX,3,4
     MUNCHLAX,3,5

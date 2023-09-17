@@ -51,6 +51,7 @@ BaseStats = 85,85,60,100,150,75
 #-------------------------------
 [PIDGEOT,1]
 FormName = Mega Pidgeot
+BaseStats = 96,95,85,121,90,70
 Type1 = ELECTRIC
 Type2 = FLYING
 MegaStone = PIDGEOTITE

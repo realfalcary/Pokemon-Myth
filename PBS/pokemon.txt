@@ -1964,7 +1964,7 @@ BattlerEnemyX = 0
 BattlerEnemyY = 28
 BattlerShadowX = 0
 BattlerShadowSize = 2
-Evolutions = POLIWRATH,Item,WATERSTONE,POLITOED,TradeItem,KINGSROCK
+Evolutions = POLIWRATH,Item,WATERSTONE,POLITOED,Item,KINGSROCK
 #-------------------------------
 [62]
 Name = Poliwrath
@@ -2062,7 +2062,7 @@ BattlerEnemyX = 0
 BattlerEnemyY = 22
 BattlerShadowX = 0
 BattlerShadowSize = 2
-Evolutions = ALAKAZAM,Trade,
+Evolutions = ALAKAZAM,Level,40
 #-------------------------------
 [65]
 Name = Alakazam
@@ -2159,7 +2159,7 @@ BattlerEnemyX = 0
 BattlerEnemyY = 18
 BattlerShadowX = 0
 BattlerShadowSize = 2
-Evolutions = MACHAMP,Trade,
+Evolutions = MACHAMP,Level,40
 #-------------------------------
 [68]
 Name = Machamp
@@ -2422,7 +2422,7 @@ BattlerEnemyX = 0
 BattlerEnemyY = 30
 BattlerShadowX = 0
 BattlerShadowSize = 2
-Evolutions = GOLEM,Trade,
+Evolutions = GOLEM,HasMove,EARTHQUAKE
 #-------------------------------
 [76]
 Name = Golem
@@ -2552,7 +2552,7 @@ BattlerEnemyX = 0
 BattlerEnemyY = 29
 BattlerShadowX = 0
 BattlerShadowSize = 2
-Evolutions = SLOWBRO,Level,37,SLOWKING,TradeItem,KINGSROCK
+Evolutions = SLOWBRO,Level,37,SLOWKING,Item,KINGSROCK
 #-------------------------------
 [80]
 Name = Slowbro
@@ -2996,7 +2996,7 @@ EffortPoints = 0,0,0,0,2,0
 Rareness = 90
 Happiness = 50
 Abilities = LEVITATE
-Moves = 0,SHADOWPUNCH,1,SHADOWPUNCH,1,LICK,1,CONFUSERAY,1,HYPNOSIS,1,MEANLOOK,12,PAYBACK,16,SPITE,20,CURSE,24,HEX,30,NIGHTSHADE,36,SUCKERPUNCH,42,DARKPULSE,48,SHADOWBALL,54,DESTINYBOND,60,DREAMEATER,62,FEARPULSE,66,ACIDPULSE
+Moves = 0,SHADOWPUNCH,1,SHADOWPUNCH,1,LICK,1,CONFUSERAY,1,HYPNOSIS,1,MEANLOOK,12,PAYBACK,16,SPITE,20,CURSE,24,HEX,30,NIGHTSHADE,36,SUCKERPUNCH,42,SHADOWSNEAK,48,SHADOWBALL,54,DESTINYBOND,60,DREAMEATER,62,FEARPULSE,66,ACIDPULSE
 Compatibility = Amorphous
 StepsToHatch = 5355
 Height = 1.6
@@ -3012,7 +3012,7 @@ BattlerEnemyX = 0
 BattlerEnemyY = 31
 BattlerShadowX = 0
 BattlerShadowSize = 2
-Evolutions = GENGAR,Trade,
+Evolutions = GENGAR,HasMove,SHADOWSNEAK
 #-------------------------------
 [94]
 Name = Gengar
@@ -3076,7 +3076,7 @@ BattlerEnemyX = 0
 BattlerEnemyY = 16
 BattlerShadowX = 0
 BattlerShadowSize = 2
-Evolutions = STEELIX,TradeItem,METALCOAT
+Evolutions = STEELIX,Item,METALCOAT
 #-------------------------------
 [96]
 Name = Drowzee
@@ -4604,7 +4604,7 @@ EffortPoints = 2,0,0,0,0,0
 Rareness = 25
 Happiness = 50
 Abilities = IMMUNITY,THICKFAT
-HiddenAbility = GREED
+HiddenAbility = GLUTTONY
 Moves = 1,RECYCLE,1,COVET,1,STOCKPILE,1,SWALLOW,1,SCREECH,1,FLING,1,METRONOME,1,FLAIL,1,LASTRESORT,1,LICK,1,TACKLE,1,DEFENSECURL,1,BLOCK,12,YAWN,16,BITE,20,REST,20,SNORE,20,SLEEPTALK,24,CRUNCH,28,BODYSLAM,32,HEAVYSLAM,36,AMNESIA,40,HIGHHORSEPOWER,44,HAMMERARM,48,BELLYDRUM,52,BELCH,56,GIGAIMPACT
 EggMoves = LICK,CHARM,DOUBLEEDGE,CURSE,FISSURE,WHIRLWIND,PURSUIT,COUNTER,NATURALGIFT,AFTERYOU,BELCH,POWERUPPUNCH,GASTROACID
 Compatibility = Monster
@@ -22462,7 +22462,7 @@ BattlerEnemyX = 0
 BattlerEnemyY = 32
 BattlerShadowX = 0
 BattlerShadowSize = 2
-Evolutions = TREVENANT,Trade,
+Evolutions = TREVENANT,Item,LEAFSTONE
 #-------------------------------
 [709]
 Name = Trevenant
