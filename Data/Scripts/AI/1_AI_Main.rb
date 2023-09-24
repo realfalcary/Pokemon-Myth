@@ -1960,6 +1960,10 @@ class PokeBattle_Battler
     @battle.battleAI.faint_battler(self)
   end
 
+  def affectedByMoldBreaker?
+    return @battle.moldBreaker && !hasActiveItem?(:ABILITYSHIELD)
+  end
+
   def airborne?
     return false if hasActiveItem?(:IRONBALL)
     return false if @effects[PBEffects::Ingrain]
