@@ -574,6 +574,7 @@ end
 
 PBAI::SwitchHandler.add_out do |switch,ai,battler,target|
   next switch if battler.nil?
+  next switch if target.nil?
 	best = battler.get_optimal_switch_choice
 	move = 0
 	target_moves = target.used_moves
@@ -648,11 +649,11 @@ PBAI::SwitchHandler.add_out do |switch,ai,battler,target|
 	next switch if !ai.battle.doublebattle
 	ally = battler.side.battlers.find {|proj| proj && proj != battler && !proj.fainted?}
 	if !ally.nil?
-	for move in ally.moves
-		if ally.target_is_immune?(move,battler) && [PBTargets::AllNearOthers,PBTargets::AllBattlers,PBTargets::BothSides].include?(move.pbTarget(battler))
-			switch = false
+		for move in ally.moves
+			if ally.target_is_immune?(move,battler) && [PBTargets::AllNearOthers,PBTargets::AllBattlers,PBTargets::BothSides].include?(move.pbTarget(battler))
+				switch = false
+			end
 		end
-	end
 	end
 	next switch
 end

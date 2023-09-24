@@ -102,3 +102,30 @@ class PokeBattle_Move_14E < PokeBattle_TwoTurnMove
     end
   end
 end
+
+class PokeBattle_Move_17E < PokeBattle_Move
+  def healingMove?; return true; end
+
+  def pbMoveFailed?(user,targets)
+    failed = true
+    @battle.eachSameSideBattler(user) do |b|
+      next if !b.canHeal?
+      failed = false
+      break
+    end
+    if failed
+      @battle.pbDisplay(_INTL("But it failed!"))
+      return true
+    end
+    return false
+  end
+
+  def pbFailsAgainstTarget?(user,target)
+    return !target.canHeal?
+  end
+
+  def pbEffectAgainstTarget(user,target)
+    target.pbRecoverHP(target.totalhp / 4)
+    @battle.pbDisplay(_INTL("{1}'s HP was restored.", target.pbThis))
+  end
+end
