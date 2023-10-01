@@ -1599,9 +1599,9 @@ class PBAI
         end
         # Trapping Effects
         if self.effects[PBEffects::Trapping] != 0
-          dmg = (NEWEST_BATTLE_MECHANICS ? b.totalhp / 8.0 : b.totalhp / 16.0)
+          dmg = (NEWEST_BATTLE_MECHANICS ? @battler.totalhp / 8.0 : @battler.totalhp / 16.0)
           if @battle.battlers[self.effects[PBEffects::TrappingUser]].hasActiveItem?(:BINDINGBAND)
-            dmg = (NEWEST_BATTLE_MECHANICS ? b.totalhp / 6.0 : b.totalhp / 8.0)
+            dmg = (NEWEST_BATTLE_MECHANICS ? @battler.totalhp / 6.0 : @battler.totalhp / 8.0)
           end
           lost += dmg
         end
