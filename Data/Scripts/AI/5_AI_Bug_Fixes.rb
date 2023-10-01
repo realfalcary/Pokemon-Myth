@@ -129,3 +129,34 @@ class PokeBattle_Move_17E < PokeBattle_Move
     @battle.pbDisplay(_INTL("{1}'s HP was restored.", target.pbThis))
   end
 end
+
+class PokeBattle_Move_095 < PokeBattle_Move
+  attr_accessor :magnitudeDmg
+  def hitsDiggingTargets?; return true; end
+
+  def pbOnStartUse(user,targets)
+    baseDmg = [10,30,50,70,90,110,150]
+    magnitudes = [
+       4,
+       5,5,
+       6,6,6,6,
+       7,7,7,7,7,7,
+       8,8,8,8,
+       9,9,
+       10
+    ]
+    magni = magnitudes[@battle.pbRandom(magnitudes.length)]
+    @magnitudeDmg = baseDmg[magni-4]
+    @battle.pbDisplay(_INTL("Magnitude {1}!",magni))
+  end
+
+  def pbBaseDamage(baseDmg,user,target)
+    return @magnitudeDmg == nil ? 70 : @magnitudeDmg
+  end
+
+  def pbModifyDamage(damageMult,user,target)
+    damageMult *= 2 if target.inTwoTurnAttack?("0CA")   # Dig
+    damageMult /= 2 if @battle.field.terrain==PBBattleTerrains::Grassy
+    return damageMult
+  end
+end

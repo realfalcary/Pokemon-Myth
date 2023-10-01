@@ -1986,8 +1986,8 @@ class PokeBattle_Battler
     return true if @effects[PBEffects::Ingrain]
     #return true if @effects[PBEffects::NoRetreat]
     return true if @battle.field.effects[PBEffects::FairyLock] > 0
-    eachOpposing { |b| return true if b.hasActiveAbility?(:ARENATRAP) && !@battler.airborne? && !@battler.hasType?(:GHOST) && !@battler.hasActiveItem?(:SHEDSHELL)}
-    eachOpposing { |b| return true if b.hasActiveAbility?(:SHADOWTAG) && !@battler.hasType?(:GHOST) && !@battler.hasActiveItem?(:SHEDSHELL)}
+    eachOpposing { |b| return true if b.hasActiveAbility?(:ARENATRAP) && !self.airborne? && !self.pokemon.hasType?(:GHOST) && !self.hasActiveItem?(:SHEDSHELL)}
+    eachOpposing { |b| return true if b.hasActiveAbility?(:SHADOWTAG) && !self.pokemon.hasType?(:GHOST) && !self.hasActiveItem?(:SHEDSHELL)}
     return false
   end
 def eachOpposing
