@@ -1,4 +1,4 @@
-PHANTOMBASS_AI_VERSION = "3.3"
+PHANTOMBASS_AI_VERSION = "3.4"
 
 class PBAI
 	attr_reader :battle
@@ -1960,17 +1960,13 @@ class PokeBattle_Battler
     @battle.battleAI.faint_battler(self)
   end
 
-  def affectedByMoldBreaker?
-    return @battle.moldBreaker && !hasActiveItem?(:ABILITYSHIELD)
-  end
-
   def airborne?
     return false if hasActiveItem?(:IRONBALL)
     return false if @effects[PBEffects::Ingrain]
     return false if @effects[PBEffects::SmackDown]
     return false if @battle.field.effects[PBEffects::Gravity] > 0
     return true if pbHasType?(:FLYING)
-    return true if hasActiveAbility?(:LEVITATE) && !affectedByMoldBreaker?
+    return true if hasActiveAbility?(:LEVITATE) && !@battle.moldBreaker
     return true if hasActiveItem?(:AIRBALLOON)
     return true if @effects[PBEffects::MagnetRise] > 0
     return true if @effects[PBEffects::Telekinesis] > 0
