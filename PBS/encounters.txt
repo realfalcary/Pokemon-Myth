@@ -16,6 +16,22 @@ Land
     MUNCHLAX,3,5
     MUNCHLAX,3,5
 #-------------------------------
+142 # Crystal Cavern
+25,10,10
+Cave
+    CARBINK,13,15
+    CARBINK,13,15
+    CARBINK,13,15
+    CARBINK,13,15
+    CARBINK,13,15
+    CARBINK,13,15
+    LUNATONE,13,15
+    SOLROCK,13,15
+    DWEBBLE,13,15
+    ROCKRUFF,13,15
+    STONJOURNER,13,15
+    MINIOR,13,15
+#-------------------------------
 043 # Route 1
 25,10,10
 Land

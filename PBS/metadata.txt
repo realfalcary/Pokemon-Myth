@@ -672,7 +672,7 @@ Outdoor = false
 #-------------------------------
 [142]
 # Crystal Cavern
-BattleBack = elite8
+BattleBack = cave1
 #-------------------------------
 [143]
 # Evening Cave
@@ -1377,7 +1377,19 @@ Outdoor = true
 ShowArea = true
 #-------------------------------
 [307]
-# Mt. Seeter
+# Route 12
+SnapEdges = true
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[308]
+# Passage of Day
+SnapEdges = true
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[309]
+# Shrine Of Day
 SnapEdges = true
 Outdoor = true
 ShowArea = true
