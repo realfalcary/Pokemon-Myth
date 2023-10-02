@@ -1599,9 +1599,9 @@ class PBAI
         end
         # Trapping Effects
         if self.effects[PBEffects::Trapping] != 0
-          dmg = (NEWEST_BATTLE_MECHANICS ? b.totalhp / 8.0 : b.totalhp / 16.0)
+          dmg = (NEWEST_BATTLE_MECHANICS ? @battler.totalhp / 8.0 : @battler.totalhp / 16.0)
           if @battle.battlers[self.effects[PBEffects::TrappingUser]].hasActiveItem?(:BINDINGBAND)
-            dmg = (NEWEST_BATTLE_MECHANICS ? b.totalhp / 6.0 : b.totalhp / 8.0)
+            dmg = (NEWEST_BATTLE_MECHANICS ? @battler.totalhp / 6.0 : @battler.totalhp / 8.0)
           end
           lost += dmg
         end
@@ -1960,6 +1960,10 @@ class PokeBattle_Battler
     @battle.battleAI.faint_battler(self)
   end
 
+  def affectedByMoldBreaker?
+    return @battle.moldBreaker && !hasActiveItem?(:ABILITYSHIELD)
+  end
+
   def airborne?
     return false if hasActiveItem?(:IRONBALL)
     return false if @effects[PBEffects::Ingrain]
@@ -1982,8 +1986,8 @@ class PokeBattle_Battler
     return true if @effects[PBEffects::Ingrain]
     #return true if @effects[PBEffects::NoRetreat]
     return true if @battle.field.effects[PBEffects::FairyLock] > 0
-    eachOpposing { |b| return true if b.hasActiveAbility?(:ARENATRAP) && !@battler.airborne? && !@battler.hasType?(:GHOST) && !@battler.hasActiveItem?(:SHEDSHELL)}
-    eachOpposing { |b| return true if b.hasActiveAbility?(:SHADOWTAG) && !@battler.hasType?(:GHOST) && !@battler.hasActiveItem?(:SHEDSHELL)}
+    eachOpposing { |b| return true if b.hasActiveAbility?(:ARENATRAP) && !self.airborne? && !self.pokemon.hasType?(:GHOST) && !self.hasActiveItem?(:SHEDSHELL)}
+    eachOpposing { |b| return true if b.hasActiveAbility?(:SHADOWTAG) && !self.pokemon.hasType?(:GHOST) && !self.hasActiveItem?(:SHEDSHELL)}
     return false
   end
 def eachOpposing
