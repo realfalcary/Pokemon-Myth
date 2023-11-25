@@ -1,3 +1,5 @@
+PHANTOMBASS_AI_VERSION = "3.3"
+
 class PBAI
 	attr_reader :battle
 	attr_reader :sides
@@ -7,6 +9,33 @@ class PBAI
   	@sides = [Side.new(self, 0), Side.new(self, 1, wild_battle)]
 		$d_switch = 0
     $doubles_switch = nil
+    $revive = nil
+    $switch_flags = {}
+    $chosen_move = nil
+  	$spam_block_flags = {
+  	  :haze_flag => [], #A pokemon has haze, so the AI registers what mon knows Haze until it is gone
+      :switches => [],
+      :moves => [],
+      :flags_set => [], 
+  	  :triple_switch => [], # Player switches 3 times in a row
+  	  :no_attacking => [], #Target has no attacking moves
+  	  :double_recover => [], # Target uses a recovery move twice in a row
+  	  :choiced_flag => [], #Target is choice-locked
+  	  :same_move => [], # Target uses same move 3 times in a row
+  	  :initiative_flag => [], # Target uses an initiative move 2 times in a row
+  	  :double_intimidate => [], # Target pivots between 2 Intimidators
+      :protect_switch => [],
+      :no_priority_flag => [],
+      :choice => nil
+  	}
+    $learned_flags = {
+      :setup_fodder => [],
+      :has_setup => [],
+      :should_taunt => [],
+      :move => nil
+    }
+    $spam_block_triggered = false
+    $test_trigger = false
   	PBAI.log("AI initialized")
   end
 
@@ -58,6 +87,20 @@ class PBAI
     return weighted_rand(newweights)
 	end
 
+	def self.move_choice(scores)
+    choices = []
+    idx = 0
+    for i in 0...scores.length
+      choices.push(idx) if scores[i] > 0
+      idx += 1
+    end
+    if choices.length > 1
+      return choices[rand(choices.length)]
+    else
+      return choices[0]
+    end
+  end
+
 	def self.log(msg)
 		echoln msg
 	end
@@ -93,6 +136,15 @@ class PBAI
 		end
 		return nil
 	end
+
+	def pbMakeFakeBattler(pokemon,batonpass=false)
+    return nil if pokemon.nil?
+    pokemon = pokemon.clone
+    battler = PokeBattle_Battler.new(@battle,@index)
+    battler.pbInitPokemon(pokemon,@index)
+    battler.pbInitEffects(batonpass)
+    return battler
+  end
 
 	def register_damage(move, user, target, damage)
 		user = battler_to_projection(user)
@@ -147,7 +199,7 @@ end
 class PBAI
 	# If true, the AI will always know the enemy's held item, even if it has not
 	# been revealed in normal gameplay.
-	AI_KNOWS_HELD_ITEMS = false
+	AI_KNOWS_HELD_ITEMS = true
 
 	# If true, the AI wil always know the enemy's ability, even if it has not
 	# been revealed in normal gameplay.
@@ -200,20 +252,36 @@ class PBAI
   	end
 
   	def index
-  		return @side.index == 0 ? @ai_index * 2 : @ai_index * 2 + 1
+  		return 0 if $spam_block_triggered && @side.index == 0
+      return @side.index == 0 ? @ai_index * 2 : @ai_index * 2 + 1
   	end
 
-		def role
-      return getID(PBRoles,@battler.role)
+  	def pbMakeFakeBattler(pokemon,batonpass=false)
+      return nil if pokemon.nil?
+      pokemon = pokemon.clone
+      battler = PokeBattle_Battler.new(@battle,@index)
+      battler.pbInitPokemon(pokemon,@index)
+      battler.pbInitEffects(batonpass)
+      return battler
     end
 
-		def hasRole?(id)
-			return @pokemon.hasRole?(id)
-		end
+    def pbMakeFakeObject(pokemon)
+      return nil if pokemon.nil?
+      return opposing_side.party.find {|mon| mon && mon.pokemon == pokemon}
+    end
+
+		def roles
+      return @battler.roles
+    end
+
+		def hasRole?(role=0)
+			#return @pokemon.hasRole?(role)
+	    return self.roles.include?(getID(PBRoles,role))
+	  end
 
 		def defensive?
 			return true if @pokemon.hasRole?(PBRoles::SCREENS)
-			return true if @pokemon.hasRole?(PBRoles::PIVOT)
+			return true if @pokemon.hasRole?(PBRoles::DEFENSIVEPIVOT)
 			return true if @pokemon.hasRole?(PBRoles::PHYSICALWALL)
 			return true if @pokemon.hasRole?(PBRoles::SPECIALWALL)
 			return true if @pokemon.hasRole?(PBRoles::TOXICSTALLER)
@@ -223,12 +291,17 @@ class PBAI
 			return true if @pokemon.hasRole?(PBRoles::REDIRECTION)
 			return true if @pokemon.hasRole?(PBRoles::CLERIC)
 			return true if @pokemon.hasRole?(PBRoles::HAZARDLEAD)
+			return true if @pokemon.hasRole?(PBRoles::SPEEDCONTROL)
+			return true if @pokemon.hasRole?(PBRoles::SUPPORT)
 			return false
 		end
 
 		def setup?
+			return true if @pokemon.hasRole?(PBRoles::PHYSICALBREAKER)
+			return true if @pokemon.hasRole?(PBRoles::SPECIALBREAKER)
 			return true if @pokemon.hasRole?(PBRoles::SETUPSWEEPER)
 			return true if @pokemon.hasRole?(PBRoles::WINCON)
+			return false
 		end
 
 		def choiced?
@@ -320,12 +393,14 @@ class PBAI
 
 	  def effective_speed
   		stageMul = [2,2,2,2,2,2, 2, 3,4,5,6,7,8]
-	    stageDiv = [8,7,6,5,4,3, 2, 2,2,2,2,2,2]
-	    stage = @battler.stages[PBStats::SPEED] + 6
+		  stageDiv = [8,7,6,5,4,3, 2, 2,2,2,2,2,2]
+	    stage = @battler.nil? ? 6 : @battler.stages[PBStats::SPEED] + 6
 	    return (@battler.speed.to_f * stageMul[stage] / stageDiv[stage]).floor
 	  end
 
     def faster_than?(target)
+	    return true if target.nil?
+			return false if self.nil?
       return self.effective_speed >= target.effective_speed
     end
 
@@ -410,7 +485,7 @@ class PBAI
   			# we consider this Pokémon capable of being a special attacker.
   			return true if speccount > 1
   			return true if spatkBoosters >= 1
-				return true if self.hasRole?(PBRoles,SPECIALBREAKER)
+				return true if self.hasRole?(PBRoles::SPECIALBREAKER)
   		end
   		return false
   	end
@@ -426,22 +501,35 @@ class PBAI
       return false
     end
 
-    def can_switch?
-      return true if @battle.pbCanSwitch?(@battler.index)
-      return false
+    def check_spam_block
+      flag = $spam_block_triggered
+      if $spam_block_triggered == false
+        self.opposing_side.battlers.each do |target|
+          next if target.nil?
+          flag = PBAI::SpamHandler.trigger(flag,@ai,@battler,target)
+        end
+      end
+      PBAI.log("Spam Block Triggered") if flag
+      return flag
     end
 
   	def choose_move
   		# An array of scores in the format of [move_index, score, target]
       scores = []
+			target_choice = $spam_block_flags[:choice]
+      spam_block = @ai.battle.doublebattle ? false : check_spam_block
+      $target = []
+      $target_ind = -1
+      rand_trigger = false
+      immune = []
 
       # Calculates whether to use an item
-      item_score = get_item_score()
+      item_score = get_item_score
       # Yields [score, item, target&]
       scores << [:ITEM, *item_score]
 
       # Calculates whether to switch
-      switch_score = get_switch_score()
+      switch_score = get_switch_score
       # Yields [score, pokemon_index]
       scores << [:SWITCH, *switch_score]
 
@@ -454,7 +542,28 @@ class PBAI
         next if proj == self || proj.nil?
         targets << proj
       end
+
+      if spam_block && target_choice.is_a?(PokeBattle_Pokemon)
+        targets.clear
+        targets << opposing_side.party.find {|mon| mon && mon.pokemon == target_choice}
+        PBAI.log("Checking damage for #{targets[0].pokemon.name} since Spam Block was triggered")
+      end
       targets.each do |target|
+        next if target.nil?
+        next if target.fainted?
+        target.battler = pbMakeFakeBattler(target_choice) if spam_block && target_choice.is_a?(PokeBattle_Pokemon)
+        $target.push(target)
+        if spam_block == false
+          if target.index != 1 && target.index != 3
+            set_flags(target)
+          end
+        end
+        if target.hp < target.totalhp/5 && !$spam_block_flags[:no_priority_flag].include?(target) && self.turnCount > 0 && @battle.doublebattle == false && !$spam_block_triggered
+          rand_trigger = true
+        end
+        if @battle.wildBattle?
+          rand_trigger = true
+        end
         next if target.nil?
         PBAI.log("Moves for #{@battler.pokemon.name} against #{target.pokemon.name}")
         # Calculate a score for all the user's moves
@@ -479,33 +588,93 @@ class PBAI
         end
       end
 
-      # If absolutely no good options exist
-      if scores.size == 0
-        # Then just try to use the very first move with pp
-				healing = false
-        protect = false
-        for i in 0...4
-          move = @battler.moves[i]
-          next if move.nil?
-          if move.pp > 0
-            next if @battler.effects[PBEffects::DisableMove] == move.id
-            scores << [i, 1, 0, "internal"]
-          end
-					healing = true if move.healingMove?
+      if rand_trigger == false
+        m_ind = -1
+        s_ind = []
+        scrs = []
+        scr_ind = -1
+        scr = 0
+        for mv in scores
+          m_ind += 1
+          scrs << [mv,m_ind] if mv[1] > 0
+          scr += 1 if mv[1] >= 200
         end
-				user.flags[:should_heal] = true if healing == true
-        user.flags[:should_protect] = true if healing == false
+        if scr == 0
+          if scrs.length > 1
+            scrs.sort! do |a,b|
+              ret = b[0][1] <=> a[0][1]
+              next ret if ret != 0
+              next b[0][2] <=> a[0][2]
+            end
+            if scrs[0][1] == scrs[1][1]
+              midx = rand(2)
+              scrs[midx][1] = 0
+              scores[[scrs][midx][2]] = scrs[midx]
+            end
+          end
+          for mov in scores
+            next if scrs.length <= 1
+            next if mov[1] == 0
+            next if mov == scrs[0][0]
+            mov[1] = 0
+          end
+        else
+          for i in scores
+            scr_ind += 1
+            s_ind << [i , scr_ind] if i[1] > 0
+          end
+          if s_ind.length > 1
+            s_ind.sort! do |a,b|
+              ret = b[0][1] <=> a[0][1]
+              next ret if ret != 0
+              next b[0][2] <=> a[0][2]
+            end
+            if s_ind[0][1] == s_ind[1][1]
+              indx = rand(2)
+              s_ind[indx][1] = 0
+              scores[[s_ind][indx][2]] = s_ind[indx]
+            end
+          end
+          for mvs in scores
+            next if s_ind.length <= 1
+            next if mvs[1] == 0
+            next if mvs == s_ind[0][0]
+            mvs[1] = 0
+          end
+        end
+      end
+      # If absolutely no good options exist
+      if scores.size == 0 || rand_trigger == true
+        # Then just try to use the very first move with pp
+        move = []
+        sts = 0
+        if @battler.moves.length == 1
+          move.push(@battler.moves[0])
+        else
+          for i in 0...@battler.moves.length
+            m = @battler.moves[i]
+            sts += 1 if m.statusMove?
+            move.push(i) if m.pp > 0 && !m.nil? && @battler.effects[PBEffects::DisableMove] != m.id && !m.statusMove? && ![:FAKEOUT,:FIRSTIMPRESSION].include?(m.id) && !immune.include?(i)
+          end
+          if sts == 4 || move == []
+            move.push(rand(@battler.moves.length))
+          end
+        end
+        $rand_move = move[rand(move.length)]
+        scores << [$rand_move , 1, 0, "random"]
+        PBAI.log("Random offensive move because of all low scores")
       end
 
       # Map the numeric skill factor to a -4..1 range (not hard bounds)
       skill = @skill / -50.0 + 1
       # Generate a random choice based on the skill factor and the score weights
-      idx = PBAI.weighted_factored_rand(skill, scores.map { |e| e[1] })
+      idx = PBAI.move_choice(scores.map { |e| e[1] })
       str = "=" * 30 + "\nSkill: #{@skill}\n"
-      weights = PBAI.get_weights(skill, scores.map { |e| e[1] })
+      weights = scores.map { |e| e[1] }
       total = weights.sum
       scores.each_with_index do |e, i|
-        finalPerc = total == 0 ? 0 : (weights[i] / total.to_f * 100).round
+        finalPerc = total == 0 ? 0 : (weights[i] / total.to_f * 100).round rescue FloatDomainError
+	      finalPerc = (weights[i] / total.to_f * 100) if finalPerc == nil
         if i == 0
           # Item
           name = PBItems.getName(e[2])
@@ -524,15 +693,30 @@ class PBAI
             str += " << CHOSEN" if idx == 1
             str += "\n"
           end
-        #elsif i == -1
-        #  str += "STRUGGLE: 100%"
+        elsif i == -1
+          if !@battle.wildBattle?
+            for move in @battler.moves
+              if move.pp > 0
+                i = 2
+              else
+                str += "STRUGGLE: 100%"
+              end
+            end
+          end
         else
           move_index, score, target, target_name = e
-          name = @battler.moves[move_index].name
-					$target = e[2] if i == idx
-          str += "MOVE(#{target_name}) #{name}: #{score} (=> #{finalPerc}%)"
-          str += " << CHOSEN" if i == idx
-          str += "\n"
+          if i == idx
+            $target_ind = target
+            if @battle.doublebattle
+                $chosen_move = @battler.moves[move_index]
+            end
+          end
+          if $DEBUG
+              name = @battler.moves[move_index].name
+              str += "\nMOVE(#{target_name}) #{name}: #{score} => #{finalPerc}%)"
+              str += " << CHOSEN" if i == idx
+              str += "\n"
+          end
         end
       end
       str += "=" * 30
@@ -544,7 +728,7 @@ class PBAI
         # TODO: Set to-be-healed flag so Heal Pulse doesn't also heal after healing by item
         healing_item = scores[0][4]
         if healing_item
-          self.flags[:will_be_healed]
+          self.flags[:will_be_healed] = true
         end
         return ret
       elsif idx == 1
@@ -555,28 +739,30 @@ class PBAI
       if idx
         choice = scores[idx]
         move = @battler.moves[choice[0]]
-				target = opposing_side.battlers[$target]
-        if ["15B", "0D5", "0D6", "0D7", "0D8", "0D9"].include?(move.function)
-          self.flags[:will_be_healed] = true
-        elsif move.function == "0DF"
-          target.flags[:will_be_healed] = true
-        elsif move.function == "0A1"
-          @side.flags[:will_luckychant] = true
-        elsif move.function == "0A2"
-          @side.flags[:will_reflect] = true
-        elsif move.function == "0A3"
-          @side.flags[:will_lightscreen] = true
-        elsif move.function == "051"
-          @side.flags[:will_haze] = true
-				elsif move.function == "167"
-					@side.flags[:will_auroraveil] = true
-				elsif move.function == "0BA"
-					target.flags[:will_be_taunted] = true
-				elsif move.function == "0B9"
-					target.flags[:will_be_disabled] = true
-				elsif move.function == "0BC"
-					target.flags[:will_be_encored] = true
-        end
+        target = $target[$target_ind%2]
+				if target != nil
+	        if ["15B", "0D5", "0D6", "0D7", "0D8", "0D9"].include?(move.function)
+	          self.flags[:will_be_healed] = true
+	        elsif move.function == "0DF"
+	          target.flags[:will_be_healed] = true
+	        elsif move.function == "0A1"
+	          @side.flags[:will_luckychant] = true
+	        elsif move.function == "0A2"
+	          @side.flags[:will_reflect] = true
+	        elsif move.function == "0A3"
+	          @side.flags[:will_lightscreen] = true
+	        elsif move.function == "051"
+	          @side.flags[:will_haze] = true
+					elsif move.function == "167"
+						@side.flags[:will_auroraveil] = true
+					elsif move.function == "0BA"
+						target.flags[:will_be_taunted] = true
+					elsif move.function == "0B9"
+						target.flags[:will_be_disabled] = true
+					elsif move.function == "0BC"
+						target.flags[:will_be_encored] = true
+	        end
+	      end
     		return [choice[0], choice[2]]
       end
       # No choice could be made
@@ -587,6 +773,7 @@ class PBAI
       @flags = {}
 			$doubles_switch = nil
       $d_switch = 0
+      $revive = nil
       $test_trigger = false
     end
 
@@ -603,6 +790,7 @@ class PBAI
         # Move score calculation will only continue if the target is not an ally,
         # or if it is an ally, then the move must be Heal Pulse (0DF).
       end
+	    $test_trigger = true
       if move.statusMove?
         # Start status moves off with a score of 30.
         # Since this makes status moves unlikely to be chosen when the other moves
@@ -625,6 +813,7 @@ class PBAI
       end
       # Trigger move-specific score modifier code
       score = PBAI::ScoreHandler.trigger_move(move, score, @ai, self, target)
+	    $test_trigger = false
       # Prefer a different move if this move would also hit the user's ally and it is super effective against the ally
       # The target is not an ally to begin with (to exclude Heal Pulse and any other good ally-targeting moves)
       if target.side != @side
@@ -742,9 +931,11 @@ class PBAI
             # our item and without using our move. So if this is the case, we dramatically increase
             # the score of using our item.
             last_dmg = last_damage_taken
-            if last_dmg && !self.faster_than?(last_dmg[0])
-              delayEff = 2.5
-            end
+            self.opposing_side.battlers.each do |target|
+	            if !self.faster_than?(target)
+	              delayEff = 2.5
+	            end
+	          end
           end
           finalFrac = hpFraction * itemEff * delayEff
           score = (finalFrac * 200).round
@@ -806,6 +997,8 @@ class PBAI
               score = 400
             end
             index = party.index(candidate)
+            score = 0 if index == $revive
+            $revive = $index if $revive == nil
             next [score, item, index]
           end
         end
@@ -829,117 +1022,201 @@ class PBAI
       return [0, 0]
     end
 
+    def flags_set?(target)
+      return $spam_block_flags[:flags_set].include?(target)
+    end
+
+    def set_flags(target)
+      PBAI.log("Checking flags...")
+      if !flags_set?(target)
+        PBAI.log("No flags found.")
+        PBAI.log("Setting flags...")
+        off_move = 4
+        prio = 0
+        if !target.nil?
+	        for i in target.moves
+	        	priority = i.priority.nil? ? 0 : i.priority
+	          if i.function == "051"
+	            $spam_block_flags[:haze_flag].push(target)
+	            PBAI.log("#{target.name} has been assigned Haze flag")
+	          end
+	          if i.statusMove?
+	            off_move -= 1
+	          end
+	          if priority > 0
+	            prio += 1
+	          end
+	        end
+	      end
+        $spam_block_flags[:haze_flag].push(target) if target.hasActiveAbility?(:UNAWARE)
+        PBAI.log("#{target.name} has been assigned Haze flag")
+        PBAI.log("Offensive Move Count: #{off_move}")
+        PBAI.log("Priority Move Count: #{prio}")
+        if off_move == 0
+          $spam_block_flags[:no_attacking].push(target)
+          PBAI.log("#{target.name} has been assigned No Attacking Flag")
+        end
+        if off_move < 2
+          $learned_flags[:should_taunt].push(target)
+          PBAI.log("#{target.name} has been assigned Should Taunt flag")
+        end
+        if prio == 0
+          $spam_block_flags[:no_priority_flag].push(target)
+          PBAI.log("#{target.name} has been assigned No Priority flag")
+        end
+        if target.choice_locked?
+          $spam_block_flags[:choiced_flag].push(target)
+        end
+        $spam_block_flags[:flags_set].push(target)
+       PBAI.log("End flag assignment.")
+     else
+      PBAI.log("Flags found.\nEnd flag search")
+     end
+   end
+
+    def can_switch?
+    	ret = true
+      party = @ai.battle.pbParty(self.battler.index)
+      fainted = 0
+      for i in party
+        fainted += 1
+      end
+      ret = false if fainted == party.length - 1
+      ret = false if self.trapped?
+      self.opposing_side.battlers.each do |target|
+      	next if target.nil?
+      	if (target.hasActiveAbility?(:ARENATRAP) && !self.airborne? && !self.pokemon.hasType?(:GHOST) && !self.hasActiveItem?(:SHEDSHELL) ||
+      		target.hasActiveAbility?(:SHADOWTAG) && !self.pokemon.hasType?(:GHOST) && !self.hasActiveItem?(:SHEDSHELL))
+      		ret = false
+      	end
+      end
+      return ret
+    end
+    def set_up_score
+      boosts = 0 
+      PBStats.eachBattleStat { |s| boosts += self.battler.stages[s] if self.battler.stages[s] != nil}
+      return boosts
+    end
+
+    def ai_should_switch?
+      switch = nil
+      self.opposing_side.battlers.each do |target|
+        next if target.nil?
+				next if self.nil?
+				next if target.index == (1 || 3)
+        switch = PBAI::SwitchHandler.trigger_out(switch,@ai,self,target)
+      end
+      return switch
+    end
+
     # Calculates the best pokemon to switch to and its score
     def get_switch_score
-      # Yields [score, pokemon_index]
-      switch = false
-      # Used to render Future Sight useless
-      switch_to_dark_type = false
-      # The AI's party
       party = @battle.pbParty(@battler.index)
-
-			$d_switch = 0
+      return [0,0] if party.length == 1
+      return [0,0] if !self.can_switch?
+      $d_switch = 0
       $d_switch = 1 if $doubles_switch != nil
-
-      # If the pokemon is struggling
-      if !@battle.pbCanChooseAnyMove?(@battler.index)
-        switch = true
-      end
-      # If the pokemon is perish songed and will die next turn
-      if self.effects[PBEffects::PerishSong] == 1
-        switch = true
-      end
-			if self.trapped?
-				switch = false
-			end
-			if self.choice_locked?
-        choiced_move_name = getID(PBMove,self.effects[PBEffects::ChoiceBand])
-        factor = 0
-        opposing_side.battlers.each do |pkmn|
-          factor += pkmn.calculate_move_matchup(choiced_move_name)
-        end
-        if factor < 2
-          switch = true
-        end
-      end
-      # Encored into bad move
-      if self.effects[PBEffects::Encore] > 0
-        encored_move_index = @battler.pbEncoredMoveIndex
-        if encored_move_index >= 0
-          encored_move = @battler.moves[encored_move_index]
-          if encored_move.statusMove?
-            switch = true
-          else
-            dmgs = @damage_dealt.select { |e| e[1] == encored_move.id }
-            if dmgs.size > 0
-              last_dmg = dmgs[-1]
-              # Bad move if it did less than 35% damage
-              if last_dmg[3] < 0.35
-                switch = true
-              end
-            else
-              # No record of dealing damage with this move,
-              # which probably means the target is immune somehow,
-              # or the user happened to miss. Don't risk being stuck in
-              # a bad move in any case, and switch.
-              switch = true
-            end
-          end
-        end
+      $target_strong_moves = false
+      if self.hasRole?(PBRoles::NONE)
+      	switch = false
+      else
+      	switch = self.ai_should_switch?
       end
       # Get the optimal switch choice by type
       scores = get_optimal_switch_choice
       # If we should switch due to effects in battle
-      if switch
-        availscores = scores.select { |e| !e[2].fainted? }
+      PBAI.log("\nShould switch = #{switch}")
+      if switch == true
+        for i in scores
+          next if i[1] != self
+          if i[0] >= 0 && self.turnCount == 0
+            return [0,0]
+          end
+        end
+        availscores = scores.select { |e| !e[1].fainted? }
         # Switch to a dark type instead of the best type matchup
-        if switch_to_dark_type
-          availscores = availscores.select { |e| e[2].pokemon.types.include?(PBTypes::DARK) }
-        end
-        while availscores.size > 0
-          hi_off_score, hi_def_score, proj = availscores[0]
+        #if $switch_flags[:dark]
+        #  availscores = availscores.select { |e| e[1].pokemon.types.include?(:DARK) }
+        #end
+        for i in 0..availscores.size
+          score = 0
+          score, proj = availscores[i]
+          if proj != nil
+            self.opposing_side.battlers.each do |target|
+              next if target.nil?
+              score = PBAI::SwitchHandler.trigger_general(score,@ai,self,proj,target)
+              target_moves = target.used_moves
+              if target_moves != nil
+                for i in target_moves
+                  score = PBAI::SwitchHandler.trigger_type(i.type,score,@ai,self,proj,target)
+                end
+              end
+              PBAI.log("\n#{proj.pokemon.name} => #{score}")
+            end
+          end
+          $doubles_switch = proj if $d_switch == 0
           eligible = true
-          eligible = false if proj.battler != nil # Already active
-          eligible = false if proj.pokemon.egg? # Egg
-					eligible = false if proj == $doubles_switch && $d_switch == 1
+          eligible = false if proj.nil?
+          if proj != nil
+            eligible = false if proj.battler != nil # Already active
+            eligible = false if proj.pokemon.egg? # Egg
+            eligible = false if proj == $doubles_switch && $d_switch == 1
+          end
           if eligible
-            score = (75 * hi_off_score * (switch_to_dark_type ? 2.0 : 1.0)).round
-						score += 50 if [PBRoles::PHYSICALWALL,PBRoles::SPECIALWALL,PBRoles::CLERIC].include?(proj.pokemon.role)
-            score += 15 if [PBRoles::PIVOT,PBRoles::STALLBREAKER].include?(proj.pokemon.role)
             index = party.index(proj.pokemon)
             return [score, index]
           end
-          availscores.delete_at(0)
         end
       end
-
-      curr_score = scores.find { |e| e[2] == self }[0]
-      # If the current battler is not very effective offensively in any of its types,
-      # then we see if there is a battler that is super effective in at least one of its types.
-      if curr_score < 1.0 && !self.trapped?
-        availscores = scores.select { |e| !e[2].fainted? }
-        while availscores.size > 0
-          hi_off_score, hi_def_score, proj = availscores[0]
-					$doubles_switch = proj if $d_switch == 0
-          eligible = true
-          eligible = false if proj.battler != nil # Already active
-          eligible = false if proj.pokemon.egg? # Egg
-					eligible = false if proj == $doubles_switch && $d_switch == 1
-          if eligible && hi_off_score >= 1.0
-            # Better choice than the current battler, so let's switch to this pokemon
-            score = (100 * hi_off_score).round
-						score += 30 if [PBRoles::PHYSICALWALL,PBRoles::SPECIALWALL,PBRoles::CLERIC].include?(proj.pokemon.role)
-            score += 15 if [PBRoles::PIVOT,PBRoles::STALLBREAKER].include?(proj.pokemon.role)
-            index = party.index(proj.pokemon)
-            return [score, index]
-          end
-          availscores.delete_at(0)
-        end
-      end
+      $switch_flags[:move] = nil
       return [0, 0]
     end
 
     def get_optimal_switch_choice
+      party = @battle.pbParty(self.index)
+      matchup = party.map do |pkmn|
+        proj = @ai.pokemon_to_projection(pkmn)
+        if !proj
+          raise "No projection found for party member #{pkmn.name}"
+        end
+        offensive_score = 1.0
+        defensive_score = 1.0
+        self.opposing_side.battlers.each do |target|
+          next if target.nil?
+          offensive_score *= proj.get_offense_score(target)
+          defensive_score *= target.get_offense_score(proj)
+        end
+        next [offensive_score, defensive_score, proj]
+      end
+      matchup.sort! do |a,b|
+        ret = (a[1] <=> b[1])
+        next ret if ret != 0
+        ret = (b[0] <=> a[0])
+        next ret if ret != 0
+        next (b[2].pokemon.defense + b[2].pokemon.spdef) <=> (a[2].pokemon.defense + a[2].pokemon.spdef)
+        next b[2].pokemon.level <=> a[2].pokemon.level
+      end
+      #PBAI.log(scores.map { |e| e[2].pokemon.name + ": (#{e[0]}, #{e[1]})" }.join("\n"))
+      scores = matchup.map do |e|
+        proj = @ai.pokemon_to_projection(e[2].pokemon)
+        if !proj
+          raise "No projection found for party member #{e[2].pokemon.name}"
+        end
+        score = 200
+        score += e[0] * 100
+        score -= e[1] * 100
+        next [score,proj]
+      end
+      scores.sort! do |a,b|
+        ret = b[0] <=> a[0]
+        next ret if ret != 0
+        next b[1].pokemon.hp <=> b[1].pokemon.hp
+      end
+      #PBAI.log(scores.map {|f| f[1].pokemon.name + "=> #{f[0]}"}.join("\n"))
+      return scores
+    end
+
+    def get_best_switch_choice
       party = @battle.pbParty(self.index)
       scores = party.map do |pkmn|
         proj = @ai.pokemon_to_projection(pkmn)
@@ -956,14 +1233,11 @@ class PBAI
         next [offensive_score, defensive_score, proj]
       end
       scores.sort! do |a,b|
-        ret = (b[0] <=> a[0])
-        next ret if ret != 0
-        # Tie-breaker for pokemon with identical offensive effectiveness
-        # Prefer the one with the best defense against the targets
-        # Lower is better, so a <=> b instead of b <=> a to get ascending order
         ret = (a[1] <=> b[1])
         next ret if ret != 0
-        # Tie-breaker for pokemon with identical defensive effectiveness
+        ret = (b[0] <=> a[0])
+        next ret if ret != 0
+        next (b[2].pokemon.defense + b[2].pokemon.spdef) <=> (a[2].pokemon.defense + a[2].pokemon.spdef)
         next b[2].pokemon.level <=> a[2].pokemon.level
       end
       #PBAI.log(scores.map { |e| e[2].pokemon.name + ": (#{e[0]}, #{e[1]})" }.join("\n"))
@@ -1154,7 +1428,11 @@ class PBAI
 	  	if projection.is_a?(BattlerProjection)
 	  		return @side.index != projection.side.move_index
 	  	else
-	  		return @battler.index % 2 != projection.index % 2
+	  		if $spam_block_triggered
+          return true if @side.index == 1
+        else
+          return @battler.index % 2 != projection.index % 2
+        end
 	  	end
 	  end
 
@@ -1321,9 +1599,9 @@ class PBAI
         end
         # Trapping Effects
         if self.effects[PBEffects::Trapping] != 0
-          dmg = (NEWEST_BATTLE_MECHANICS ? b.totalhp / 8.0 : b.totalhp / 16.0)
+          dmg = (NEWEST_BATTLE_MECHANICS ? @battler.totalhp / 8.0 : @battler.totalhp / 16.0)
           if @battle.battlers[self.effects[PBEffects::TrappingUser]].hasActiveItem?(:BINDINGBAND)
-            dmg = (NEWEST_BATTLE_MECHANICS ? b.totalhp / 6.0 : b.totalhp / 8.0)
+            dmg = (NEWEST_BATTLE_MECHANICS ? @battler.totalhp / 6.0 : @battler.totalhp / 8.0)
           end
           lost += dmg
         end
@@ -1361,7 +1639,7 @@ class PBAI
       return took_more_than_x_damage?(x)
     end
 
-		def should_switch?(target)
+		def predict_switch?(target)
       return true if target.bad_against?(self)
       return false if self.bad_against?(target)
       kill = false
@@ -1376,11 +1654,12 @@ class PBAI
         return true if i.priority > 0 && i.damagingMove? && self.get_move_damage(target,i) >= target.hp
       end
       return true if target.bad_against?(self) && self.faster_than?(target)
+      return false if $spam_block_triggered
       return false
     end
 
 		def trapped?
-			return self.effects[PBEffects::Trapping] > 0
+			return self.trappedInBattle?
 		end
 
     def discourage_making_contact_with?(target)
@@ -1395,10 +1674,14 @@ class PBAI
     end
 
     def get_move_damage(target, move)
+	    if target.nil?
+		    return 0
+		    else
       calcType = move.pbCalcType(@battler)
       target.battler.damageState.typeMod = move.pbCalcTypeMod(calcType, @battler, target.battler)
       move.pbCalcDamage(@battler, target.battler)
       return target.battler.damageState.calcDamage
+		    end
     end
 
     # Calculates the combined type effectiveness of all user and target types
@@ -1428,7 +1711,7 @@ class PBAI
       mod = 1.0
       user_types.each do |user_type|
         target_types.each do |target_type|
-          user_eff = PBTypes.getEffectiveness(user_type, target_type)
+          user_eff = (target_type.nil? || user_type.nil?) ? 1.0 : PBTypes.getEffectiveness(user_type, target_type)
           mod *= user_eff / 2.0
         end
       end
@@ -1580,14 +1863,42 @@ class PBAI
 
   def pbDefaultChooseEnemyCommand(idxBattler)
   	sideIndex = idxBattler % 2
-  	index = PBAI.battler_to_proj_index(idxBattler)
-  	side = @sides[sideIndex]
-  	projection = side.battlers[index]
+    index = PBAI.battler_to_proj_index(idxBattler)
+    side = @sides[sideIndex]
+    projection = side.battlers[index]
     # Choose move
     data = projection.choose_move
-    if data.nil?
+    if data.nil? && !@battle.wildBattle?
       # Struggle
       @battle.pbAutoChooseMove(idxBattler)
+    elsif data.nil? && @battle.wildBattle?
+      move = []
+      idx = -1
+      for i in projection.battler.moves
+        idx += 1
+        move.push(idx) if i.pp > 0
+      end
+      if move.length == 0
+        @battle.pbAutoChooseMove(idxBattler)
+      else
+        move_index = move[rand(move.length)]
+        move_target = 0
+        data = [move_index,move_target]
+        @battle.pbRegisterMegaEvolution(idxBattler) if projection.should_mega_evolve?(idxBattler)
+      # Register our move
+      @battle.pbRegisterMove(idxBattler, move_index, false)
+      # Register the move's target
+      @battle.pbRegisterTarget(idxBattler, move_target)
+      end
+    elsif data[0] == :SWITCH
+      # [:SWITCH, pokemon_index]
+      @battle.pbRegisterSwitch(idxBattler, data[1])
+   # elsif data[0] == :FLEE
+   #   pbSEPlay("Battle flee")
+   #   @battle.pbDisplay(_INTL("{1} fled from battle!",projection.pbThis))
+   #   @battle.decision = 3
+   #   @battle.scene.clearMessageWindow
+   #   @battle.scene.pbEndBattle(@battle.decision)
     elsif data[0] == :ITEM
       # [:ITEM, item_id, target&]
       item = data[1]
@@ -1603,16 +1914,14 @@ class PBAI
       end
       # Register our item
       @battle.pbRegisterItem(idxBattler, item, target_index)
-    elsif data[0] == :SWITCH
-      # [:SWITCH, pokemon_index]
-      @battle.pbRegisterSwitch(idxBattler, data[1])
     else
-      # [move_index, move_target]
-    	move_index, move_target = data
+       if move_index.nil?
+        move_index,move_target = data
+      end
       # Mega evolve if we determine that we should
-      @battle.pbRegisterMegaEvolution(idxBattler) if projection.should_mega_evolve?(idxBattler)
+          @battle.pbRegisterMegaEvolution(idxBattler) if projection.should_mega_evolve?(idxBattler)
       # Register our move
-    	@battle.pbRegisterMove(idxBattler, move_index, false)
+      @battle.pbRegisterMove(idxBattler, move_index, false)
       # Register the move's target
       @battle.pbRegisterTarget(idxBattler, move_target)
     end
@@ -1624,7 +1933,7 @@ class PBAI
   #=============================================================================
   def pbDefaultChooseNewEnemy(idxBattler, party)
     proj = self.battler_to_projection(@battle.battlers[idxBattler])
-    scores = proj.get_optimal_switch_choice
+    scores = proj.get_best_switch_choice
     scores.each do |_, _, proj|
       pkmn = proj.pokemon
       index = @battle.pbParty(idxBattler).index(pkmn)
@@ -1649,6 +1958,40 @@ class PokeBattle_Battler
   def pbFaint(*args)
     pbai_pbFaint(*args)
     @battle.battleAI.faint_battler(self)
+  end
+
+  def affectedByMoldBreaker?
+    return @battle.moldBreaker && !hasActiveItem?(:ABILITYSHIELD)
+  end
+
+  def airborne?
+    return false if hasActiveItem?(:IRONBALL)
+    return false if @effects[PBEffects::Ingrain]
+    return false if @effects[PBEffects::SmackDown]
+    return false if @battle.field.effects[PBEffects::Gravity] > 0
+    return true if pbHasType?(:FLYING)
+    return true if hasActiveAbility?(:LEVITATE) && !affectedByMoldBreaker?
+    return true if hasActiveItem?(:AIRBALLOON)
+    return true if @effects[PBEffects::MagnetRise] > 0
+    return true if @effects[PBEffects::Telekinesis] > 0
+    return false
+  end
+
+  def trappedInBattle?
+    return true if @effects[PBEffects::Trapping] > 0
+    return true if @effects[PBEffects::MeanLook] >= 0
+    #return true if @effects[PBEffects::JawLock] >= 0
+   # @battle.eachBattler { |b| return true if b.effects[PBEffects::JawLock] == @index }
+   # return true if @effects[PBEffects::Octolock] >= 0
+    return true if @effects[PBEffects::Ingrain]
+    #return true if @effects[PBEffects::NoRetreat]
+    return true if @battle.field.effects[PBEffects::FairyLock] > 0
+    eachOpposing { |b| return true if b.hasActiveAbility?(:ARENATRAP) && !self.airborne? && !self.pokemon.hasType?(:GHOST) && !self.hasActiveItem?(:SHEDSHELL)}
+    eachOpposing { |b| return true if b.hasActiveAbility?(:SHADOWTAG) && !self.pokemon.hasType?(:GHOST) && !self.hasActiveItem?(:SHEDSHELL)}
+    return false
+  end
+def eachOpposing
+    @battle.battlers.each { |b| yield b if b && !b.fainted? && b.opposes?(@index) }
   end
 end
 
@@ -1743,7 +2086,7 @@ class PBAI
   		if proj.nil?
   			raise "Battler to be sent-out was not found in the party list."
   		end
-  		if proj.active?
+  		if proj.active? && !$spam_block_triggered
   			raise "Battler to be sent-out was already sent out before."
   		end
   		index = PBAI.battler_to_proj_index(battlerIndex)
