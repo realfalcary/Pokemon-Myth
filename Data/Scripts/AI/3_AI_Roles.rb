@@ -21,9 +21,12 @@ module PBRoles
   TRICKROOMSETTER = 19
   OFFENSIVEPIVOT = 20
   SUPPORT = 21
+  WEATHERTERRAIN = 22
+  WEATHERTERRAINABUSER = 23
+  TANK = 24
 
-  def self.maxValue; 21; end
-  def self.getCount; 22; end
+  def self.maxValue; 24; end
+  def self.getCount; 25; end
   def self.getName(id)
     id = getID(PBRoles,id)
     names = [
@@ -48,7 +51,10 @@ module PBRoles
        _INTL("Redirection"),
        _INTL("Trick Room Setter"),
        _INTL("Offensive Pivot"),
-       _INTL("Support")
+       _INTL("Support"),
+       _INTL("Weather/Terrain Setter"),
+       _INTL("Weather/Terrain Abuser"),
+       _INTL("Tank")
     ]
     return names[id]
   end
@@ -65,7 +71,65 @@ class PokeBattle_Pokemon
     calcStats
   end
   def hasRole?(role=0)
-    return self.roles.include?(getID(PBRoles,role))
+    yes = 0
+    if role.is_a?(Array)
+      role.each do |r|
+        yes += 1 if self.roles.include?(getID(PBRoles,r))
+      end
+      return yes > 0
+    else
+      return self.roles.include?(getID(PBRoles,role))
+    end
+  end
+  def assign_roles
+    roles = []
+    setup = [:SWORDSDANCE,:WORKUP,:NASTYPLOT,:GROWTH,:HOWL,:BULKUP,:CALMMIND,:TAILGLOW,:AGILITY,:ROCKPOLISH,:AUTOTOMIZE,
+      :SHELLSMASH,:SHIFTGEAR,:QUIVERDANCE,:VICTORYDANCE,:CLANGOROUSSOUL,:CHARGE,:COIL,:HONECLAWS,:IRONDEFENSE,:COSMICPOWER,:AMNESIA,
+      :POWERUPPUNCH,:FLAMECHARGE,:TRAILBLAZE,:DRAGONDANCE,:FILLETAWAY,:STATICSURGE]
+    physical_moves = 0
+    special_moves = 0
+    status_moves = 0
+    @moves.each do |move|
+      move_data = pbGetMoveData(move.id)
+      category = move_data[6]
+      physical_moves += 1 if category == 0
+      special_moves += 1 if category == 1
+      status_moves += 1 if category == 2
+    end
+    roles.push(PBRoles::PHYSICALBREAKER) if physical_moves > 2
+    roles.push(PBRoles::SPECIALBREAKER) if special_moves > 2
+    for move in @moves
+      m = getID(PBMoves,move)
+      roles.push(PBRoles::SETUPSWEEPER) if setup.include?(m)
+      roles.push(PBRoles::CLERIC) if [:WISH,:HEALBELL,:AROMATHERAPY].include?(m)
+      roles.push(PBRoles::OFFENSIVEPIVOT) if [:UTURN,:VOLTSWITCH,:FLIPTURN].include?(m)
+      roles.push(PBRoles::DEFENSIVEPIVOT) if [:PARTINGSHOT,:CHILLYRECEPTION,:TELEPORT,:SHEDTAIL].include?(m)
+      roles.push(PBRoles::SPEEDCONTROL) if [:ICYWIND,:THUNDERWAVE,:GLARE,:BULLDOZE,:DOLDRUMS,:ROCKTOMB,:POUNCE,:NUZZLE,:ELECTROWEB,:LOWSWEEP,:TAILWIND].include?(m)
+      roles.push(PBRoles::STALLBREAKER) if m == :TAUNT
+      roles.push(PBRoles::REDIRECTION) if [:FOLLOWME,:ALLYSWITCH,:RAGEPOWDER].include?(m)
+      roles.push(PBRoles::SUPPORT) if [:HELPINGHAND,:WIDEGUARD,:MATBLOCK].include?(m)
+      roles.push(PBRoles::HAZARDREMOVAL) if [:RAPIDSPIN,:MORTALSPIN,:TIDYUP,:DEFOG].include?(m)
+      roles.push(PBRoles::SCREENS) if [:LIGHTSCREEN,:REFLECT,:AURORAVEIL].include?(m)
+      roles.push(PBRoles::TOXICSTALLER) if m == :TOXIC
+      roles.push(PBRoles::LEAD) if [:STEALTHROCK,:SPIKES,:TOXICSPIKES,:STICKYWEB].include?(m)
+      roles.push(PBRoles::TRICKROOMSETTER) if m == :TRICKROOM
+      roles.push(PBRoles::TANK) if [:RECOVER,:ROOST,:MOONLIGHT,:MORNINGSUN,:SHOREUP,:PACKIN,:SOFTBOILED,:SYNTHESIS,:HEALORDER].include?(m) && !roles.include?(PBRoles::SETUPSWEEPER)
+      roles.push(PBRoles::PHAZER) if [:ROAR,:DRAGONTAIL,:WHIRLWIND,:HAZE,:FREEZYFROST].include?(m)
+      roles.push(PBRoles::STATUSABSORBER) if m == :FACADE
+    end
+    case @ability
+    when :DRIZZLE,:DROUGHT,:SNOWWARNING,:SANDSTREAM,:SANDSPIT,:ELECTRICSURGE,:PSYCHICSURGE,:GRASSYSURGE,:MISTYSURGE,:SEEDSOWER
+      roles.push(PBRoles::WEATHERTERRAIN)
+    when :SWIFTSWIM,:DRYSKIN,:HYDRATION,:RAINDISH,:SOLARPOWER,:CHLOROPHYLL,:PROTOSYNTHESIS,:SLUSHRUSH,:ICEBODY,:ICEFACE,:SANDRUSH,:SANDVEIL,
+      :SANDFORCE,:SNOWCLOAK,:FLOWERGIFT,:FORECAST,:SURGESURFER,:MEADOWRUSH,:BRAINBLAST,:HARVEST,:STEAMPOWERED
+      roles.push(PBRoles::WEATHERTERRAINABUSER)
+    when :DEFIANT,:COMPETITIVE,:SOULHEART,:MOXIE,:ASONEICE,:ASONEGHOST,:GRIMNEIGH,:CHILLINGNEIGH,:LIONSPRIDE,:BEASTBOOST,:DOWNLOAD,:CONTRARY
+      roles.push(PBRoles::SETUPSWEEPER)
+      roles.push(PBRoles::SPECIALBREAKER) if [:COMPETITIVE,:SOULHEART,:ASONEGHOST,:GRIMNEIGH,:LIONSPRIDE].include?(@ability)
+      roles.push(PBRoles::PHYSICALBREAKER) if [:DEFIANT,:MOXIE,:ASONEICE,:CHILLINGNEIGH].include?(@ability)
+    end
+    roles.push(PBRoles::NONE) if roles == []
+    return roles
   end
 end
 
@@ -78,6 +142,30 @@ class PokeBattle_Battler
   def role=(value)
     @roles = [0] if !value
     @pokemon.setRole(value) if @pokemon
+  end
+
+  def hasRole?(role=0)
+    yes = 0
+    if role.is_a?(Array)
+      role.each do |r|
+        yes += 1 if self.roles.include?(getID(PBRoles,r))
+      end
+      return yes > 0
+    else
+      return self.roles.include?(getID(PBRoles,role))
+    end
+  end
+
+  def defensive?
+    return self.hasRole?([:SCREENS,:DEFENSIVEPIVOT,:OFFENSIVEPIVOT,:PHYSICALWALL,:SPECIALWALL,:TOXICSTALLER,:STALLBREAKER,:TRICKROOMSETTER,:REDIRECTION,:CLERIC,:HAZARDLEAD])
+  end
+
+  def setup?
+    return self.hasRole?([:SETUPSWEEPER,:WINCON,:PHYSICALBREAKER,:SPECIALBREAKER])
+  end
+
+  def pivot?
+    return self.hasRole?([:DEFENSIVEPIVOT,:OFFENSIVEPIVOT])
   end
 
   alias init_role pbInitBlank
